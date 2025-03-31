@@ -64,46 +64,39 @@ This files contents are outlined below >>>>
 ==================================================*/
 
 
-#gameSearch {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
 #gameList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 9999;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; /* Initially hidden */
+    border: 1px solid #444;
+    padding: 10px;
 }
 
 .game-item {
-    width: 200px;
-    padding: 10px;
-    background: #f4f4f4;
-    border-radius: 5px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid #555;
 }
 
 .game-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+#gameSearch {
     width: 100%;
-    border-radius: 5px;
+    max-width: 300px;
+    padding: 8px;
 }
 
-.game-item a {
-    display: block;
-    margin: 10px 0;
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-}
-
-.game-item p {
-    color: #666;
-    font-size: 14px;
-}
 
 
 
