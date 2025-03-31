@@ -1,4 +1,4 @@
 User-agent: *
-Allow: /
+Disallow: /game/index.html
 
 Sitemap: https://faf-games.github.io/sitemap.xml
