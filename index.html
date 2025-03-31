@@ -1270,6 +1270,53 @@
   window._taboola = window._taboola || [];
   _taboola.push({flush: true});
 </script>
+		    <script>
+    let games = [];
+
+    // Fetch games from JSON file
+    fetch("games.json")
+        .then(response => response.json())
+        .then(data => {
+            games = data.games;
+            displayGames(games); // Show all games initially
+        })
+        .catch(error => console.error("Error loading games:", error));
+
+    // Function to display games dynamically
+    function displayGames(gameArray) {
+        let gameList = document.getElementById("gameList");
+        gameList.innerHTML = "";
+
+        gameArray.forEach(game => {
+            let gameItem = document.createElement("div");
+            gameItem.classList.add("game-item");
+
+            let gameImage = document.createElement("img");
+            gameImage.src = game.image;
+            gameImage.alt = game.name;
+
+            let gameLink = document.createElement("a");
+            gameLink.href = game.url;
+            gameLink.textContent = game.name;
+
+            let gameCategory = document.createElement("p");
+            gameCategory.textContent = `Category: ${game.category}`;
+
+            gameItem.appendChild(gameImage);
+            gameItem.appendChild(gameLink);
+            gameItem.appendChild(gameCategory);
+            gameList.appendChild(gameItem);
+        });
+    }
+
+    // Function to filter games dynamically
+    function searchGames() {
+        let input = document.getElementById("gameSearch").value.toLowerCase();
+        let filteredGames = games.filter(game => game.name.toLowerCase().includes(input));
+        displayGames(filteredGames);
+    }
+</script>
+
 		
 	
 </body>
