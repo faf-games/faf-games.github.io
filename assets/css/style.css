@@ -64,16 +64,29 @@ This files contents are outlined below >>>>
 ==================================================*/
 
 
+.search-container {
+    position: relative;
+    width: 300px;
+}
+
+#gameSearch {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
 #gameList {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background: #000;
-    z-index: 9999;
-    max-height: 300px;
+    background: #222;
+    border-radius: 5px;
+    max-height: 250px;
     overflow-y: auto;
-    display: none; /* Initially hidden */
+    display: none; /* Hidden by default */
     border: 1px solid #444;
     padding: 10px;
 }
@@ -81,23 +94,21 @@ This files contents are outlined below >>>>
 .game-item {
     display: flex;
     align-items: center;
-    padding: 5px;
-    border-bottom: 1px solid #555;
+    padding: 10px;
+    border-bottom: 1px solid #333;
+    cursor: pointer;
+}
+
+.game-item:hover {
+    background: #444;
 }
 
 .game-item img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     margin-right: 10px;
+    border-radius: 5px;
 }
-
-#gameSearch {
-    width: 100%;
-    max-width: 300px;
-    padding: 8px;
-}
-
-
 
 
 .lazy {
