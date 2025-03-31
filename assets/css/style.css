@@ -64,10 +64,48 @@ This files contents are outlined below >>>>
 ==================================================*/
 
 
-
-* {
-
+#gameSearch {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
+
+#gameList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.game-item {
+    width: 200px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.game-item img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.game-item a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+.game-item p {
+    color: #666;
+    font-size: 14px;
+}
+
+
 
 .lazy {
     opacity: 0;
