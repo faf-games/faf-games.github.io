@@ -67,12 +67,10 @@ This files contents are outlined below >>>>
 /* Search Bar Container */
 .search-container {
     position: relative;
-    width: 320px;
 }
 
 /* Search Input */
 #gameSearch {
-    width: 100%;
     padding: 12px;
     font-size: 16px;
     border: 2px solid #444;
@@ -180,7 +178,6 @@ This files contents are outlined below >>>>
 /* Style the search box container */
 .search-container {
   text-align: center;
-  margin-top: 20px;
 }
 
 /* Style the search input field */
