@@ -64,38 +64,50 @@ This files contents are outlined below >>>>
 ==================================================*/
 
 
+/* Search Bar Container */
 .search-container {
     position: relative;
-    width: 300px;
+    width: 320px;
 }
 
+/* Search Input */
 #gameSearch {
     width: 100%;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 8px;
     outline: none;
+    transition: 0.3s;
 }
 
+#gameSearch:focus {
+    border-color: #00ffcc;
+}
+
+/* Game List (Dropdown) */
 #gameList {
     position: absolute;
-    top: 100%;
+    top: 105%;
     left: 0;
     width: 100%;
     background: #222;
-    border-radius: 5px;
+    border-radius: 8px;
     max-height: 250px;
     overflow-y: auto;
-    display: none; /* Hidden by default */
+    display: none; /* Initially hidden */
     border: 1px solid #444;
     padding: 10px;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
+/* Individual Game Items */
 .game-item {
     display: flex;
     align-items: center;
     padding: 10px;
-    border-bottom: 1px solid #333;
+    border-radius: 5px;
+    transition: 0.2s;
     cursor: pointer;
 }
 
@@ -103,11 +115,25 @@ This files contents are outlined below >>>>
     background: #444;
 }
 
+/* Game Images */
 .game-item img {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
     border-radius: 5px;
+    object-fit: cover;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
