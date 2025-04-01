@@ -101,6 +101,7 @@ This files contents are outlined below >>>>
             margin-top: 5px;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+	    scrollbar-width: thin;
         }
         
         .game-item {
