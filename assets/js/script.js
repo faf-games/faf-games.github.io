@@ -3,20 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch games from JSON file
     fetch("https://faf-games.github.io/games.json")
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Error: games.json not found!");
+            }
+            return response.json();
+        })
         .then(data => {
             games = data;
         })
         .catch(error => console.error("Error loading games:", error));
 
-    // Search function (Runs when typing)
+    // Search function - Runs when user types in search bar
     document.getElementById("gameSearch").addEventListener("input", function () {
         let input = this.value.toLowerCase();
         let gameList = document.getElementById("gameList");
 
         if (input === "") {
-            gameList.innerHTML = ""; // Clear list when empty
-            gameList.style.display = "none"; 
+            gameList.innerHTML = ""; // Clear results when empty
+            gameList.style.display = "none";
             return;
         }
 
