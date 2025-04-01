@@ -1,22 +1,27 @@
 [
     {
         "name": "Color Road",
-        "url": "game/color-road.html"
+        "url": "game/color-road.html",
+        "image": "color-road.png"
     },
     {
         "name": "Subway Surfers",
-        "url": "game/subway-surfers.html"
+        "url": "game/subway-surfers.html",
+        "image": "subway-surfers.png"
     },
     {
         "name": "Moto X3M",
-        "url": "game/moto-x3m.html"
+        "url": "game/moto-x3m.html",
+        "image": "moto-x3m.png"
     },
     {
         "name": "Slope",
-        "url": "game/slope.html"
+        "url": "game/slope.html",
+        "image": "slope.png"
     },
     {
         "name": "Among Us",
-        "url": "game/among-us.html"
+        "url": "game/among-us.html",
+        "image": "among-us.png"
     }
 ]
