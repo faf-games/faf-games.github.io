@@ -5,27 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("https://faf-games.github.io/games.json")
         .then(response => response.json())
         .then(data => {
-            games = data; // Store games in memory
-            console.log("Games loaded:", games); // Debugging: Check if games load
+            games = data; // Corrected JSON parsing
         })
         .catch(error => console.error("Error loading games:", error));
 
-    // Search function (Triggers when typing)
+    // Search function
     document.getElementById("gameSearch").addEventListener("input", function () {
-        let input = this.value.toLowerCase().trim();
+        let input = this.value.toLowerCase();
         let gameList = document.getElementById("gameList");
-        gameList.innerHTML = ""; // Clear previous results
-
-        console.log("User input:", input); // Debugging: Check user input
 
         if (input === "") {
-            gameList.style.display = "none"; // Hide if input is empty
+            gameList.style.display = "none"; // Hide if empty
             return;
         }
 
-        // Filter games by input (allowing partial matches)
         let filteredGames = games.filter(game => game.name.toLowerCase().includes(input));
-        console.log("Filtered games:", filteredGames); // Debugging: Check filter results
 
         if (filteredGames.length > 0) {
             displayGames(filteredGames);
@@ -46,9 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
             gameItem.classList.add("game-item");
 
             let gameImage = document.createElement("img");
-            gameImage.src = `https://faf-games.github.io/${game.image}`;
+            gameImage.src = `https://faf-games.github.io/assets/images/${game.image}`;
             gameImage.alt = game.name;
-            gameImage.classList.add("game-image");
 
             let gameName = document.createElement("span");
             gameName.textContent = game.name;
@@ -62,4 +55,14 @@ document.addEventListener("DOMContentLoaded", function () {
             gameList.appendChild(gameItem);
         });
     }
+
+    // Hide search results when clicking outside
+    document.addEventListener("click", function (event) {
+        let searchBox = document.getElementById("gameSearch");
+        let gameList = document.getElementById("gameList");
+
+        if (!searchBox.contains(event.target) && !gameList.contains(event.target)) {
+            gameList.style.display = "none";
+        }
+    });
 });
