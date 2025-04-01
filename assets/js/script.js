@@ -1,68 +1,64 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     let games = [];
     let isDataLoaded = false;
 
+    // Fetch games
     fetch("https://faf-games.github.io/games.json")
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) throw new Error("Network error");
+            return response.json();
+        })
         .then(data => {
             games = data;
             isDataLoaded = true;
         })
-        .catch(error => console.error("Error loading games:", error));
+        .catch(error => {
+            console.error("Fetch error:", error);
+            document.getElementById("gameList").innerHTML = "<p>Error loading games</p>";
+        });
 
-    document.getElementById("gameSearch").addEventListener("input", function () {
-        if (!isDataLoaded) {
-            document.getElementById("gameList").innerHTML = "<p>Loading games...</p>";
-            document.getElementById("gameList").style.display = "block";
-            return;
-        }
-
-        const input = this.value.toLowerCase().trim();
+    // Search function
+    document.getElementById("gameSearch").addEventListener("input", function() {
+        const input = this.value.trim().toLowerCase();
         const gameList = document.getElementById("gameList");
+        
+        gameList.innerHTML = "";
+        gameList.style.display = "block";
 
+        // Hide if empty
         if (!input) {
             gameList.style.display = "none";
-            gameList.innerHTML = "";
             return;
         }
 
-        const filteredGames = games.filter(game => 
-            game.name.toLowerCase().includes(input)
+        // Show loading if data isn't ready
+        if (!isDataLoaded) {
+            gameList.innerHTML = "<p>Loading games...</p>";
+            return;
+        }
+
+        // Filter games STARTING with input letter
+        const results = games.filter(game => 
+            game.name.toLowerCase().startsWith(input)
         );
 
-        if (filteredGames.length > 0) {
-            displayGames(filteredGames);
-            gameList.style.display = "block";
+        // Display results
+        if (results.length > 0) {
+            results.forEach(game => {
+                const item = document.createElement("div");
+                item.className = "game-item";
+                item.innerHTML = `<a href="https://faf-games.github.io/${game.url}">${game.name}</a>`;
+                gameList.appendChild(item);
+            });
         } else {
             gameList.innerHTML = "<p>No results found</p>";
-            gameList.style.display = "block";
         }
     });
 
-    function displayGames(gameArray) {
-        const gameList = document.getElementById("gameList");
-        gameList.innerHTML = "";
-
-        gameArray.forEach(game => {
-            const gameItem = document.createElement("div");
-            gameItem.classList.add("game-item");
-
-            const gameLink = document.createElement("a");
-            gameLink.href = `https://faf-games.github.io/${game.url}`;
-            gameLink.textContent = game.name;
-
-            gameItem.appendChild(gameLink);
-            gameList.appendChild(gameItem);
-        });
-    }
-
     // Close results when clicking outside
-    document.addEventListener("click", function (e) {
-        const searchBox = document.getElementById("gameSearch");
-        const gameList = document.getElementById("gameList");
-
-        if (e.target !== searchBox && !gameList.contains(e.target)) {
-            gameList.style.display = "none";
+    document.addEventListener("click", function(e) {
+        if (!e.target.closest("#gameSearch, #gameList")) {
+            document.getElementById("gameList").style.display = "none";
         }
     });
 });
