@@ -93,6 +93,7 @@ This files contents are outlined below >>>>
         
         #gameList {
             max-height: 300px;
+	    background: #0f1320;
             overflow-y: auto;
             position: absolute;
             z-index: 1000;
@@ -103,7 +104,7 @@ This files contents are outlined below >>>>
         }
         
         .game-item {
-            padding: 8px 12px;
+            padding: 0.5rem;
             border-radius: 5px;
             cursor: pointer;
         }
