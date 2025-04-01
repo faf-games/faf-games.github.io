@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     fetch("https://faf-games.github.io/games.json")
         .then(response => response.json())
         .then(data => {
-            games = data; // Corrected JSON parsing
+            games = data; // Store games in memory
         })
         .catch(error => console.error("Error loading games:", error));
 
-    // Search function
+    // Search function (Triggers when typing)
     document.getElementById("gameSearch").addEventListener("input", function () {
         let input = this.value.toLowerCase();
         let gameList = document.getElementById("gameList");
@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        let filteredGames = games.filter(game => game.name.toLowerCase().includes(input));
+        // Filter games by first letter
+        let filteredGames = games.filter(game => game.name.toLowerCase().startsWith(input));
 
         if (filteredGames.length > 0) {
             displayGames(filteredGames);
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
             gameItem.classList.add("game-item");
 
             let gameImage = document.createElement("img");
-            gameImage.src = `https://faf-games.github.io/assets/images/${game.image}`;
+            gameImage.src = `https://faf-games.github.io/assets/images/${game.image || "default.png"}`;
             gameImage.alt = game.name;
 
             let gameName = document.createElement("span");
