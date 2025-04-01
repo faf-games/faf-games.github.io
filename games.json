@@ -890,5 +890,29 @@
     {
         "name": "Wheely 6",
         "url": "game/wheely-6.html"
-    }
+    },
+    {
+        "name": "Wheely 7",
+        "url": "game/wheely-7.html"
+    },
+    {
+        "name": "Wheely 8",
+        "url": "game/wheely-8.html"
+    },
+    {
+        "name": "Wordle Unlimited",
+        "url": "game/wordle-unlimited.html"
+    },
+    {
+        "name": "Worlds Hardest Game 2",
+        "url": "game/worlds-hardest-game-2.html"
+    },
+     {
+        "name": "Worlds Hardest Game 3",
+        "url": "game/worlds-hardest-game-3.html"
+    },
+     {
+        "name": "Worlds Hardest Game",
+        "url": "game/worlds-hardest-game.html"
+    },
 ]
