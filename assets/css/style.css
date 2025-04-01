@@ -63,6 +63,17 @@ This files contents are outlined below >>>>
 02 - DEFAULT CSS
 ==================================================*/
 
+.game-item a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.game-item a:hover {
+    background: #f0f0f0;
+}
 
 /* Search Bar Container */
 .search-container {
