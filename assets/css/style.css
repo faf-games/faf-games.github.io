@@ -92,9 +92,6 @@ This files contents are outlined below >>>>
         }
         
         #gameList {
-            background: white;
-            border: 1px solid #ddd;
-            width: 300px;
             max-height: 300px;
             overflow-y: auto;
             position: absolute;
@@ -112,7 +109,7 @@ This files contents are outlined below >>>>
         }
         
         .game-item a {
-            color: #333;
+            color: #fff;
             text-decoration: none;
             display: block;
 	    font-size: large;
