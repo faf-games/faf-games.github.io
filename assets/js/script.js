@@ -11,16 +11,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Search function (Triggers when typing)
     document.getElementById("gameSearch").addEventListener("input", function () {
-        let input = this.value.toLowerCase();
+        let input = this.value.toLowerCase().trim();
         let gameList = document.getElementById("gameList");
 
         if (input === "") {
-            gameList.style.display = "none"; // Hide if empty
+            gameList.style.display = "none"; // Hide results if input is empty
+            gameList.innerHTML = "";
             return;
         }
 
-        // Filter games by first letter
-        let filteredGames = games.filter(game => game.name.toLowerCase().startsWith(input));
+        // Filter games by search query
+        let filteredGames = games.filter(game => game.name.toLowerCase().includes(input));
 
         if (filteredGames.length > 0) {
             displayGames(filteredGames);
@@ -41,18 +42,18 @@ document.addEventListener("DOMContentLoaded", function () {
             gameItem.classList.add("game-item");
 
             let gameImage = document.createElement("img");
-            gameImage.src = `https://faf-games.github.io/assets/images/${game.image || "default.png"}`;
+            gameImage.src = `https://faf-games.github.io/${game.image}`;
             gameImage.alt = game.name;
 
             let gameName = document.createElement("span");
             gameName.textContent = game.name;
 
-            gameItem.onclick = function () {
-                window.location.href = `https://faf-games.github.io/${game.url}`;
-            };
+            let gameLink = document.createElement("a");
+            gameLink.href = `https://faf-games.github.io/${game.url}`;
+            gameLink.appendChild(gameImage);
+            gameLink.appendChild(gameName);
 
-            gameItem.appendChild(gameImage);
-            gameItem.appendChild(gameName);
+            gameItem.appendChild(gameLink);
             gameList.appendChild(gameItem);
         });
     }
