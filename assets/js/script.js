@@ -3,23 +3,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch games from JSON file
     fetch("https://faf-games.github.io/games.json")
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Games JSON file not found!");
+            }
+            return response.json();
+        })
         .then(data => {
-            games = data; // Store games in memory
+            games = data;
         })
         .catch(error => console.error("Error loading games:", error));
 
-    // Search function (Triggers when typing)
+    // Search function (Runs when typing)
     document.getElementById("gameSearch").addEventListener("input", function () {
         let input = this.value.toLowerCase();
         let gameList = document.getElementById("gameList");
 
         if (input === "") {
-            gameList.style.display = "none"; // Hide if empty
+            gameList.style.display = "none"; // Hide when empty
             return;
         }
 
-        // Filter games by first letter
         let filteredGames = games.filter(game => game.name.toLowerCase().startsWith(input));
 
         if (filteredGames.length > 0) {
@@ -34,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to display search results
     function displayGames(gameArray) {
         let gameList = document.getElementById("gameList");
-        gameList.innerHTML = ""; // Clear old results
+        gameList.innerHTML = ""; // Clear previous results
 
         gameArray.forEach(game => {
             let gameItem = document.createElement("div");
