@@ -3,28 +3,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fetch games from JSON file
     fetch("https://faf-games.github.io/games.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Error: games.json not found!");
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            games = data;
+            games = data; // Store games in memory
         })
         .catch(error => console.error("Error loading games:", error));
 
-    // Search function - Runs when user types in search bar
+    // Search function (Triggers when typing)
     document.getElementById("gameSearch").addEventListener("input", function () {
         let input = this.value.toLowerCase();
         let gameList = document.getElementById("gameList");
 
         if (input === "") {
-            gameList.innerHTML = ""; // Clear results when empty
-            gameList.style.display = "none";
+            gameList.style.display = "none"; // Hide if empty
             return;
         }
 
+        // Filter games by first letter
         let filteredGames = games.filter(game => game.name.toLowerCase().startsWith(input));
 
         if (filteredGames.length > 0) {
@@ -39,17 +34,25 @@ document.addEventListener("DOMContentLoaded", function () {
     // Function to display search results
     function displayGames(gameArray) {
         let gameList = document.getElementById("gameList");
-        gameList.innerHTML = ""; // Clear previous results
+        gameList.innerHTML = ""; // Clear old results
 
         gameArray.forEach(game => {
             let gameItem = document.createElement("div");
             gameItem.classList.add("game-item");
 
-            let gameLink = document.createElement("a");
-            gameLink.href = `https://faf-games.github.io/${game.url}`;
-            gameLink.textContent = game.name;
+            let gameImage = document.createElement("img");
+            gameImage.src = `https://faf-games.github.io/assets/images/${game.image || "default.png"}`;
+            gameImage.alt = game.name;
 
-            gameItem.appendChild(gameLink);
+            let gameName = document.createElement("span");
+            gameName.textContent = game.name;
+
+            gameItem.onclick = function () {
+                window.location.href = `https://faf-games.github.io/${game.url}`;
+            };
+
+            gameItem.appendChild(gameImage);
+            gameItem.appendChild(gameName);
             gameList.appendChild(gameItem);
         });
     }
