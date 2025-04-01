@@ -115,6 +115,7 @@ This files contents are outlined below >>>>
             text-decoration: none;
             display: block;
 	    font-size: medium;
+            text-align: justify;
         }
         
         .game-item:hover {
