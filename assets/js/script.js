@@ -5,6 +5,7 @@ fetch("https://faf-games.github.io/games.json")
     .then(response => response.json())
     .then(data => {
         games = data.games;
+        console.log("Games loaded:", games); // Debugging
     })
     .catch(error => console.error("Error loading games:", error));
 
@@ -14,8 +15,13 @@ function searchGames() {
     let gameList = document.getElementById("gameList");
 
     // Hide if input is empty
-    if (input === "") {
+    if (input.trim() === "") {
         gameList.style.display = "none";
+        return;
+    }
+
+    if (games.length === 0) {
+        console.error("Games data not loaded yet.");
         return;
     }
 
@@ -55,6 +61,9 @@ function displayGames(gameArray) {
         gameList.appendChild(gameItem);
     });
 }
+
+// Add event listener to trigger search
+document.getElementById("gameSearch").addEventListener("input", searchGames);
 
 // Hide results when clicking outside
 document.addEventListener("click", function(event) {
