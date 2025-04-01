@@ -2,776 +2,916 @@
     {
         "name": "1v1 LOL",
         "url": "game/1v1-lol.html",
-        "image": "https://faf-games.github.io/assets/img/1v1.lol/logo.png"
+        "image": "assets/img/1v1.lol/logo.png"
     },
     {
         "name": "2048",
         "url": "game/2048.html",
-        "image": "https://faf-games.github.io/assets/img/2048/2048.png"
+        "image": "assets/img/2048/2048.png"
     },
     {
         "name": "3D Bowling",
         "url": "game/3d-bowling.html",
-        "image": "https://faf-games.github.io/assets/img/3d-bowling/logo.png"
+        "image": "assets/img/3d-bowling/logo.png"
     },
     {
         "name": "3D Car Simulator",
         "url": "game/3d-car-simulator.html",
-        "image": "https://faf-games.github.io/assets/img/3d-car-simulator/logo.png"
+        "image": "assets/img/3d-car-simulator/logo.png"
     },
     {
         "name": "3D Moto Simulator 2",
         "url": "game/3d-moto-simulator-2.html",
-        "image": "https://faf-games.github.io/assets/img/3d-moto-simulator-2/logo.png"
+        "image": "assets/img/3d-moto-simulator-2/logo.png"
     },
     {
         "name": "8Ball Pool",
         "url": "game/8ball-pool.html",
-        "image": "https://faf-games.github.io/assets/img/8ball-pool/logo.png"
+        "image": "assets/img/8ball-pool/logo.png"
     },
     {
         "name": "Adventure Drivers",
         "url": "game/adventure-drivers.html",
-        "image": "https://faf-games.github.io/assets/img/adventure-drivers/logo.png"
+        "image": "assets/img/adventure-drivers/logo.png"
     },
     {
         "name": "Among Us",
         "url": "game/among-us.html",
-        "image": "https://faf-games.github.io/assets/img/among-us/logo.png"
+        "image": "assets/img/among-us/logo.png"
     },
     {
         "name": "Angry Gran Run",
         "url": "game/angry-gran-run.html",
-        "image": "https://faf-games.github.io/assets/img/angry-gran-run/logo.png"
+        "image": "assets/img/angry-gran-run/logo.png"
     },
     {
         "name": "Apple Shooter",
         "url": "game/apple-shooter.html",
-        "image": "https://faf-games.github.io/assets/img/apple-shooter/logo.png"
+        "image": "assets/img/apple-shooter/logo.png"
     },
     {
         "name": "Awesome Tanks 2",
         "url": "game/awesome-tanks-2.html",
-        "image": "https://faf-games.github.io/assets/img/awesome-tanks-2/logo.png"
+        "image": "assets/img/awesome-tanks-2/logo.png"
     },
     {
         "name": "Axis Football League",
         "url": "game/axis-football-league.html",
-        "image": "https://faf-games.github.io/assets/img/axis-football-league/logo.png"
+        "image": "assets/img/axis-football-league/logo.png"
     },
     {
         "name": "Bad Ice Cream 3",
         "url": "game/bad-ice-cream-3.html",
-        "image": "https://faf-games.github.io/assets/img/bad-ice-cream-3/logo.png"
+        "image": "assets/img/bad-ice-cream-3/logo.png"
     },
     {
         "name": "Ballistic",
         "url": "game/ballistic.html",
-        "image": "https://faf-games.github.io/assets/img/ballistic/logo.png"
+        "image": "assets/img/ballistic/logo.png"
     },
     {
         "name": "Basket and Ball",
         "url": "game/basket-and-ball.html",
-        "image": "https://faf-games.github.io/assets/img/basket-and-ball/logo.png"
+        "image": "assets/img/basket-and-ball/logo.png"
     },
     {
         "name": "Basket Random",
         "url": "game/basket-random.html",
-        "image": "https://faf-games.github.io/assets/img/basket-random/logo.png"
+        "image": "assets/img/basket-random/logo.png"
     },
     {
         "name": "Basketball Legends 2020",
         "url": "game/basketball-legends-2020.html",
-        "image": "https://faf-games.github.io/assets/img/basketball-legends-2020/logo.png"
+        "image": "assets/img/basketball-legends-2020/logo.png"
     },
     {
         "name": "Basketball Stars",
         "url": "game/basketball-stars.html",
-        "image": "https://faf-games.github.io/assets/img/basketball-stars/logo.png"
+        "image": "assets/img/basketball-stars/logo.png"
     },
     {
         "name": "Big Tower Tiny Square",
         "url": "game/big-tower-tiny-square.html",
-        "image": "https://faf-games.github.io/assets/img/big-tower-tiny-square/logo.png"
+        "image": "assets/img/big-tower-tiny-square/logo.png"
     },
     {
         "name": "Bike Trials Winter 2",
         "url": "game/bike-trials-winter-2.html",
-        "image": "https://faf-games.github.io/assets/img/bike-trials-winter-2/logo.png"
+        "image": "assets/img/bike-trials-winter-2/logo.png"
     },
     {
         "name": "BitLife",
         "url": "game/bitlife.html",
-        "image": "https://faf-games.github.io/assets/img/bitlife/logo.png"
+        "image": "assets/img/bitlife/logo.png"
     },
     {
         "name": "Blumgi Rocket",
         "url": "game/blumgi-rocket.html",
-        "image": "https://faf-games.github.io/assets/img/blumgi-rocket/logo.png"
+        "image": "assets/img/blumgi-rocket/logo.png"
     },
     {
         "name": "Bob the Robber 2",
         "url": "game/bob-the-robber-2.html",
-        "image": "https://faf-games.github.io/assets/img/bob-the-robber-2/logo.png"
+        "image": "assets/img/bob-the-robber-2/logo.png"
     },
     {
         "name": "Bob the Robber 4",
         "url": "game/bob-the-robber-4.html",
-        "image": "https://faf-games.github.io/assets/img/bob-the-robber-4/logo.png"
+        "image": "assets/img/bob-the-robber-4/logo.png"
     },
     {
         "name": "Bomb It 7",
         "url": "game/bomb-it-7.html",
-        "image": "https://faf-games.github.io/assets/img/bomb-it-7/logo.png"
+        "image": "assets/img/bomb-it-7/logo.png"
     },
     {
         "name": "Breaking the Bank",
         "url": "game/breaking-the-bank.html",
-        "image": "https://faf-games.github.io/assets/img/breaking-the-bank/logo.png"
+        "image": "assets/img/breaking-the-bank/logo.png"
     },
     {
         "name": "Bullet Force",
         "url": "game/bullet-force.html",
-        "image": "https://faf-games.github.io/assets/img/bullet-force/logo.png"
+        "image": "assets/img/bullet-force/logo.png"
     },
     {
         "name": "Burnin Rubber 5 XS",
         "url": "game/burnin-rubber-5-xs.html",
-        "image": "https://faf-games.github.io/assets/img/burnin-rubber-5-xs/logo.png"
+        "image": "assets/img/burnin-rubber-5-xs/logo.png"
     },
     {
         "name": "Burnin Rubber",
         "url": "game/burnin-rubber.html",
-        "image": "https://faf-games.github.io/assets/img/burnin-rubber/logo.png"
+        "image": "assets/img/burnin-rubber/logo.png"
     },
     {
         "name": "Burnout Drift Hilltop",
         "url": "game/burnout-drift-hilltop.html",
-        "image": "https://faf-games.github.io/assets/img/burnout-drift-hilltop/logo.png"
+        "image": "assets/img/burnout-drift-hilltop/logo.png"
     },
     {
         "name": "Burrito Bison Launcha Libre",
         "url": "game/burrito-bison-launcha-libre.html",
-        "image": "https://faf-games.github.io/assets/img/burrito-bison-launcha-libre/logo.png"
+        "image": "assets/img/burrito-bison-launcha-libre/logo.png"
     },
     {
         "name": "Bus Parking 3D",
         "url": "game/bus-parking-3d.html",
-        "image": "https://faf-games.github.io/assets/img/bus-parking-3d/logo.png"
+        "image": "assets/img/bus-parking-3d/logo.png"
     },
     {
         "name": "Candy Jump",
         "url": "game/candy-jump.html",
-        "image": "https://faf-games.github.io/assets/img/candy-jump/logo.png"
+        "image": "assets/img/candy-jump/logo.png"
     },
     {
         "name": "Car Drift Racers 2",
         "url": "game/car-drift-racers-2.html",
-        "image": "https://faf-games.github.io/assets/img/car-drift-racers-2/logo.png"
+        "image": "assets/img/car-drift-racers-2/logo.png"
     },
     {
         "name": "Car Rush",
         "url": "game/car-rush.html",
-        "image": "https://faf-games.github.io/assets/img/car-rush/logo.png"
+        "image": "assets/img/car-rush/logo.png"
     },
     {
         "name": "Car Simulator Arena",
         "url": "game/car-simulator-arena.html",
-        "image": "https://faf-games.github.io/assets/img/car-simulator-arena/logo.png"
+        "image": "assets/img/car-simulator-arena/logo.png"
     },
     {
         "name": "Cars Thief",
         "url": "game/cars-thief.html",
-        "image": "https://faf-games.github.io/assets/img/cars-thief/logo.png"
+        "image": "assets/img/cars-thief/logo.png"
     },
     {
         "name": "Cartoon Mini Racing",
         "url": "game/cartoon-mini-racing.html",
-        "image": "https://faf-games.github.io/assets/img/cartoon-mini-racing/logo.png"
+        "image": "assets/img/cartoon-mini-racing/logo.png"
     },
     {
         "name": "Circloo 2",
         "url": "game/circloo-2.html",
-        "image": "https://faf-games.github.io/assets/img/circloo-2/logo.png"
+        "image": "assets/img/circloo-2/logo.png"
     },
     {
         "name": "Circloo",
         "url": "game/circloo.html",
-        "image": "https://faf-games.github.io/assets/img/circloo/logo.png"
+        "image": "assets/img/circloo/logo.png"
     },
     {
         "name": "City Car Driving Stunt Master",
         "url": "game/city-car-driving-stunt-master.html",
-        "image": "https://faf-games.github.io/assets/img/city-car-driving-stunt-master/logo.png"
+        "image": "assets/img/city-car-driving-stunt-master/logo.png"
     },
     {
         "name": "City Rider",
         "url": "game/city-rider.html",
-        "image": "https://faf-games.github.io/assets/img/city-rider/logo.png"
+        "image": "assets/img/city-rider/logo.png"
     },
     {
         "name": "Clicker Heroes",
         "url": "game/clicker-heroes.html",
-        "image": "https://faf-games.github.io/assets/img/clicker-heroes/logo.png"
+        "image": "assets/img/clicker-heroes/logo.png"
     },
     {
         "name": "Color Road",
         "url": "game/color-road.html",
-        "image": "https://faf-games.github.io/assets/img/color-road/logo.png"
+        "image": "assets/img/color-road/logo.png"
     },
     {
         "name": "Color Tunnel 2",
         "url": "game/color-tunnel-2.html",
-        "image": "https://faf-games.github.io/assets/img/color-tunnel-2/logo.png"
+        "image": "assets/img/color-tunnel-2/logo.png"
     },
     {
         "name": "Color Tunnel",
         "url": "game/color-tunnel.html",
-        "image": "https://faf-games.github.io/assets/img/color-tunnel/logo.png"
+        "image": "assets/img/color-tunnel/logo.png"
     },
     {
         "name": "Cookie Clicker",
         "url": "game/cookie-clicker.html",
-        "image": "https://faf-games.github.io/assets/img/cookie-clicker/logo.png"
+        "image": "assets/img/cookie-clicker/logo.png"
     },
     {
         "name": "Crazy Tunnel 3D",
         "url": "game/crazy-tunnel-3d.html",
-        "image": "https://faf-games.github.io/assets/img/crazy-tunnel-3d/logo.png"
+        "image": "assets/img/crazy-tunnel-3d/logo.png"
     },
     {
         "name": "Crossy Road",
         "url": "game/crossy-road.html",
-        "image": "https://faf-games.github.io/assets/img/crossy-road/logo.png"
+        "image": "assets/img/crossy-road/logo.png"
     },
     {
         "name": "Cubefield",
         "url": "game/cubefield.html",
-        "image": "https://faf-games.github.io/assets/img/cubefield/logo.png"
+        "image": "assets/img/cubefield/logo.png"
     },
     {
         "name": "Demolition Derby Crash Racing",
         "url": "game/demolition-derby-crash-racing.html",
-        "image": "https://faf-games.github.io/assets/img/demolition-derby-crash-racing/logo.png"
+        "image": "assets/img/demolition-derby-crash-racing/logo.png"
     },
     {
         "name": "Doodle Jump",
         "url": "game/doodle-jump.html",
-        "image": "https://faf-games.github.io/assets/img/doodle-jump/logo.png"
+        "image": "assets/img/doodle-jump/logo.png"
     },
     {
         "name": "Doom 2",
         "url": "game/doom-2.html",
-        "image": "https://faf-games.github.io/assets/img/doom-2/logo.png"
+        "image": "assets/img/doom-2/logo.png"
     },
     {
         "name": "Drift Boss",
         "url": "game/drift-boss.html",
-        "image": "https://faf-games.github.io/assets/img/drift-boss/logo.png"
+        "image": "assets/img/drift-boss/logo.png"
     },
     {
         "name": "Drift Hunters",
         "url": "game/drift-hunters.html",
-        "image": "https://faf-games.github.io/assets/img/drift-hunters/logo.png"
+        "image": "assets/img/drift-hunters/logo.png"
     },
     {
         "name": "Drive Mad",
         "url": "game/drive-mad.html",
-        "image": "https://faf-games.github.io/assets/img/drive-mad/logo.png"
+        "image": "assets/img/drive-mad/logo.png"
     },
     {
         "name": "E Scooter",
         "url": "game/e-scooter.html",
-        "image": "https://faf-games.github.io/assets/img/e-scooter/logo.png"
+        "image": "assets/img/e-scooter/logo.png"
     },
     {
         "name": "Eagle Ride",
         "url": "game/eagle-ride.html",
-        "image": "https://faf-games.github.io/assets/img/eagle-ride/logo.png"
+        "image": "assets/img/eagle-ride/logo.png"
     },
     {
         "name": "Earn to Die",
         "url": "game/earn-to-die.html",
-        "image": "https://faf-games.github.io/assets/img/earn-to-die/logo.png"
+        "image": "assets/img/earn-to-die/logo.png"
     },
     {
         "name": "Eggy Car",
         "url": "game/eggy-car.html",
-        "image": "https://faf-games.github.io/assets/img/eggy-car/logo.png"
+        "image": "assets/img/eggy-car/logo.png"
     },
     {
         "name": "Electron Dash",
         "url": "game/electron-dash.html",
-        "image": "https://faf-games.github.io/assets/img/electron-dash/logo.png"
+        "image": "assets/img/electron-dash/logo.png"
     },
     {
         "name": "Endless Truck",
         "url": "game/endless-truck.html",
-        "image": "https://faf-games.github.io/assets/img/endless-truck/logo.png"
+        "image": "assets/img/endless-truck/logo.png"
     },
     {
         "name": "Endless Tunnel",
         "url": "game/endless-tunnel.html",
-        "image": "https://faf-games.github.io/assets/img/endless-tunnel/logo.png"
+        "image": "assets/img/endless-tunnel/logo.png"
     },
     {
         "name": "Escaping the Prison",
         "url": "game/escaping-the-prison.html",
-        "image": "https://faf-games.github.io/assets/img/escaping-the-prison/logo.png"
+        "image": "assets/img/escaping-the-prison/logo.png"
     },
     {
         "name": "Extreme Car Parking",
         "url": "game/extreme-car-parking.html",
-        "image": "https://faf-games.github.io/assets/img/extreme-car-parking/logo.png"
+        "image": "assets/img/extreme-car-parking/logo.png"
     },
     {
         "name": "Extreme Pamplona",
         "url": "game/extreme-pamplona.html",
-        "image": "https://faf-games.github.io/assets/img/extreme-pamplona/logo.png"
+        "image": "assets/img/extreme-pamplona/logo.png"
     },
     {
         "name": "Fire Truck Rescue",
         "url": "game/fire-truck-rescue.html",
-        "image": "https://faf-games.github.io/assets/img/fire-truck-rescue/logo.png"
+        "image": "assets/img/fire-truck-rescue/logo.png"
     },
     {
         "name": "Fire Truck",
         "url": "game/fire-truck.html",
-        "image": "https://faf-games.github.io/assets/img/fire-truck/logo.png"
+        "image": "assets/img/fire-truck/logo.png"
     },
     {
         "name": "Fireboy and Watergirl 2",
         "url": "game/fireboy-and-watergirl-2.html",
-        "image": "https://faf-games.github.io/assets/img/fireboy-and-watergirl-2/logo.png"
+        "image": "assets/img/fireboy-and-watergirl-2/logo.png"
     },
     {
         "name": "Fireboy and Watergirl 3",
         "url": "game/fireboy-and-watergirl-3.html",
-        "image": "https://faf-games.github.io/assets/img/fireboy-and-watergirl-3/logo.png"
+        "image": "assets/img/fireboy-and-watergirl-3/logo.png"
     },
     {
         "name": "Fireboy and Watergirl 4",
         "url": "game/fireboy-and-watergirl-4.html",
-        "image": "https://faf-games.github.io/assets/img/fireboy-and-watergirl-4/logo.png"
+        "image": "assets/img/fireboy-and-watergirl-4/logo.png"
     },
     {
         "name": "Fireboy and Watergirl 5",
         "url": "game/fireboy-and-watergirl-5.html",
-        "image": "https://faf-games.github.io/assets/img/fireboy-and-watergirl-5/logo.png"
+        "image": "assets/img/fireboy-and-watergirl-5/logo.png"
     },
     {
         "name": "Fireboy and Watergirl 6",
         "url": "game/fireboy-and-watergirl-6.html",
-        "image": "https://faf-games.github.io/assets/img/fireboy-and-watergirl-6/logo.png"
+        "image": "assets/img/fireboy-and-watergirl-6/logo.png"
     },
     {
         "name": "Fireboy and Watergirl",
         "url": "game/fireboy-and-watergirl.html",
-        "image": "https://faf-games.github.io/assets/img/fireboy-and-watergirl/logo.png"
+        "image": "assets/img/fireboy-and-watergirl/logo.png"
     },
     {
         "name": "Fleeing the Complex",
         "url": "game/fleeing-the-complex.html",
-        "image": "https://faf-games.github.io/assets/img/fleeing-the-complex/logo.png"
+        "image": "assets/img/fleeing-the-complex/logo.png"
     },
     {
         "name": "Flying Car Simulator",
         "url": "game/flying-car-simulator.html",
-        "image": "https://faf-games.github.io/assets/img/flying-car-simulator/logo.png"
+        "image": "assets/img/flying-car-simulator/logo.png"
     },
     {
         "name": "Football Legends",
         "url": "game/football-legends.html",
-        "image": "https://faf-games.github.io/assets/img/football-legends/logo.png"
+        "image": "assets/img/football-legends/logo.png"
     },
     {
         "name": "Fortnite",
         "url": "game/fortnite.html",
-        "image": "https://faf-games.github.io/assets/img/fortnite/logo.png"
+        "image": "assets/img/fortnite/logo.png"
     },
     {
         "name": "Fortride Open World",
         "url": "game/fortride-open-world.html",
-        "image": "https://faf-games.github.io/assets/img/fortride-open-world/logo.png"
+        "image": "assets/img/fortride-open-world/logo.png"
     },
     {
         "name": "Galaga",
         "url": "game/galaga.html",
-        "image": "https://faf-games.github.io/assets/img/galaga/logo.png"
+        "image": "assets/img/galaga/logo.png"
     },
     {
         "name": "Getaway Shootout",
         "url": "game/getaway-shootout.html",
-        "image": "https://faf-games.github.io/assets/img/getaway-shootout/logo.png"
+        "image": "assets/img/getaway-shootout/logo.png"
     },
     {
         "name": "Go Kart Go Ultra",
         "url": "game/go-kart-go-ultra.html",
-        "image": "https://faf-games.github.io/assets/img/go-kart-go-ultra/logo.png"
+        "image": "assets/img/go-kart-go-ultra/logo.png"
     },
     {
         "name": "Gun Blood",
         "url": "game/gun-blood.html",
-        "image": "https://faf-games.github.io/assets/img/gun-blood/logo.png"
+        "image": "assets/img/gun-blood/logo.png"
     },
     {
         "name": "Gun Mayhem 2",
         "url": "game/gun-mayhem-2.html",
-        "image": "https://faf-games.github.io/assets/img/gun-mayhem-2/logo.png"
+        "image": "assets/img/gun-mayhem-2/logo.png"
     },
     {
         "name": "Gun Mayhem 3",
         "url": "game/gun-mayhem-3.html",
-        "image": "https://faf-games.github.io/assets/img/gun-mayhem-3/logo.png"
+        "image": "assets/img/gun-mayhem-3/logo.png"
     },
     {
         "name": "Gun Mayhem",
         "url": "game/gun-mayhem.html",
-        "image": "https://faf-games.github.io/assets/img/gun-mayhem/logo.png"
+        "image": "assets/img/gun-mayhem/logo.png"
     },
     {
         "name": "Gunspin",
         "url": "game/gunspin.html",
-        "image": "https://faf-games.github.io/assets/img/gunspin/logo.png"
+        "image": "assets/img/gunspin/logo.png"
     },
     {
         "name": "Highway Racer 3D",
         "url": "game/highway-racer-3d.html",
-        "image": "https://faf-games.github.io/assets/img/highway-racer-3d/logo.png"
+        "image": "assets/img/highway-racer-3d/logo.png"
     },
     {
         "name": "Highway Rider Extreme",
         "url": "game/highway-rider-extreme.html",
-        "image": "https://faf-games.github.io/assets/img/highway-rider-extreme/logo.png"
+        "image": "assets/img/highway-rider-extreme/logo.png"
     },
     {
         "name": "Icycle",
         "url": "game/icycle.html",
-        "image": "https://faf-games.github.io/assets/img/icycle/logo.png"
+        "image": "assets/img/icycle/logo.png"
     },
     {
         "name": "Idle Breakout",
         "url": "game/idle-breakout.html",
-        "image": "https://faf-games.github.io/assets/img/idle-breakout/logo.png"
+        "image": "assets/img/idle-breakout/logo.png"
     },
     {
         "name": "Idle Dice",
         "url": "game/idle-dice.html",
-        "image": "https://faf-games.github.io/assets/img/idle-dice/logo.png"
+        "image": "assets/img/idle-dice/logo.png"
     },
     {
         "name": "Idle Miner",
         "url": "game/idle-miner.html",
-        "image": "https://faf-games.github.io/assets/img/idle-miner/logo.png"
+        "image": "assets/img/idle-miner/logo.png"
     },
     {
         "name": "Idle Mining Empire",
         "url": "game/idle-mining-empire.html",
-        "image": "https://faf-games.github.io/assets/img/idle-mining-empire/logo.png"
+        "image": "assets/img/idle-mining-empire/logo.png"
     },
     {
         "name": "Idle Startup Tycoon",
         "url": "game/idle-startup-tycoon.html",
-        "image": "https://faf-games.github.io/assets/img/idle-startup-tycoon/logo.png"
+        "image": "assets/img/idle-startup-tycoon/logo.png"
     },
     {
         "name": "Impossible Monster Truck",
         "url": "game/impossible-monster-truck.html",
-        "image": "https://faf-games.github.io/assets/img/impossible-monster-truck/logo.png"
+        "image": "assets/img/impossible-monster-truck/logo.png"
     },
     {
         "name": "Indian Truck Simulator 3D",
         "url": "game/indian-truck-simulator-3d.html",
-        "image": "https://faf-games.github.io/assets/img/indian-truck-simulator-3d/logo.png"
+        "image": "assets/img/indian-truck-simulator-3d/logo.png"
     },
     {
         "name": "Infiltrating the Airship",
         "url": "game/infiltrating-the-airship.html",
-        "image": "https://faf-games.github.io/assets/img/infiltrating-the-airship/logo.png"
+        "image": "assets/img/infiltrating-the-airship/logo.png"
     },
     {
         "name": "Iron Snout 2",
         "url": "game/iron-snout-2.html",
-        "image": "https://faf-games.github.io/assets/img/iron-snout-2/logo.png"
+        "image": "assets/img/iron-snout-2/logo.png"
     },
     {
         "name": "Iron Snout",
         "url": "game/iron-snout.html",
-        "image": "https://faf-games.github.io/assets/img/iron-snout/logo.png"
+        "image": "assets/img/iron-snout/logo.png"
     },
     {
         "name": "Jelly Truck",
         "url": "game/jelly-truck.html",
-        "image": "https://faf-games.github.io/assets/img/jelly-truck/logo.png"
+        "image": "assets/img/jelly-truck/logo.png"
     },
     {
         "name": "Just Fall",
         "url": "game/just-fall.html",
-        "image": "https://faf-games.github.io/assets/img/just-fall/logo.png"
+        "image": "assets/img/just-fall/logo.png"
     },
     {
         "name": "Leader Strike",
         "url": "game/leader-strike.html",
-        "image": "https://faf-games.github.io/assets/img/leader-strike/logo.png"
+        "image": "assets/img/leader-strike/logo.png"
     },
     {
         "name": "Mad Gunz",
         "url": "game/mad-gunz.html",
-        "image": "https://faf-games.github.io/assets/img/mad-gunz/logo.png"
+        "image": "assets/img/mad-gunz/logo.png"
     },
     {
         "name": "Mad Truck Challenge Special",
         "url": "game/mad-truck-challenge-special.html",
-        "image": "https://faf-games.github.io/assets/img/mad-truck-challenge-special/logo.png"
+        "image": "assets/img/mad-truck-challenge-special/logo.png"
     },
     {
         "name": "Madalin Stunt Cars 2",
         "url": "game/madalin-stunt-cars-2.html",
-        "image": "https://faf-games.github.io/assets/img/madalin-stunt-cars-2/logo.png"
+        "image": "assets/img/madalin-stunt-cars-2/logo.png"
     },
     {
         "name": "Madalin Stunt Cars 3",
         "url": "game/madalin-stunt-cars-3.html",
-        "image": "https://faf-games.github.io/assets/img/madalin-stunt-cars-3/logo.png"
+        "image": "assets/img/madalin-stunt-cars-3/logo.png"
     },
     {
         "name": "Magikmon",
         "url": "game/magikmon.html",
-        "image": "https://faf-games.github.io/assets/img/magikmon/logo.png"
+        "image": "assets/img/magikmon/logo.png"
     },
     {
         "name": "Masked Forces",
         "url": "game/masked-forces.html",
-        "image": "https://faf-games.github.io/assets/img/masked-forces/logo.png"
+        "image": "assets/img/masked-forces/logo.png"
     },
     {
         "name": "Merge Cakes",
         "url": "game/merge-cakes.html",
-        "image": "https://faf-games.github.io/assets/img/merge-cakes/logo.png"
+        "image": "assets/img/merge-cakes/logo.png"
     },
     {
         "name": "Merge Cyber Racers",
         "url": "game/merge-cyber-racers.html",
-        "image": "https://faf-games.github.io/assets/img/merge-cyber-racers/logo.png"
+        "image": "assets/img/merge-cyber-racers/logo.png"
     },
     {
         "name": "Merge Round Racers",
         "url": "game/merge-round-racers.html",
-        "image": "https://faf-games.github.io/assets/img/merge-round-racers/logo.png"
+        "image": "assets/img/merge-round-racers/logo.png"
     },
     {
         "name": "Microwars",
         "url": "game/microwars.html",
-        "image": "https://faf-games.github.io/assets/img/microwars/logo.png"
+        "image": "assets/img/microwars/logo.png"
     },
     {
         "name": "Monster Truck Destroyer",
         "url": "game/monster-truck-destroyer.html",
-        "image": "https://faf-games.github.io/assets/img/monster-truck-destroyer/logo.png"
+        "image": "assets/img/monster-truck-destroyer/logo.png"
     },
     {
         "name": "Monster Truck vs Zombie",
         "url": "game/monster-truck-vs-zombie.html",
-        "image": "https://faf-games.github.io/assets/img/monster-truck-vs-zombie/logo.png"
+        "image": "assets/img/monster-truck-vs-zombie/logo.png"
     },
     {
         "name": "Moto Road Rash 3D",
         "url": "game/moto-road-rash-3d.html",
-        "image": "https://faf-games.github.io/assets/img/moto-road-rash-3d/logo.png"
+        "image": "assets/img/moto-road-rash-3d/logo.png"
     },
     {
         "name": "Moto X3M 2",
         "url": "game/moto-x3m-2.html",
-        "image": "https://faf-games.github.io/assets/img/moto-x3m-2/logo.png"
+        "image": "assets/img/moto-x3m-2/logo.png"
     },
     {
         "name": "Moto X3M Bike Race",
         "url": "game/moto-x3m-bike-race.html",
-        "image": "https://faf-games.github.io/assets/img/moto-x3m-bike-race/logo.png"
+        "image": "assets/img/moto-x3m-bike-race/logo.png"
     },
     {
         "name": "Moto X3M Pool Party",
         "url": "game/moto-x3m-pool-party.html",
-        "image": "https://faf-games.github.io/assets/img/moto-x3m-pool-party/logo.png"
+        "image": "assets/img/moto-x3m-pool-party/logo.png"
     },
     {
         "name": "Moto X3M Spooky Land",
         "url": "game/moto-x3m-spooky-land.html",
-        "image": "https://faf-games.github.io/assets/img/moto-x3m-spooky-land/logo.png"
+        "image": "assets/img/moto-x3m-spooky-land/logo.png"
     },
     {
         "name": "Moto X3M Winter",
         "url": "game/moto-x3m-winter.html",
-        "image": "https://faf-games.github.io/assets/img/moto-x3m-winter/logo.png"
+        "image": "assets/img/moto-x3m-winter/logo.png"
     },
     {
         "name": "Moto X3M",
         "url": "game/moto-x3m.html",
-        "image": "https://faf-games.github.io/assets/img/moto-x3m/logo.png"
+        "image": "assets/img/moto-x3m/logo.png"
     },
     {
         "name": "Mr Bullet",
         "url": "game/mr-bullet.html",
-        "image": "https://faf-games.github.io/assets/img/mr-bullet/logo.png"
+        "image": "assets/img/mr-bullet/logo.png"
     },
     {
         "name": "Neon Biker",
         "url": "game/neon-biker.html",
-        "image": "https://faf-games.github.io/assets/img/neon-biker/logo.png"
+        "image": "assets/img/neon-biker/logo.png"
     },
     {
         "name": "Neon Racer",
         "url": "game/neon-racer.html",
-        "image": "https://faf-games.github.io/assets/img/neon-racer/logo.png"
+        "image": "assets/img/neon-racer/logo.png"
     },
     {
         "name": "Ovo",
         "url": "game/ovo.html",
-        "image": "https://faf-games.github.io/assets/img/ovo/logo.png"
+        "image": "assets/img/ovo/logo.png"
     },
     {
         "name": "Pacman Doodle",
         "url": "game/pacman-doodle.html",
-        "image": "https://faf-games.github.io/assets/img/pacman-doodle/logo.png"
+        "image": "assets/img/pacman-doodle/logo.png"
     },
     {
         "name": "Parking Fury 2",
         "url": "game/parking-fury-2.html",
-        "image": "https://faf-games.github.io/assets/img/parking-fury-2/logo.png"
+        "image": "assets/img/parking-fury-2/logo.png"
     },
     {
         "name": "Parking Fury 3",
         "url": "game/parking-fury-3.html",
-        "image": "https://faf-games.github.io/assets/img/parking-fury-3/logo.png"
+        "image": "assets/img/parking-fury-3/logo.png"
     },
     {
         "name": "Parking Fury 3D Beach City",
         "url": "game/parking-fury-3d-beach-city.html",
-        "image": "https://faf-games.github.io/assets/img/parking-fury-3d-beach-city/logo.png"
+        "image": "assets/img/parking-fury-3d-beach-city/logo.png"
     },
     {
         "name": "Parking Fury 3D",
         "url": "game/parking-fury-3d.html",
-        "image": "https://faf-games.github.io/assets/img/parking-fury-3d/logo.png"
+        "image": "assets/img/parking-fury-3d/logo.png"
     },
     {
         "name": "Parking Fury",
         "url": "game/parking-fury.html",
-        "image": "https://faf-games.github.io/assets/img/parking-fury/logo.png"
+        "image": "assets/img/parking-fury/logo.png"
     },
     {
         "name": "Penalty Kick Online",
         "url": "game/penalty-kick-online.html",
-        "image": "https://faf-games.github.io/assets/img/penalty-kick-online/logo.png"
+        "image": "assets/img/penalty-kick-online/logo.png"
     },
     {
         "name": "Poly Track",
         "url": "game/poly-track.html",
-        "image": "https://faf-games.github.io/assets/img/poly-track/logo.png"
+        "image": "assets/img/poly-track/logo.png"
     },
     {
         "name": "Racing Monster Trucks",
         "url": "game/racing-monster-trucks.html",
-        "image": "https://faf-games.github.io/assets/img/racing-monster-trucks/logo.png"
+        "image": "assets/img/racing-monster-trucks/logo.png"
     },
     {
         "name": "Raft Wars 1",
         "url": "game/raft-wars-1.html",
-        "image": "https://faf-games.github.io/assets/img/raft-wars-1/logo.png"
+        "image": "assets/img/raft-wars-1/logo.png"
     },
     {
         "name": "Raft Wars 2",
         "url": "game/raft-wars-2.html",
-        "image": "https://faf-games.github.io/assets/img/raft-wars-2/logo.png"
+        "image": "assets/img/raft-wars-2/logo.png"
     },
     {
         "name": "Real Flying Truck",
         "url": "game/real-flying-truck.html",
-        "image": "https://faf-games.github.io/assets/img/real-flying-truck/logo.png"
+        "image": "assets/img/real-flying-truck/logo.png"
     },
     {
         "name": "Real Garbage Truck",
         "url": "game/real-garbage-truck.html",
-        "image": "https://faf-games.github.io/assets/img/real-garbage-truck/logo.png"
+        "image": "assets/img/real-garbage-truck/logo.png"
     },
     {
         "name": "Red Ball 4",
         "url": "game/red-ball-4.html",
-        "image": "https://faf-games.github.io/assets/img/red-ball-4/logo.png"
+        "image": "assets/img/red-ball-4/logo.png"
     },
     {
         "name": "Retro Bowl",
         "url": "game/retro-bowl.html",
-        "image": "https://faf-games.github.io/assets/img/retro-bowl/logo.png"
+        "image": "assets/img/retro-bowl/logo.png"
     },
     {
         "name": "Road Fury",
         "url": "game/road-fury.html",
-        "image": "https://faf-games.github.io/assets/img/road-fury/logo.png"
+        "image": "assets/img/road-fury/logo.png"
     },
     {
         "name": "Rocket Soccer Derby",
         "url": "game/rocket-soccer-derby.html",
-        "image": "https://faf-games.github.io/assets/img/rocket-soccer-derby/logo.png"
+        "image": "assets/img/rocket-soccer-derby/logo.png"
     },
     {
         "name": "Rolling Ball 3D",
         "url": "game/rolling-ball-3d.html",
-        "image": "https://faf-games.github.io/assets/img/rolling-ball-3d/logo.png"
+        "image": "assets/img/rolling-ball-3d/logo.png"
     },
     {
         "name": "Rolly Vortex",
         "url": "game/rolly-vortex.html",
-        "image": "https://faf-games.github.io/assets/img/rolly-vortex/logo.png"
+        "image": "assets/img/rolly-vortex/logo.png"
     },
     {
         "name": "Rooftop Snipers",
         "url": "game/rooftop-snipers.html",
-        "image": "https://faf-games.github.io/assets/img/rooftop-snipers/logo.png"
+        "image": "assets/img/rooftop-snipers/logo.png"
     },
     {
         "name": "Run 2",
         "url": "game/run-2.html",
-        "image": "https://faf-games.github.io/assets/img/run-2/logo.png"
+        "image": "assets/img/run-2/logo.png"
     },
     {
         "name": "Run 3",
         "url": "game/run-3.html",
-        "image": "https://faf-games.github.io/assets/img/run-3/logo.png"
+        "image": "assets/img/run-3/logo.png"
     },
     {
         "name": "Running Fred",
         "url": "game/running-fred.html",
-        "image": "https://faf-games.github.io/assets/img/running-fred/logo.png"
+        "image": "assets/img/running-fred/logo.png"
     },
     {
         "name": "Shell Shockers",
         "url": "game/shell-shockers.html",
-        "image": "https://faf-games.github.io/assets/img/shell-shockers/logo.png"
+        "image": "assets/img/shell-shockers/logo.png"
     },
     {
         "name": "Skiing Fred",
         "url": "game/skiing-fred.html",
-        "image": "https://faf-games.github.io/assets/img/skiing-fred/logo.png"
+        "image": "assets/img/skiing-fred/logo.png"
     },
     {
         "name": "Sling Drift",
         "url": "game/sling-drift.html",
-        "image": "https://faf-games.github.io/assets/img/sling-drift/logo.png"
+        "image": "assets/img/sling-drift/logo.png"
     },
     {
         "name": "Slope 3",
         "url": "game/slope-3.html",
-        "image": "https://faf-games.github.io/assets/img/slope-3/logo.png"
+        "image": "assets/img/slope-3/logo.png"
     },
     {
         "name": "Slope Ball",
         "url": "game/slope-ball.html",
-        "image": "https://faf-games.github.io/assets/img/slope-ball/logo.png"
+        "image": "assets/img/slope-ball/logo.png"
     },
     {
         "name": "Slope City",
         "url": "game/slope-city.html",
-        "image": "https://faf-games.github.io/assets/img/slope-city/logo.png"
+        "image": "assets/img/slope-city/logo.png"
+    },
+    {
+        "name": "Slope Racing 3D",
+        "url": "game/slope-racing-3d.html",
+        "image": "assets/img/slope-racing-3d/logo.png"
+    },
+    {
+        "name": "Slope Run",
+        "url": "game/slope-run.html",
+        "image": "assets/img/slope-run/logo.png"
+    },
+    {
+        "name": "Slope Tunnel",
+        "url": "game/slope-tunnel.html",
+        "image": "assets/img/slope-tunnel/logo.png"
+    },
+    {
+        "name": "Slope",
+        "url": "game/slope.html",
+        "image": "assets/img/slope/logo.png"
+    },
+    {
+        "name": "Smash Karts",
+        "url": "game/smash-karts.html",
+        "image": "assets/img/smash-karts/logo.png"
+    },
+    {
+        "name": "Snail Bob 2",
+        "url": "game/snail-bob-2.html",
+        "image": "assets/img/snail-bob-2/logo.png"
+    },
+    {
+        "name": "Snail Bob 3",
+        "url": "game/snail-bob-3.html",
+        "image": "assets/img/snail-bob-3/logo.png"
+    },
+    {
+        "name": "Snail Bob 4",
+        "url": "game/snail-bob-4.html",
+        "image": "assets/img/snail-bob-4/logo.png"
+    },
+    {
+        "name": "Snail Bob 5",
+        "url": "game/snail-bob-5.html",
+        "image": "assets/img/snail-bob-5/logo.png"
+    },
+    {
+        "name": "Snail Bob 6",
+        "url": "game/snail-bob-6.html",
+        "image": "assets/img/snail-bob-6/logo.png"
+    },
+    {
+        "name": "Snail Bob 7",
+        "url": "game/snail-bob-7.html",
+        "image": "assets/img/snail-bob-7/logo.png"
+    },
+    {
+        "name": "Snail Bob 8",
+        "url": "game/snail-bob-8.html",
+        "image": "assets/img/snail-bob-8/logo.png"
+    },
+    {
+        "name": "Snail Bob",
+        "url": "game/snail-bob.html",
+        "image": "assets/img/snail-bob/logo.png"
+    },
+    {
+        "name": "Snow Rider 3D",
+        "url": "game/snow-rider-3d.html",
+        "image": "assets/img/snow-rider-3d/logo.png"
+    },
+    {
+        "name": "Soccar",
+        "url": "game/soccar.html",
+        "image": "assets/img/soccar/logo.png"
+    },
+    {
+        "name": "Soccer Heads",
+        "url": "game/soccer-heads.html",
+        "image": "assets/img/soccer-heads/logo.png"
+    },
+    {
+        "name": "Spacebar Clicker",
+        "url": "game/spacebar-clicker.html",
+        "image": "assets/img/spacebar-clicker/logo.png"
+    },
+    {
+        "name": "Sprinter",
+        "url": "game/sprinter.html",
+        "image": "assets/img/sprinter/logo.png"
+    },
+    {
+        "name": "Stair Race 3D",
+        "url": "game/stair-race-3d.html",
+        "image": "assets/img/stair-race-3d/logo.png"
+    },
+    {
+        "name": "Stealing the Diamond",
+        "url": "game/stealing-the-diamond.html",
+        "image": "assets/img/stealing-the-diamond/logo.png"
+    },
+    {
+        "name": "Stick Merge Halloween",
+        "url": "game/stick-merge-halloween.html",
+        "image": "assets/img/stick-merge-halloween/logo.png"
+    },
+    {
+        "name": "Stick Merge",
+        "url": "game/stick-merge.html",
+        "image": "assets/img/stick-merge/logo.png"
+    },
+    {
+        "name": "Stickman Fighter 2",
+        "url": "game/stickman-fighter-2.html",
+        "image": "assets/img/stickman-fighter-2/logo.png"
+    },
+    {
+        "name": "Stickman Fighter Epic Battle",
+        "url": "game/stickman-fighter-epic-battle.html",
+        "image": "assets/img/stickman-fighter-epic-battle/logo.png"
+    },
+    {
+        "name": "Stickman Hook",
+        "url": "game/stickman-hook.html",
+        "image": "assets/img/stickman-hook/logo.png"
+    },
+    {
+        "name": "Street Ball Star",
+        "url": "game/street-ball-star.html",
+        "image": "assets/img/street-ball-star/logo.png"
+    },
+    {
+        "name": "Stunt Car Challenge 3",
+        "url": "game/stunt-car-challenge-3.html",
+        "image": "assets/img/stunt-car-challenge-3/logo.png"
+    },
+    {
+        "name": "Subway Surfers Bali",
+        "url": "game/subway-surfers-bali.html",
+        "image": "assets/img/subway-surfers-bali/logo.png"
     },
 ]
