@@ -74,3 +74,4 @@ document.addEventListener("click", function(event) {
         gameList.style.display = "none";
     }
 });
+
