@@ -1,72 +1,79 @@
-document.addEventListener("DOMContentLoaded", function () {
+// Step 1: Wait for the document to load before running the script
+document.addEventListener("DOMContentLoaded", () => {
+    
+    // Step 2: Declare a variable to store game data
     let games = [];
+    
+    // Step 3: Get references to the search input field and game list container
+    const searchInput = document.getElementById("gameSearch");
+    const gameList = document.getElementById("gameList");
 
-    // Fetch games from JSON file
-    fetch("https://faf-games.github.io/games.json")
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Games JSON file not found!");
-            }
-            return response.json();
-        })
-        .then(data => {
-            games = data;
-        })
-        .catch(error => console.error("Error loading games:", error));
+    // Step 4: Function to fetch games from the JSON file asynchronously
+    async function loadGames() {
+        try {
+            const response = await fetch("https://faf-games.github.io/games.json"); // Fetch JSON data
+            const data = await response.json(); // Convert response to JSON format
+            games = data.games; // Store fetched games in the variable
+            console.log("Games loaded:", games); // Debugging log
+        } catch (error) {
+            console.error("Error loading games:", error); // Log errors if fetching fails
+        }
+    }
 
-    // Search function (Runs when typing)
-    document.getElementById("gameSearch").addEventListener("input", function () {
-        let input = this.value.toLowerCase();
-        let gameList = document.getElementById("gameList");
-
-        if (input === "") {
-            gameList.style.display = "none"; // Hide when empty
+    // Step 5: Function to filter and display games based on search input
+    function searchGames() {
+        const query = searchInput.value.trim().toLowerCase(); // Get and format search input
+        gameList.innerHTML = ""; // Clear previous search results
+        
+        if (!query) { // If search input is empty, hide the game list
+            gameList.style.display = "none";
             return;
         }
 
-        let filteredGames = games.filter(game => game.name.toLowerCase().startsWith(input));
+        // Step 6: Filter games that match the search query
+        const filteredGames = games.filter(game => game.name.toLowerCase().includes(query));
 
         if (filteredGames.length > 0) {
-            displayGames(filteredGames);
-            gameList.style.display = "block";
+            displayGames(filteredGames); // Display matched games
+            gameList.style.display = "block"; // Show results
         } else {
-            gameList.innerHTML = "<p>No results found</p>";
-            gameList.style.display = "block";
+            gameList.style.display = "none"; // Hide list if no match is found
         }
-    });
+    }
 
-    // Function to display search results
+    // Step 7: Function to display search results dynamically
     function displayGames(gameArray) {
-        let gameList = document.getElementById("gameList");
-        gameList.innerHTML = ""; // Clear previous results
-
         gameArray.forEach(game => {
-            let gameItem = document.createElement("div");
-            gameItem.classList.add("game-item");
+            const gameItem = document.createElement("div"); // Create a container for each game
+            gameItem.classList.add("game-item"); // Assign a CSS class for styling
 
-            let gameImage = document.createElement("img");
-            gameImage.src = `https://faf-games.github.io/assets/images/${game.image || "default.png"}`;
-            gameImage.alt = game.name;
+            const gameImage = document.createElement("img"); // Create image element
+            gameImage.src = `https://faf-games.github.io/assets/images/${game.image}`; // Set image source
+            gameImage.alt = game.name; // Set alt text for accessibility
 
-            let gameName = document.createElement("span");
-            gameName.textContent = game.name;
+            const gameName = document.createElement("span"); // Create text element for game name
+            gameName.textContent = game.name; // Set text content
 
-            gameItem.onclick = function () {
-                window.location.href = `https://faf-games.github.io/${game.url}`;
+            // Step 8: Add click event to redirect user to the game page
+            gameItem.onclick = () => {
+                window.location.href = `https://faf-games.github.io/game/${game.url}`;
             };
 
-            gameItem.appendChild(gameImage);
-            gameItem.appendChild(gameName);
-            gameList.appendChild(gameItem);
+            gameItem.appendChild(gameImage); // Add image to game item
+            gameItem.appendChild(gameName); // Add game name to game item
+            gameList.appendChild(gameItem); // Append the game item to the list
         });
     }
 
-    // Hide search results when clicking outside
-    document.addEventListener("click", function (event) {
-        let searchBox = document.getElementById("gameSearch");
-        let gameList = document.getElementById("gameList");
+    // Step 9: Load games when the page is ready
+    loadGames();
 
-        if (!searchBox.contains(event.target) && !gameList.contains(event.target)) {
+    // Step 10: Add event listener to trigger search when user types
+    searchInput.addEventListener("input", searchGames);
+
+    // Step 11: Hide results when clicking outside the search bar
+    document.addEventListener("click", (event) => {
+        if (!searchInput.contains(event.target) && !gameList.contains(event.target)) {
             gameList.style.display = "none";
         }
     });
