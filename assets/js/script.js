@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(response => response.json())
         .then(data => {
             games = data; // Store games in memory
+            console.log("Games loaded:", games); // Debugging: Check if games load
         })
         .catch(error => console.error("Error loading games:", error));
 
@@ -15,6 +16,8 @@ document.addEventListener("DOMContentLoaded", function () {
         let gameList = document.getElementById("gameList");
         gameList.innerHTML = ""; // Clear previous results
 
+        console.log("User input:", input); // Debugging: Check user input
+
         if (input === "") {
             gameList.style.display = "none"; // Hide if input is empty
             return;
@@ -22,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Filter games by input (allowing partial matches)
         let filteredGames = games.filter(game => game.name.toLowerCase().includes(input));
+        console.log("Filtered games:", filteredGames); // Debugging: Check filter results
 
         if (filteredGames.length > 0) {
             displayGames(filteredGames);
@@ -58,14 +62,4 @@ document.addEventListener("DOMContentLoaded", function () {
             gameList.appendChild(gameItem);
         });
     }
-
-    // Hide search results when clicking outside
-    document.addEventListener("click", function (event) {
-        let searchBox = document.getElementById("gameSearch");
-        let gameList = document.getElementById("gameList");
-
-        if (!searchBox.contains(event.target) && !gameList.contains(event.target)) {
-            gameList.style.display = "none";
-        }
-    });
 });
