@@ -92,7 +92,7 @@ This files contents are outlined below >>>>
         }
         
         #gameList {
-            max-height: 300px;
+            max-height: 250px;
 	    background: #0f1320;
             overflow-y: auto;
             position: absolute;
