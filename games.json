@@ -4,6 +4,10 @@
         "url": "game/1v1-lol.html"
     },
     {
+        "name": "2048",
+        "url": "game/2048.html"
+    },
+    {
         "name": "3D Bowling",
         "url": "game/3d-bowling.html"
     },
@@ -46,6 +50,10 @@
     {
         "name": "Bad Ice Cream 3",
         "url": "game/bad-ice-cream-3.html"
+    },
+    {
+        "name": "Block Blast",
+        "url": "game/block-blast.html"
     },
     {
         "name": "Ballistic",
@@ -266,6 +274,10 @@
     {
         "name": "Fire Truck",
         "url": "game/fire-truck.html"
+    },
+    {
+        "name": "Fruit Merge",
+        "url": "game/fruit-merge.html"
     },
     {
         "name": "Fireboy And Watergirl 2",
@@ -602,6 +614,10 @@
     {
         "name": "Slope 3",
         "url": "game/slope-3.html"
+    },
+    {
+        "name": "Soccer Bros",
+        "url": "game/soccerbros.html"
     },
     {
         "name": "Slope Ball",
