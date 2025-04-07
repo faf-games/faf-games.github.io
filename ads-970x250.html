@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Game Page with Ad</title>
+  <title>Ad Test Page</title>
 
   <!-- GPT Library -->
   <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
   <script>
     window.googletag = window.googletag || {cmd: []};
     googletag.cmd.push(function() {
-      googletag.defineSlot('/23079347111/footer', [970, 250], 'div-gpt-ad-1743853742640-0').addService(googletag.pubads());
+      googletag.defineSlot('/23079347111/footer', [970, 250], 'div-gpt-ad-1743853742640-0')
+        .addService(googletag.pubads());
       googletag.pubads().enableSingleRequest();
       googletag.enableServices();
     });
@@ -33,8 +34,6 @@
       });
     </script>
   </div>
-
-  <!-- Your game iframe or canvas goes here -->
 
 </body>
 </html>
