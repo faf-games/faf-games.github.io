@@ -1,161 +1,86 @@
 <!DOCTYPE html>
-<html lang="en-us">
-
+<html lang="en">
 <head>
-
-    <title>Granny Unblocked - GNHUSTGames</title>
-    <link rel="icon" href="logo.jpg">
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="description" content="Granny: Enter a chilling survival horror experience! Trapped in Granny's eerie house, evade her watchful eye, solve puzzles, and find a way to escape. Stealth, strategy, and nerves of steel are your only allies in this heart-pounding game. Can you outwit Granny and survive her sinister abode?">
-
-    <link rel="stylesheet" href="./TemplateData/style.css">
-
-    <!-- Yandex Games SDK -->
-    <script src="./sdk.js"></script>
+  <meta charset="utf-8">
+  <title>Granny Unblocked - GNHUSTGames</title>
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes">
+  <meta name="description" content="Granny: Enter a chilling survival horror experience! Trapped in Granny's eerie house, evade her watchful eye, solve puzzles, and find a way to escape. Stealth, strategy, and nerves of steel are your only allies in this heart-pounding game. Can you outwit Granny and survive her sinister abode?">
+  <link rel="icon" href="logo.jpg">
+  <link rel="stylesheet" href="TemplateData/style.css">
+  <script src="sdk.js" defer></script>
 </head>
-
 <body>
-
-    <div id="unity-container" style="position: absolute; width: 100%; height: 100%; left: 0%; top: 0%;">
-        <canvas id="unity-canvas" style="position: absolute; width: 100%; height: 100%"></canvas>
-        <div id="unity-loading-bar">
-            <div id="unity-logo"></div>
-            <div id="unity-progress-bar-empty">
-                <div id="unity-progress-bar-full"></div>
-            </div>
-        </div>
-        <div id="unity-warning"> </div>
+  <div id="unity-container" style="position: absolute; width: 100%; height: 100%; left: 0; top: 0;">
+    <canvas id="unity-canvas" style="width: 100%; height: 100%; position: absolute;"></canvas>
+    <div id="unity-loading-bar">
+      <div id="unity-logo"></div>
+      <div id="unity-progress-bar-empty">
+        <div id="unity-progress-bar-full"></div>
+      </div>
     </div>
-    <script>
-        function checkScreenSize() {
-            var hiddenBlock = document.querySelector('#logo');
-            if (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth > 1600) {
-                hiddenBlock.style.display = "block";
-            } else {
-                hiddenBlock.style.display = "none";
-            }
-        }
+    <div id="unity-warning"></div>
+  </div>
 
-        // Add an event listener to check the size whenever the window is load or réize
-        window.addEventListener('load', checkScreenSize);
-        window.addEventListener('resize', checkScreenSize);
-        // Initial check when the page loads
-        checkScreenSize();
-    </script>
-    <script>
-        var player;
+  <script>
+    // Optional player initialization for Yandex SDK
+    let player;
+    function initPlayer() {
+      return ysdk.getPlayer({ scopes: false }).then(_player => {
+        player = _player;
+        return player;
+      });
+    }
+  </script>
 
-        function initPlayer() {
-            return ysdk.getPlayer({
-                scopes: false
-            }).then(_player => {
-                player = _player;
+  <script>
+    const container = document.querySelector("#unity-container");
+    const canvas = document.querySelector("#unity-canvas");
+    const loadingBar = document.querySelector("#unity-loading-bar");
+    const progressBarFull = document.querySelector("#unity-progress-bar-full");
+    const warningBanner = document.querySelector("#unity-warning");
 
-                return player;
-            });
-        }
-    </script>
+    function unityShowBanner(msg, type) {
+      const div = document.createElement("div");
+      div.innerHTML = msg;
+      div.style = type === "error" ? "background: red; padding: 10px;" : "background: yellow; padding: 10px;";
+      warningBanner.appendChild(div);
+      if (type !== "error") {
+        setTimeout(() => {
+          warningBanner.removeChild(div);
+          warningBanner.style.display = warningBanner.children.length ? "block" : "none";
+        }, 5000);
+      } else {
+        warningBanner.style.display = "block";
+      }
+    }
 
-    <script>
-        var container = document.querySelector("#unity-container");
-        var canvas = document.querySelector("#unity-canvas");
-        var loadingBar = document.querySelector("#unity-loading-bar");
-        var progressBarFull = document.querySelector("#unity-progress-bar-full");
-        //var fullscreenButton = document.querySelector("#unity-fullscreen-button");
-        var warningBanner = document.querySelector("#unity-warning");
+    const buildUrl = "Build";
+    const loaderUrl = buildUrl + "/Granny.loader.js";
+    const config = {
+      dataUrl: buildUrl + "/Granny.data",
+      frameworkUrl: buildUrl + "/Granny.framework.js",
+      codeUrl: buildUrl + "/Granny.wasm",
+      streamingAssetsUrl: "StreamingAssets",
+      companyName: "Anastasia Kazantseva",
+      productName: "Granny",
+      productVersion: "1.0",
+      showBanner: unityShowBanner
+    };
 
-        // Shows a temporary message banner/ribbon for a few seconds, or
-        // a permanent error message on top of the canvas if type=='error'.
-        // If type=='warning', a yellow highlight color is used.
-        // Modify or remove this function to customize the visually presented
-        // way that non-critical warnings and error messages are presented to the
-        // user.
-        function unityShowBanner(msg, type) {
-            function updateBannerVisibility() {
-                warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-            }
-            var div = document.createElement('div');
-            div.innerHTML = msg;
-            warningBanner.appendChild(div);
-            if (type == 'error') div.style = 'background: red; padding: 10px;';
-            else {
-                if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-                setTimeout(function() {
-                    warningBanner.removeChild(div);
-                    updateBannerVisibility();
-                }, 5000);
-            }
-            updateBannerVisibility();
-        }
+    loadingBar.style.display = "block";
 
-        var buildUrl = "Build";
-        var loaderUrl = buildUrl + "/Granny.loader.js";
-        var config = {
-            dataUrl: buildUrl + "/Granny.data",
-            frameworkUrl: buildUrl + "/Granny.framework.js",
-            codeUrl: buildUrl + "/Granny.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "Anastasia Kazantseva",
-            productName: "Granny",
-            productVersion: "1.0",
-            showBanner: unityShowBanner,
-        };
-
-        // By default Unity keeps WebGL canvas render target size matched with
-        // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-        // Set this to false if you want to decouple this synchronization from
-        // happening inside the engine, and you would instead like to size up
-        // the canvas DOM size and WebGL render target sizes yourself.
-        // config.matchWebGLToCanvasSize = false;
-
-        if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-            // Mobile device style: fill the whole browser client area with the game canvas:
-
-            var meta = document.createElement('meta');
-            meta.name = 'viewport';
-            meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-            document.getElementsByTagName('head')[0].appendChild(meta);
-            container.className = "unity-mobile";
-            canvas.className = "unity-mobile";
-
-            // To lower canvas resolution on mobile devices to gain some
-            // performance, uncomment the following line:
-            // config.devicePixelRatio = 1;
-
-
-        } else {
-            // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
-
-            canvas.style.width = "100%";
-            canvas.style.height = "100%";
-        }
-
-        loadingBar.style.display = "block";
-
-        var myGameInstance = null;
-
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-            createUnityInstance(canvas, config, (progress) => {
-                progressBarFull.style.width = 100 * progress + "%";
-            }).then((unityInstance) => {
-
-                myGameInstance = unityInstance;
-
-                loadingBar.style.display = "none";
-                //fullscreenButton.onclick = () => {
-                //  unityInstance.SetFullscreen(1);
-                //};
-            }).catch((message) => {
-                alert(message);
-            });
-        };
-
-        document.body.appendChild(script);
-    </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"946da27c2a4b97a4","version":"2025.4.0-1-g37f21b1","r":1,"token":"466cade843754106bbf20c4f18f202b6","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}}}' crossorigin="anonymous"></script>
+    const script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = (100 * progress) + "%";
+      }).then((unityInstance) => {
+        loadingBar.style.display = "none";
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
 </body>
-
 </html>
