@@ -1,3 +1,35 @@
+// Create and insert the async Funding Choices script
+const fundingScript = document.createElement('script');
+fundingScript.async = true;
+fundingScript.src = "https://fundingchoicesmessages.google.com/i/pub-9427048641572074?ers=1";
+fundingScript.setAttribute("nonce", "7M3TLdpr6ws84KtZqprB7Q");
+document.head.appendChild(fundingScript);
+
+// Create and insert the inline script
+const inlineScript = document.createElement('script');
+inlineScript.setAttribute("nonce", "7M3TLdpr6ws84KtZqprB7Q");
+inlineScript.textContent = `
+(function() {
+  function signalGooglefcPresent() {
+    if (!window.frames['googlefcPresent']) {
+      if (document.body) {
+        const iframe = document.createElement('iframe');
+        iframe.style = 'width: 0; height: 0; border: none; z-index: -1000; left: -1000px; top: -1000px;';
+        iframe.style.display = 'none';
+        iframe.name = 'googlefcPresent';
+        document.body.appendChild(iframe);
+      } else {
+        setTimeout(signalGooglefcPresent, 0);
+      }
+    }
+  }
+  signalGooglefcPresent();
+})();
+`;
+document.head.appendChild(inlineScript);
+
+
+
 (function() {
   // Create <link> element
   var link = document.createElement("link");
