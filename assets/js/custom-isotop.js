@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", function () {
     // Create Fullscreen Button
     const button = document.createElement("button");
@@ -38,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     observer.observe(document.getElementById("loadgame"), { childList: true, subtree: true });
 });
-</script>
-
 
 
 
