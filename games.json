@@ -1,4 +1,9 @@
+
 [
+    {
+        "name": "Granny Game",
+        "url": "game/0-granny.html"
+    },
     {
         "name": "1v1 LOL",
         "url": "game/1v1-lol.html"
