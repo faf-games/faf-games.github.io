@@ -1,3 +1,13 @@
+function loadMainGame() {
+    var html = `<iframe class="game-iframe iframeloader" id="game-area" src="https://faf-games.github.io/game/pacman/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
+    document.getElementById("loadgame").innerHTML = html;
+
+    // Show the fullscreen button after loading the game
+    document.getElementById("fullscreenButton").style.display = "inline-flex";
+    
+    // Scroll the game into view
+    document.getElementById('loadgame').scrollIntoView();
+}
 
 
 function open_fullscreen() {
