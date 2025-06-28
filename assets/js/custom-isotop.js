@@ -10,9 +10,8 @@ function onGameLoaded() {
     if (btn) btn.style.display = 'inline-flex';
 }
 
-// Your fullscreen logic (unchanged)
 function open_fullscreen() {
-    var iframe = document.getElementById('gameFrame');
+    var iframe = document.getElementById('game-area'); // <--- FIXED HERE!
     if (!iframe) {
         alert('Game frame not found!');
         return;
@@ -29,6 +28,7 @@ function open_fullscreen() {
         alert('Fullscreen is not supported in this browser.');
     }
 }
+
 
 
 
