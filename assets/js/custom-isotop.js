@@ -1,24 +1,39 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the section to insert before
+    var relatedSection = document.querySelector('.fag-games-area.related_games.section_100');
+    if (!relatedSection) return;
 
+    // Create the button
+    var btn = document.createElement('button');
+    btn.id = 'fullscreenButton';
+    btn.className = 'fullscreen-btn';
+    btn.type = 'button';
+    btn.innerHTML = '<i class="fas fa-expand"></i> Fullscreen';
+    btn.style.display = 'none'; // Hide initially
 
+    // Insert button before the related games section
+    relatedSection.parentNode.insertBefore(btn, relatedSection);
 
-function open_fullscreen() {
-    var iframe = document.getElementById('game-area'); // <--- FIXED HERE!
-    if (!iframe) {
-        alert('Game frame not found!');
-        return;
-    }
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-    } else {
-        alert('Fullscreen is not supported in this browser.');
-    }
-}
+    // Attach fullscreen function
+    btn.onclick = function open_fullscreen() {
+        var iframe = document.getElementById('game-area'); // Your dynamic game iframe ID
+        if (!iframe) {
+            alert('Game frame not found!');
+            return;
+        }
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+            iframe.msRequestFullscreen();
+        } else {
+            alert('Fullscreen is not supported in this browser.');
+        }
+    };
+});
 
 
 
