@@ -62,30 +62,30 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
- .fullscreen-btn {
-            display: none; /* Initially hidden */
-            align-items: center;
-            background-color: #ff6a00; /* Orange color */
-            color: white;
-            border: none;
-            border-radius: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px;
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%); /* Center the button horizontally */
-        }
+.fullscreen-btn {
+    display: none;
+    align-items: center;
+    background-color: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
-        .fullscreen-btn:hover {
-            background-color: #ff7a21;
-        }
+.fullscreen-btn:hover {
+    background-color: #ff7a21;
+}
 
-        .fullscreen-btn i {
-            margin-right: 8px;
-        }
+.fullscreen-btn i {
+    margin-right: 8px;
+}
 
 
 
