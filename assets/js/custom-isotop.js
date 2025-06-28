@@ -1,37 +1,30 @@
-function loadMainGame() {
-    // 1. Create the game iframe
-    var iframeHTML = `<iframe class="game-iframe iframeloader" id="game-area" src="https://faf-games.github.io/game/pacman/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
-    // 2. Create the fullscreen button HTML
-    var fullscreenBtnHTML = `
-        <button id="fullscreenButton" class="fullscreen-btn" style="display:inline-flex; margin-top:18px;" onclick="open_fullscreen()">
-            <i class="fas fa-expand"></i> Fullscreen
-        </button>
-    `;
-    // 3. Set the inner HTML of the game area container
-    document.getElementById("loadgame").innerHTML = iframeHTML + fullscreenBtnHTML;
-
-    // 4. Scroll the game into view
-    document.getElementById('loadgame').scrollIntoView();
-}
-function open_fullscreen() {
-    var iframe = document.getElementById('game-area'); // Match your iframe ID
-    if (!iframe) {
-        alert('Game frame not found!');
-        return;
+// MutationObserver approach: Automatically add fullscreen button for any iframe in #loadgame
+const loadgame = document.getElementById('loadgame');
+const observer = new MutationObserver(() => {
+    // Remove old button
+    var oldBtn = document.getElementById('fullscreenButton');
+    if (oldBtn) oldBtn.remove();
+    // Find new iframe
+    var iframe = document.getElementById('game-area');
+    if (iframe) {
+        var btn = document.createElement('button');
+        btn.id = 'fullscreenButton';
+        btn.className = 'fullscreen-btn';
+        btn.style.display = 'inline-flex';
+        btn.style.marginTop = '18px';
+        btn.style.left = '50%';
+        btn.style.transform = 'translateX(-50%)';
+        btn.innerHTML = '<i class="fas fa-expand"></i> Fullscreen';
+        btn.onclick = function() {
+            if (iframe.requestFullscreen) iframe.requestFullscreen();
+            else if (iframe.mozRequestFullScreen) iframe.mozRequestFullScreen();
+            else if (iframe.webkitRequestFullscreen) iframe.webkitRequestFullscreen();
+            else if (iframe.msRequestFullscreen) iframe.msRequestFullscreen();
+        };
+        iframe.parentNode.insertBefore(btn, iframe.nextSibling);
     }
-    if (iframe.requestFullscreen) {
-        iframe.requestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-        iframe.mozRequestFullScreen();
-    } else if (iframe.webkitRequestFullscreen) {
-        iframe.webkitRequestFullscreen();
-    } else if (iframe.msRequestFullscreen) {
-        iframe.msRequestFullscreen();
-    } else {
-        alert('Fullscreen is not supported in this browser.');
-    }
-}
-
+});
+observer.observe(loadgame, { childList: true });
 
 
 
