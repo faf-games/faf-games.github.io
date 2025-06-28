@@ -62,27 +62,30 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
-.fullscreen-btn {
-  display: none; /* Hidden until game loads */  align-items: center;
-  gap: 8px;
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 17px;
-  box-shadow: 0 2px 12px #0002;
-  margin-bottom: 24px;
-  transition: background 0.15s;
-}
-.fullscreen-btn:hover {
-  background: #444;
-}
-.fullscreen-btn i {
-  font-size: 19px;
-}
+ .fullscreen-btn {
+            display: none; /* Initially hidden */
+            align-items: center;
+            background-color: #ff6a00; /* Orange color */
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%); /* Center the button horizontally */
+        }
 
+        .fullscreen-btn:hover {
+            background-color: #ff7a21;
+        }
+
+        .fullscreen-btn i {
+            margin-right: 8px;
+        }
 
 
 
