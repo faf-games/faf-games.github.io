@@ -1,14 +1,4 @@
-// Hide button on load
-document.addEventListener("DOMContentLoaded", function() {
-    var btn = document.getElementById('fullscreenButton');
-    if (btn) btn.style.display = 'none';
-});
 
-// Call this when your iframe is loaded
-function onGameLoaded() {
-    var btn = document.getElementById('fullscreenButton');
-    if (btn) btn.style.display = 'inline-flex';
-}
 
 function open_fullscreen() {
     var iframe = document.getElementById('game-area'); // <--- FIXED HERE!
