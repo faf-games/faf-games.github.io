@@ -62,6 +62,30 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
+.fullscreen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 17px;
+  box-shadow: 0 2px 12px #0002;
+  margin-bottom: 24px;
+  transition: background 0.15s;
+}
+.fullscreen-btn:hover {
+  background: #444;
+}
+.fullscreen-btn i {
+  font-size: 19px;
+}
+
+
+
 
 {
             font-family: Arial, sans-serif;
