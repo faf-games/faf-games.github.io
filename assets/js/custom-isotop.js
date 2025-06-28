@@ -1,3 +1,44 @@
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Create Fullscreen Button
+    const button = document.createElement("button");
+    button.id = "fullscreenButton";
+    button.className = "fullscreen-btn";
+    button.style.display = "none"; // Initially hidden
+    button.innerHTML = `<i class="fas fa-expand"></i> Fullscreen`;
+    button.onclick = function () {
+        const game = document.getElementById("game-area");
+        if (game) {
+            if (game.requestFullscreen) {
+                game.requestFullscreen();
+            } else if (game.mozRequestFullScreen) {
+                game.mozRequestFullScreen();
+            } else if (game.webkitRequestFullscreen) {
+                game.webkitRequestFullscreen();
+            } else if (game.msRequestFullscreen) {
+                game.msRequestFullscreen();
+            }
+        }
+    };
+
+    // Append button below game container
+    const container = document.getElementById("loadgame");
+    if (container) {
+        container.parentNode.insertBefore(button, container.nextSibling);
+    }
+
+    // Observer or delay to show button after iframe loads
+    const observer = new MutationObserver(function () {
+        const iframe = document.getElementById("game-area");
+        if (iframe) {
+            document.getElementById("fullscreenButton").style.display = "inline-flex";
+            observer.disconnect(); // Stop observing
+        }
+    });
+
+    observer.observe(document.getElementById("loadgame"), { childList: true, subtree: true });
+});
+</script>
 
 
 
