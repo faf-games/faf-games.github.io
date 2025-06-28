@@ -1,3 +1,14 @@
+function loadMainGame(gameUrl) {
+    var html = `<iframe class="game-iframe iframeloader" id="game-area" src="${gameUrl}" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
+    document.getElementById("loadgame").innerHTML = html;
+
+    // Add fullscreen button right after the new iframe
+    addFullscreenButton();
+
+    document.getElementById('loadgame').scrollIntoView();
+}
+
+
 // MutationObserver approach: Automatically add fullscreen button for any iframe in #loadgame
 const loadgame = document.getElementById('loadgame');
 const observer = new MutationObserver(() => {
