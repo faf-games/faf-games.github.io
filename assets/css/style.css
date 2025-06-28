@@ -63,8 +63,7 @@ This files contents are outlined below >>>>
 02 - DEFAULT CSS
 ==================================================*/
 .fullscreen-btn {
-  display: inline-flex;
-  align-items: center;
+  display: none; /* Hidden until game loads */  align-items: center;
   gap: 8px;
   background: #222;
   color: #fff;
