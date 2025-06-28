@@ -1,3 +1,42 @@
+document.addEventListener("DOMContentLoaded", function() {
+    // Find the related games section
+    var relatedSection = document.querySelector('.fag-games-area.related_games.section_100');
+    if (!relatedSection) return; // Stop if section not found
+
+    // Create the button element
+    var btn = document.createElement('button');
+    btn.id = 'fullscreenButton';
+    btn.className = 'fullscreen-btn';
+    btn.type = 'button';
+    btn.innerHTML = '<i class="fas fa-expand"></i> Fullscreen';
+    btn.style.marginBottom = "24px"; // optional inline style
+
+    // Insert before the section
+    relatedSection.parentNode.insertBefore(btn, relatedSection);
+
+    // Fullscreen function
+    btn.onclick = function open_fullscreen() {
+        var iframe = document.getElementById('gameFrame');
+        if (!iframe) {
+            alert('Game frame not found!');
+            return;
+        }
+        if (iframe.requestFullscreen) {
+            iframe.requestFullscreen();
+        } else if (iframe.mozRequestFullScreen) {
+            iframe.mozRequestFullScreen();
+        } else if (iframe.webkitRequestFullscreen) {
+            iframe.webkitRequestFullscreen();
+        } else if (iframe.msRequestFullscreen) {
+            iframe.msRequestFullscreen();
+        } else {
+            alert('Fullscreen is not supported in this browser.');
+        }
+    };
+});
+
+
+
 // Create and insert the async Funding Choices script
 const fundingScript = document.createElement('script');
 fundingScript.async = true;
