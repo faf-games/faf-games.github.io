@@ -102,43 +102,22 @@
     .discord-button:hover {
     }
 #chatToggle{
-  position: fixed;
-  right: max(14px, env(safe-area-inset-right));
-  bottom: max(14px, env(safe-area-inset-bottom));
-  z-index: 99999;
+  position:fixed; right:16px; bottom:16px; z-index:99999;
   padding:.65rem .9rem; border:0; border-radius:999px;
   background:#ff7a21; color:#000; font:600 15px/1 system-ui;
   box-shadow:0 8px 24px rgba(0,0,0,.25); cursor:pointer;
 }
-
-/* Wrapper fixed to bottom-right; transparent background */
 #chatDock{
-  position: fixed;
-  right: max(14px, env(safe-area-inset-right));
-  bottom: calc(max(14px, env(safe-area-inset-bottom)) + 56px);
-  z-index: 99998;
-  display: none;
-  background: transparent;
+  position:fixed; right:16px; bottom:78px; z-index:99998;
+  background:transparent;
 }
-
-/* Size holder so nothing collapses */
-#chatDock .chatShell{
-  width: 360px;
-  height: 480px;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0,0,0,.35);
+#chatShell{
+  width:360px; height:480px;          /* >= Chatango min size */
+  border-radius:14px; overflow:hidden;
+  box-shadow:0 12px 36px rgba(0,0,0,.35);
 }
-
-/* show when opened */
-#chatDock.open{ display:block; }
-
-/* Mobile: keep above Chatango’s minimum */
-@media (max-width: 520px){
-  #chatDock .chatShell{
-    width: 320px;   /* don’t go below ~300 */
-    height: 440px;  /* don’t go below ~360–400 */
-  }
+@media (max-width:520px){
+  #chatShell{ width:320px; height:440px; }
 }
 
 
@@ -248,15 +227,10 @@
 		    </div></div>
 <button id="chatToggle" aria-label="Open chat">Open Chat</button>
 
-<div id="chatDock" class="closed" aria-hidden="true">
-  <div class="chatShell">
-    <script id="chatEmbed" data-cfasync="false" async
-      src="//st.chatango.com/js/gz/emb.js"
-      style="width: 360px; height: 480px;">
-      {"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}
-    </script>
-  </div>
+<div id="chatDock" hidden>
+  <div id="chatShell"></div>
 </div>
+
 
 
 
@@ -1414,21 +1388,37 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 
 <script>
-  const btn  = document.getElementById('chatToggle');
-  const dock = document.getElementById('chatDock');
-  const embed= document.getElementById('chatEmbed');
+  const btn   = document.getElementById('chatToggle');
+  const dock  = document.getElementById('chatDock');
+  const shell = document.getElementById('chatShell');
+
+  let chatLoaded = false;
+
+  function loadChatango() {
+    const s = document.createElement('script');
+    s.id = 'chatango-embed';
+    s.src = 'https://st.chatango.com/js/gz/emb.js';
+    s.async = true;
+    s.style.width  = shell.clientWidth + 'px';
+    s.style.height = shell.clientHeight + 'px';
+    // Chatango expects JSON config as the script's text content
+    s.text = '{"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}';
+    shell.appendChild(s);
+    chatLoaded = true;
+  }
 
   btn.addEventListener('click', () => {
-    const isOpen = dock.classList.toggle('open');
-    dock.setAttribute('aria-hidden', !isOpen);
-    btn.textContent = isOpen ? 'Close Chat' : 'Open Chat';
-
-    // Safety: ensure inline size never shrinks below minimums
-    const shell = dock.querySelector('.chatShell');
-    const w = Math.max(shell.clientWidth, 320);
-    const h = Math.max(shell.clientHeight, 440);
-    embed.style.width  = w + 'px';
-    embed.style.height = h + 'px';
+    const isHidden = dock.hasAttribute('hidden');
+    if (isHidden) {
+      dock.removeAttribute('hidden');     // make visible first
+      if (!chatLoaded) loadChatango();     // then inject script
+      btn.textContent = 'Close Chat';
+      btn.ariaLabel = 'Close chat';
+    } else {
+      dock.setAttribute('hidden','');
+      btn.textContent = 'Open Chat';
+      btn.ariaLabel = 'Open chat';
+    }
   });
 </script>
 
