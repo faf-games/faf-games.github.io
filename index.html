@@ -101,30 +101,35 @@
 
     .discord-button:hover {
     }
-  /* Button */
-  #chat-toggle {
-    position: fixed; right: 16px; bottom: 16px;
-    z-index: 9999;
-    padding: 10px 14px; border: 0; border-radius: 999px;
-    background:#ff7a21; color:#fff; font-weight:600; cursor:pointer;
-    box-shadow: 0 8px 24px rgba(0,0,0,.2);
-  }
+#chatToggle{
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom));
+  z-index: 99999;
+  padding: .65rem .9rem;
+  border: 0;
+  border-radius: 999px;
+  background: #ff7a21; color:#000; font:600 15px/1 system-ui;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  cursor: pointer;
+}
 
-  /* Panel wrapper */
-  #chat-panel {
-    position: fixed; right: 16px; bottom: 72px; /* above the button */
-    z-index: 9998;
-    width: min(380px, 92vw);
-    height: clamp(320px, 60vh, 560px);
-    background:#000; border-radius: 14px; overflow:hidden;
-    box-shadow: 0 12px 32px rgba(0,0,0,.35);
-    display:none;
-  }
+/* Transparent, autosizing wrapper */
+#chatDock{
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: calc(max(14px, env(safe-area-inset-bottom)) + 56px);
+  z-index: 99998;
+  display: none;          /* hidden by default */
+  background: transparent;/* <-- removes the black box */
+  width: auto;            /* let the embed size itself */
+  height: auto;           /* same */
+  padding: 0;
+}
 
-  /* Tiny helper for ultra-small phones */
-  @media (max-width: 420px) {
-    #chat-panel { right: 8px; left: 8px; width: auto; }
-  }
+/* show when opened */
+#chatDock.open{ display:block; }
+
 
   </style>
 
@@ -230,10 +235,17 @@
 
 			 
 		    </div></div>
-				<button id="chat-toggle" aria-expanded="false" aria-controls="chat-panel">Open Chat</button>
-<div id="chat-panel" role="dialog" aria-label="Chat">
-  <div id="chatango-slot"></div>
+				<button id="chatToggle" aria-label="Open chat">Open Chat</button>
+
+<div id="chatDock" aria-hidden="true">
+  <!-- Chatango embed (sizes the box) -->
+  <script id="cid0020000415652152232" data-cfasync="false" async
+    src="//st.chatango.com/js/gz/emb.js"
+    style="width: clamp(280px, 32vw, 360px); height: clamp(360px, 55vh, 520px);">
+    {"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}
+  </script>
 </div>
+
 
                 <div class="col-12">
                     <div class="site-heading">
@@ -1390,64 +1402,17 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 	
 <script>
-  (function(){
-    const btn = document.getElementById('chat-toggle');
-    const panel = document.getElementById('chat-panel');
-    const slot = document.getElementById('chatango-slot');
-    let loaded = false, embedScriptEl = null;
+  const btn  = document.getElementById('chatToggle');
+  const dock = document.getElementById('chatDock');
 
-    function panelVisible(v){
-      panel.style.display = v ? 'block' : 'none';
-      btn.textContent = v ? 'Close Chat' : 'Open Chat';
-      btn.setAttribute('aria-expanded', v ? 'true' : 'false');
-      if (v && !loaded) loadChatango();
-      if (v) sizeChat();
-    }
-
-    function sizeChat(){
-      const rect = panel.getBoundingClientRect();
-      if (embedScriptEl){
-        embedScriptEl.style.width = rect.width + 'px';
-        embedScriptEl.style.height = rect.height + 'px';
-      }
-    }
-
-    function loadChatango(){
-      const s = document.createElement('script');
-      s.id = 'cid0020000415652152232';
-      s.setAttribute('data-cfasync', 'false');
-      s.async = true;
-      s.src = '//st.chatango.com/js/gz/emb.js';
-      s.style.width = '100%';
-      s.style.height = '100%';
-      s.innerHTML = JSON.stringify({
-        handle: "faf-games",
-        arch: "js",
-        styles: {
-          a: "ff7a21", b: 100, c: "000000", d: "000000",
-          k: "ff7a21", l: "ff7a21", m: "ff7a21",
-          p: "10", q: "ff7a21", r: 100,
-          cnrs: "0.35", fwtickm: 1
-        }
-      });
-      slot.innerHTML = '';
-      slot.appendChild(s);
-      embedScriptEl = s;
-      loaded = true;
-      requestAnimationFrame(sizeChat);
-      setTimeout(sizeChat, 300);
-    }
-
-    btn.addEventListener('click', () => {
-      const open = panel.style.display !== 'block';
-      panelVisible(open);
-    });
-
-    window.addEventListener('resize', () => {
-      if (panel.style.display === 'block') sizeChat();
-    });
-  })();
+  btn.addEventListener('click', () => {
+    const isOpen = dock.classList.toggle('open');
+    dock.setAttribute('aria-hidden', !isOpen);
+    btn.textContent = isOpen ? 'Close Chat' : 'Open Chat';
+    btn.ariaLabel   = isOpen ? 'Close chat' : 'Open chat';
+  });
 </script>
+
 		
 	
 </body>
