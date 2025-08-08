@@ -101,7 +101,7 @@
 
     .discord-button:hover {
     }
-<!-- Floating Chat Button + Responsive Chat Panel -->
+  /* Button */
   #chat-toggle {
     position: fixed; right: 16px; bottom: 16px;
     z-index: 9999;
@@ -109,8 +109,10 @@
     background:#ff7a21; color:#fff; font-weight:600; cursor:pointer;
     box-shadow: 0 8px 24px rgba(0,0,0,.2);
   }
+
+  /* Panel wrapper */
   #chat-panel {
-    position: fixed; right: 16px; bottom: 72px;
+    position: fixed; right: 16px; bottom: 72px; /* above the button */
     z-index: 9998;
     width: min(380px, 92vw);
     height: clamp(320px, 60vh, 560px);
@@ -118,10 +120,11 @@
     box-shadow: 0 12px 32px rgba(0,0,0,.35);
     display:none;
   }
+
+  /* Tiny helper for ultra-small phones */
   @media (max-width: 420px) {
     #chat-panel { right: 8px; left: 8px; width: auto; }
   }
-
 
   </style>
 
