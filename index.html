@@ -101,24 +101,47 @@
 
     .discord-button:hover {
     }
+/* Floating button (bottom-right) */
 #chatToggle{
-  position:fixed; right:16px; bottom:16px; z-index:99999;
-  padding:.65rem .9rem; border:0; border-radius:999px;
-  background:#ff7a21; color:#000; font:600 15px/1 system-ui;
-  box-shadow:0 8px 24px rgba(0,0,0,.25); cursor:pointer;
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom));
+  z-index: 99999;
+  padding: .65rem .9rem;
+  border: 0;
+  border-radius: 999px;
+  font: 600 15px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #ff7a21;
+  color: #000;
+  box-shadow: 0 8px 24px rgba(0,0,0,.25);
+  cursor: pointer;
 }
+
+/* Chat dock (floats above content, right side) */
 #chatDock{
-  position:fixed; right:16px; bottom:78px; z-index:99998;
-  background:transparent;
+  position: fixed;
+  right: max(14px, env(safe-area-inset-right));
+  bottom: calc(max(14px, env(safe-area-inset-bottom)) + 56px); /* sits above button */
+  z-index: 99998;
+  width: clamp(260px, 32vw, 360px);
+  height: clamp(320px, 45vh, 520px);
+  background: #000;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0,0,0,.35);
 }
-#chatShell{
-  width:360px; height:480px;          /* >= Chatango min size */
-  border-radius:14px; overflow:hidden;
-  box-shadow:0 12px 36px rgba(0,0,0,.35);
+
+/* Mobile tweaks */
+@media (max-width: 520px){
+  #chatDock{
+    width: min(94vw, 420px);
+    height: min(60vh, 560px);
+    right: 3vw;
+    left: 3vw;
+  }
+  #chatToggle{ font-size: 14px; }
 }
-@media (max-width:520px){
-  #chatShell{ width:320px; height:440px; }
-}
+
 
 
   </style>
