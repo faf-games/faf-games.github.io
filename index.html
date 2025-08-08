@@ -106,29 +106,40 @@
   right: max(14px, env(safe-area-inset-right));
   bottom: max(14px, env(safe-area-inset-bottom));
   z-index: 99999;
-  padding: .65rem .9rem;
-  border: 0;
-  border-radius: 999px;
-  background: #ff7a21; color:#000; font:600 15px/1 system-ui;
-  box-shadow: 0 8px 24px rgba(0,0,0,.25);
-  cursor: pointer;
+  padding:.65rem .9rem; border:0; border-radius:999px;
+  background:#ff7a21; color:#000; font:600 15px/1 system-ui;
+  box-shadow:0 8px 24px rgba(0,0,0,.25); cursor:pointer;
 }
 
-/* Transparent, autosizing wrapper */
+/* Wrapper fixed to bottom-right; transparent background */
 #chatDock{
   position: fixed;
   right: max(14px, env(safe-area-inset-right));
   bottom: calc(max(14px, env(safe-area-inset-bottom)) + 56px);
   z-index: 99998;
-  display: none;          /* hidden by default */
-  background: transparent;/* <-- removes the black box */
-  width: auto;            /* let the embed size itself */
-  height: auto;           /* same */
-  padding: 0;
+  display: none;
+  background: transparent;
+}
+
+/* Size holder so nothing collapses */
+#chatDock .chatShell{
+  width: 360px;
+  height: 480px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0,0,0,.35);
 }
 
 /* show when opened */
 #chatDock.open{ display:block; }
+
+/* Mobile: keep above Chatango’s minimum */
+@media (max-width: 520px){
+  #chatDock .chatShell{
+    width: 320px;   /* don’t go below ~300 */
+    height: 440px;  /* don’t go below ~360–400 */
+  }
+}
 
 
   </style>
@@ -235,16 +246,18 @@
 
 			 
 		    </div></div>
-				<button id="chatToggle" aria-label="Open chat">Open Chat</button>
+<button id="chatToggle" aria-label="Open chat">Open Chat</button>
 
-<div id="chatDock" aria-hidden="true">
-  <!-- Chatango embed (sizes the box) -->
-  <script id="cid0020000415652152232" data-cfasync="false" async
-    src="//st.chatango.com/js/gz/emb.js"
-    style="width: clamp(280px, 32vw, 360px); height: clamp(360px, 55vh, 520px);">
-    {"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}
-  </script>
+<div id="chatDock" class="closed" aria-hidden="true">
+  <div class="chatShell">
+    <script id="chatEmbed" data-cfasync="false" async
+      src="//st.chatango.com/js/gz/emb.js"
+      style="width: 360px; height: 480px;">
+      {"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}
+    </script>
+  </div>
 </div>
+
 
 
                 <div class="col-12">
@@ -1400,18 +1413,25 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
     <script src="assets/js/script.js"></script>
 
 
-	
 <script>
   const btn  = document.getElementById('chatToggle');
   const dock = document.getElementById('chatDock');
+  const embed= document.getElementById('chatEmbed');
 
   btn.addEventListener('click', () => {
     const isOpen = dock.classList.toggle('open');
     dock.setAttribute('aria-hidden', !isOpen);
     btn.textContent = isOpen ? 'Close Chat' : 'Open Chat';
-    btn.ariaLabel   = isOpen ? 'Close chat' : 'Open chat';
+
+    // Safety: ensure inline size never shrinks below minimums
+    const shell = dock.querySelector('.chatShell');
+    const w = Math.max(shell.clientWidth, 320);
+    const h = Math.max(shell.clientHeight, 440);
+    embed.style.width  = w + 'px';
+    embed.style.height = h + 'px';
   });
 </script>
+
 
 		
 	
