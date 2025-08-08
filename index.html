@@ -251,7 +251,6 @@
 <button id="chatToggle" aria-label="Open chat">Open Chat</button>
 
 <div id="chatDock" aria-hidden="true">
-  <!-- Chatango embed (sizes the box) -->
   <script id="cid0020000415652152232" data-cfasync="false" async
     src="//st.chatango.com/js/gz/emb.js"
     style="width: clamp(280px, 32vw, 360px); height: clamp(360px, 55vh, 520px);">
@@ -1418,19 +1417,36 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 
 <script>
-  const btn = document.getElementById('chatToggle');
-  const dock = document.getElementById('chatDock');
+  const btn   = document.getElementById('chatToggle');
+  const dock  = document.getElementById('chatDock');
+  const shell = document.getElementById('chatShell');
+
+  let chatLoaded = false;
+
+  function loadChatango() {
+    const s = document.createElement('script');
+    s.id = 'chatango-embed';
+    s.src = 'https://st.chatango.com/js/gz/emb.js';
+    s.async = true;
+    s.style.width  = shell.clientWidth + 'px';
+    s.style.height = shell.clientHeight + 'px';
+    // Chatango expects JSON config as the script's text content
+    s.text = '{"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}';
+    shell.appendChild(s);
+    chatLoaded = true;
+  }
 
   btn.addEventListener('click', () => {
-    const open = dock.hasAttribute('hidden') ? false : true;
-    if (open){
-      dock.setAttribute('hidden','');
-      btn.textContent = 'Chat';
-      btn.ariaLabel = 'Open chat';
-    } else {
-      dock.removeAttribute('hidden');
+    const isHidden = dock.hasAttribute('hidden');
+    if (isHidden) {
+      dock.removeAttribute('hidden');     // make visible first
+      if (!chatLoaded) loadChatango();     // then inject script
       btn.textContent = 'Close Chat';
       btn.ariaLabel = 'Close chat';
+    } else {
+      dock.setAttribute('hidden','');
+      btn.textContent = 'Open Chat';
+      btn.ariaLabel = 'Open chat';
     }
   });
 </script>
