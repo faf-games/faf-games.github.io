@@ -101,7 +101,8 @@
 
     .discord-button:hover {
     }
-		    /* Button */
+<!-- Floating Chat Button + Responsive Chat Panel -->
+<style>
   #chat-toggle {
     position: fixed; right: 16px; bottom: 16px;
     z-index: 9999;
@@ -109,10 +110,8 @@
     background:#ff7a21; color:#fff; font-weight:600; cursor:pointer;
     box-shadow: 0 8px 24px rgba(0,0,0,.2);
   }
-
-  /* Panel wrapper */
   #chat-panel {
-    position: fixed; right: 16px; bottom: 72px; /* above the button */
+    position: fixed; right: 16px; bottom: 72px;
     z-index: 9998;
     width: min(380px, 92vw);
     height: clamp(320px, 60vh, 560px);
@@ -120,11 +119,10 @@
     box-shadow: 0 12px 32px rgba(0,0,0,.35);
     display:none;
   }
-
-  /* Tiny helper for ultra-small phones */
   @media (max-width: 420px) {
     #chat-panel { right: 8px; left: 8px; width: auto; }
   }
+</style>
 
   </style>
 
@@ -1414,7 +1412,7 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
     function loadChatango(){
       const s = document.createElement('script');
-      s.id = 'cid0020000415651156368';
+      s.id = 'cid0020000415652152232';
       s.setAttribute('data-cfasync', 'false');
       s.async = true;
       s.src = '//st.chatango.com/js/gz/emb.js';
@@ -1426,8 +1424,7 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
         styles: {
           a: "ff7a21", b: 100, c: "000000", d: "000000",
           k: "ff7a21", l: "ff7a21", m: "ff7a21",
-          p: "10", q: "ff7a21", r: 100, bpos: "tr",
-          cv: 1, cvbg: "CC0000", cvw: 75, cvh: 30,
+          p: "10", q: "ff7a21", r: 100,
           cnrs: "0.35", fwtickm: 1
         }
       });
