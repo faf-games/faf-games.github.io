@@ -374,6 +374,90 @@ dl dd {
   background: #34344a;
   border-radius: 5px;
 }
+
+
+			   .comments-section {
+            margin-top: var(--section-spacing);
+        }
+        
+        .comment {
+            padding: 1rem;
+            border-bottom: 1px solid #2a3a4a;
+            margin-bottom: 1rem;
+            color: #e0e0e0;
+        }
+        
+        .comment-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .comment-author {
+            font-weight: bold;
+            color: #0077ff;
+        }
+        
+        .comment-date {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .comment-text {
+            line-height: 1.5;
+        }
+        
+        .comment-form {
+            margin-top: var(--section-spacing);
+            padding: 1.5rem;
+            background-color: #0f1923;
+            border-radius: 8px;
+            border: 1px solid #2a3a4a;
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #e0e0e0;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #2a3a4a;
+            border-radius: 4px;
+            font-family: inherit;
+            box-sizing: border-box;
+            background-color: #1a2a3a;
+            color: white;
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #0077ff;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+        
+        .submit-btn:hover {
+            background-color: #0055cc;
+        }
             
         </style>
 
@@ -1150,8 +1234,28 @@ If you love quick battles, tactical building, and outsmarting your foes, 1v1.lol
 
     <p>Last updated: May 2025</p>
 </article>
+					
 			
               </div>
+				         <div class="section">
+            <h3 class="section-title"><i class="fas fa-comments"></i> Player Comments</h3>
+            <div class="comments-section" id="commentsSection">
+                <!-- Comments will be loaded here -->
+            </div>
+            
+            <div class="comment-form">
+                <h4>Leave your comment</h4>
+                <div class="form-group">
+                    <label for="commentName">Name</label>
+                    <input type="text" id="commentName" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="commentText">Comment</label>
+                    <textarea id="commentText" placeholder="Write your comment here..." required></textarea>
+                </div>
+                <button class="submit-btn" id="submitComment">Post Comment</button>
+            </div>
+        </div>
             </div>
           </section>
           <!-- Related Games End -->
@@ -1282,5 +1386,85 @@ If you love quick battles, tactical building, and outsmarting your foes, 1v1.lol
                  }
                  };
         </script>
+
+		   <script>
+
+		           // Comment system
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load comments from localStorage
+            loadComments();
+            
+            // Submit comment handler
+            document.getElementById('submitComment').addEventListener('click', function() {
+                const name = document.getElementById('commentName').value.trim();
+                const text = document.getElementById('commentText').value.trim();
+                
+                if (name && text) {
+                    addComment(name, text);
+                    document.getElementById('commentName').value = '';
+                    document.getElementById('commentText').value = '';
+                } else {
+                    alert('Please fill in both name and comment fields.');
+                }
+            });
+            
+            // Set current year in footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Mobile menu toggle
+            document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+                document.getElementById('navContainer').classList.toggle('active');
+            });
+        });
+        
+        function addComment(name, text) {
+            const comment = {
+                name: name,
+                text: text,
+                date: new Date().toLocaleDateString()
+            };
+            
+            // Get existing comments
+            let comments = JSON.parse(localStorage.getItem('gameComments') || '[]');
+            
+            // Add new comment
+            comments.unshift(comment); // Add to beginning
+            
+            // Save to localStorage
+            localStorage.setItem('gameComments', JSON.stringify(comments));
+            
+            // Refresh comments display
+            loadComments();
+        }
+        
+        function loadComments() {
+            const commentsSection = document.getElementById('commentsSection');
+            const comments = JSON.parse(localStorage.getItem('gameComments') || '[]');
+            
+            // Clear existing comments
+            commentsSection.innerHTML = '';
+            
+            // Add each comment
+            comments.forEach(comment => {
+                const commentDiv = document.createElement('div');
+                commentDiv.className = 'comment';
+                commentDiv.innerHTML = `
+                    <div class="comment-header">
+                        <div class="comment-author">${comment.name}</div>
+                        <div class="comment-date">${comment.date}</div>
+                    </div>
+                    <div class="comment-text">
+                        ${comment.text}
+                    </div>
+                `;
+                commentsSection.appendChild(commentDiv);
+            });
+            
+            // If no comments, show message
+            if (comments.length === 0) {
+                commentsSection.innerHTML = '<p>No comments yet. Be the first to comment!</p>';
+            }
+        }
+    </script>
 </body>
 </html>
