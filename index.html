@@ -142,6 +142,15 @@
   #chatToggle{ font-size: 14px; }
 }
 
+		  .chat-container {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+}
+.chat-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+}
 
 
   </style>
@@ -251,11 +260,15 @@
 <button id="chatToggle" aria-label="Open chat">Open Chat</button>
 
 <div id="chatDock" aria-hidden="true">
-  <script id="cid0020000415652152232" data-cfasync="false" async
-    src="//st.chatango.com/js/gz/emb.js"
-    style="width: clamp(280px, 32vw, 360px); height: clamp(360px, 55vh, 520px);">
-    {"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}
-  </script>
+  <script id="cid0020000415652152232" data-cfasync="false" async 
+  src="//st.chatango.com/js/gz/emb.js" 
+  style="width: 350px; height: 500px;">
+  {"handle":"faf-games","arch":"js","styles":{
+    "a":"ff7a21","b":100,"c":"000000","d":"000000",
+    "k":"ff7a21","l":"ff7a21","m":"ff7a21",
+    "p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1
+  }}
+</script>
 </div>
 
 
