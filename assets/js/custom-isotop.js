@@ -30,7 +30,7 @@
       .chat-box{
         width: clamp(300px, 32vw, 420px);
         height: clamp(380px, 50vh, 560px);
-        background:#000; border-radius:16px; overflow:hidden;
+        background: transparent; border-radius:16px; overflow:hidden;
         box-shadow: 0 12px 32px rgba(0,0,0,.35);
       }
       @media (max-width: 600px){
