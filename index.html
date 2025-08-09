@@ -1419,8 +1419,7 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
   const wrap = document.getElementById('chat-wrap');
   const btn  = document.getElementById('chat-toggle');
 
-  btn.addEventListener('click', () => {
-    const open = wrap.hasAttribute('hidden');
+  function toggleChat(open) {
     if (open) {
       wrap.removeAttribute('hidden');
       btn.textContent = 'Close Chat';
@@ -1430,13 +1429,18 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
       btn.textContent = 'Open Chat';
       btn.setAttribute('aria-expanded', 'false');
     }
+  }
+
+  btn.addEventListener('click', () => {
+    toggleChat(wrap.hasAttribute('hidden'));
   });
 
-  // If you ever saw a lingering black overlay from other UI,
-  // make sure nothing else sits above the chat:
-  // (Adjust if your site uses a modal/backdrop)
-  // document.querySelectorAll('.modal-backdrop,.overlay').forEach(el => el.style.zIndex = 999000);
+  // Open chat automatically when page loads
+  window.addEventListener('DOMContentLoaded', () => {
+    toggleChat(true);
+  });
 </script>
+
 
 
 
