@@ -101,56 +101,36 @@
 
     .discord-button:hover {
     }
-/* Floating button (bottom-right) */
-#chatToggle{
-  position: fixed;
-  right: max(14px, env(safe-area-inset-right));
-  bottom: max(14px, env(safe-area-inset-bottom));
-  z-index: 99999;
-  padding: .65rem .9rem;
-  border: 0;
-  border-radius: 999px;
-  font: 600 15px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: #ff7a21;
-  color: #000;
+/* Floating button */
+#chat-toggle{
+  position: fixed; right: 20px; bottom: 20px;
+  z-index: 999999; padding: 10px 14px; border: 0; border-radius: 999px;
+  background:#ff7a21; color:#000; font-weight:600; cursor:pointer;
   box-shadow: 0 8px 24px rgba(0,0,0,.25);
-  cursor: pointer;
 }
 
-/* Chat dock (floats above content, right side) */
-#chatDock{
-  position: fixed;
-  right: max(14px, env(safe-area-inset-right));
-  bottom: calc(max(14px, env(safe-area-inset-bottom)) + 56px); /* sits above button */
-  z-index: 99998;
-  width: clamp(260px, 32vw, 360px);
-  height: clamp(320px, 45vh, 520px);
-  background: #000;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 12px 36px rgba(0,0,0,.35);
+/* Chat container */
+#chat-wrap{
+  position: fixed; right: 20px; bottom: 76px; /* sits above the button */
+  z-index: 999998; /* just under the button */
+}
+
+/* The visible chat box (responsive but never too small) */
+.chat-box{
+  width: clamp(300px, 32vw, 420px);   /* min 300px to avoid “too small” */
+  height: clamp(380px, 50vh, 560px);  /* min ~380px is comfy */
+  background:#000; border-radius:16px; overflow:hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,.35);
 }
 
 /* Mobile tweaks */
-@media (max-width: 520px){
-  #chatDock{
-    width: min(94vw, 420px);
-    height: min(60vh, 560px);
-    right: 3vw;
-    left: 3vw;
+@media (max-width: 600px){
+  .chat-box{
+    width: min(92vw, 420px);
+    height: min(70vh, 560px);
   }
-  #chatToggle{ font-size: 14px; }
 }
 
-		  .chat-container {
-  width: 100%;
-  max-width: 400px;
-  height: 500px;
-}
-.chat-container iframe {
-  width: 100% !important;
-  height: 100% !important;
-}
 
 
   </style>
@@ -257,18 +237,24 @@
 
 			 
 		    </div></div>
-<button id="chatToggle" aria-label="Open chat">Open Chat</button>
+<!-- Chat Toggle Button -->
+<button id="chat-toggle" aria-expanded="false">Open Chat</button>
 
-<div id="chatDock" aria-hidden="true">
-  <script id="cid0020000415652152232" data-cfasync="false" async 
-  src="//st.chatango.com/js/gz/emb.js" 
-  style="width: 350px; height: 500px;">
-  {"handle":"faf-games","arch":"js","styles":{
-    "a":"ff7a21","b":100,"c":"000000","d":"000000",
-    "k":"ff7a21","l":"ff7a21","m":"ff7a21",
-    "p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1
-  }}
-</script>
+<!-- Chat Wrapper -->
+<div id="chat-wrap" hidden>
+  <!-- Responsive inner box that guarantees a safe minimum -->
+  <div class="chat-box">
+    <script id="cid0020000415739779520"
+      data-cfasync="false" async
+      src="//st.chatango.com/js/gz/emb.js"
+      style="width:100%; height:100%;">
+      {"handle":"faf-games","arch":"js","styles":{
+        "a":"ff7a21","b":100,"c":"000000","d":"000000",
+        "k":"ff7a21","l":"ff7a21","m":"ff7a21",
+        "p":"10","q":"ff7a21","r":100,"fwtickm":1
+      }}
+    </script>
+  </div>
 </div>
 
 
@@ -1430,38 +1416,26 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 
 <script>
-  const btn   = document.getElementById('chatToggle');
-  const dock  = document.getElementById('chatDock');
-  const shell = document.getElementById('chatShell');
-
-  let chatLoaded = false;
-
-  function loadChatango() {
-    const s = document.createElement('script');
-    s.id = 'chatango-embed';
-    s.src = 'https://st.chatango.com/js/gz/emb.js';
-    s.async = true;
-    s.style.width  = shell.clientWidth + 'px';
-    s.style.height = shell.clientHeight + 'px';
-    // Chatango expects JSON config as the script's text content
-    s.text = '{"handle":"faf-games","arch":"js","styles":{"a":"ff7a21","b":100,"c":"000000","d":"000000","k":"ff7a21","l":"ff7a21","m":"ff7a21","p":"10","q":"ff7a21","r":100,"cnrs":"0.35","fwtickm":1}}';
-    shell.appendChild(s);
-    chatLoaded = true;
-  }
+  const wrap = document.getElementById('chat-wrap');
+  const btn  = document.getElementById('chat-toggle');
 
   btn.addEventListener('click', () => {
-    const isHidden = dock.hasAttribute('hidden');
-    if (isHidden) {
-      dock.removeAttribute('hidden');     // make visible first
-      if (!chatLoaded) loadChatango();     // then inject script
+    const open = wrap.hasAttribute('hidden');
+    if (open) {
+      wrap.removeAttribute('hidden');
       btn.textContent = 'Close Chat';
-      btn.ariaLabel = 'Close chat';
+      btn.setAttribute('aria-expanded', 'true');
     } else {
-      dock.setAttribute('hidden','');
+      wrap.setAttribute('hidden', '');
       btn.textContent = 'Open Chat';
-      btn.ariaLabel = 'Open chat';
+      btn.setAttribute('aria-expanded', 'false');
     }
   });
+
+  // If you ever saw a lingering black overlay from other UI,
+  // make sure nothing else sits above the chat:
+  // (Adjust if your site uses a modal/backdrop)
+  // document.querySelectorAll('.modal-backdrop,.overlay').forEach(el => el.style.zIndex = 999000);
 </script>
 
 
