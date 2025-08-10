@@ -101,35 +101,7 @@
 
     .discord-button:hover {
     }
-/* Floating button */
-#chat-toggle{
-  position: fixed; right: 20px; bottom: 20px;
-  z-index: 999999; padding: 10px 14px; border: 0; border-radius: 999px;
-  background:#ff7a21; color:#000; font-weight:600; cursor:pointer;
-  box-shadow: 0 8px 24px rgba(0,0,0,.25);
-}
 
-/* Chat container */
-#chat-wrap{
-  position: fixed; right: 20px; bottom: 76px; /* sits above the button */
-  z-index: 999998; /* just under the button */
-}
-
-/* The visible chat box (responsive but never too small) */
-.chat-box{
-  width: clamp(300px, 32vw, 420px);   /* min 300px to avoid “too small” */
-  height: clamp(380px, 50vh, 560px);  /* min ~380px is comfy */
-  background: transparent; border-radius:16px; overflow:hidden;
-  box-shadow: 0 12px 32px rgba(0,0,0,.35);
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px){
-  .chat-box{
-    width: min(92vw, 420px);
-    height: min(70vh, 560px);
-  }
-}
 
 
 		  			   .comments-section {
@@ -334,24 +306,6 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
             <div class="row">
                 <div class="col-12">
 					<!-- Chat Toggle Button -->
-<button id="chat-toggle" aria-expanded="false">Open Chat</button>
-
-<!-- Chat Wrapper -->
-<div id="chat-wrap" hidden>
-  <!-- Responsive inner box that guarantees a safe minimum -->
-  <div class="chat-box">
-    <script id="cid0020000415739779520"
-      data-cfasync="false" async
-      src="//st.chatango.com/js/gz/emb.js"
-      style="width:100%; height:100%;">
-      {"handle":"faf-games","arch":"js","styles":{
-        "a":"ff7a21","b":100,"c":"000000","d":"000000",
-        "k":"ff7a21","l":"ff7a21","m":"ff7a21",
-        "p":"10","q":"ff7a21","r":100,"fwtickm":1
-      }}
-    </script>
-  </div>
-</div>
 
                     <div class="games-masonary">
                         <div class="projectFilter project-btn">
@@ -1515,31 +1469,7 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
     <script src="assets/js/script.js"></script>
 
 
-<script>
-  const wrap = document.getElementById('chat-wrap');
-  const btn  = document.getElementById('chat-toggle');
 
-  function toggleChat(open) {
-    if (open) {
-      wrap.removeAttribute('hidden');
-      btn.textContent = 'Close Chat';
-      btn.setAttribute('aria-expanded', 'true');
-    } else {
-      wrap.setAttribute('hidden', '');
-      btn.textContent = 'Open Chat';
-      btn.setAttribute('aria-expanded', 'false');
-    }
-  }
-
-  btn.addEventListener('click', () => {
-    toggleChat(wrap.hasAttribute('hidden'));
-  });
-
-  // Open chat automatically when page loads
-  window.addEventListener('DOMContentLoaded', () => {
-    toggleChat(true);
-  });
-</script>
 
 			  <script>
 
