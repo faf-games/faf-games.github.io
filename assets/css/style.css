@@ -62,7 +62,37 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
- .tags {
+.dark-theme body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.dark-theme .section {
+    background-color: #1e1e1e;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.dark-theme h2 {
+    color: #ffffff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 5px;
+}
+
+.dark-theme ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.dark-theme li {
+    margin-bottom: 5px;
+}
+
+
+
+.tags {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
