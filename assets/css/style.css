@@ -62,7 +62,7 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
-.dark-theme body {
+.dark-theme container  {
     background-color: #121212;
     color: #ffffff;
     font-family: Arial, sans-serif;
