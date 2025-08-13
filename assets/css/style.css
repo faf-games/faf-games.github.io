@@ -62,6 +62,32 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
+ .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  .tag {
+    background-color: #3d3d3c;
+    border-radius: 12px;
+    padding: 0.3rem;
+    margin: .5rem;
+    font-size: 14px;
+    color: #ffffffb3;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+  .tag:hover {
+    background-color: #ff7a21;
+    padding: 0.7rem;
+}
+
+
+
+
+
 .fullscreen-btn {
     display: none;
     align-items: center;
