@@ -1,0 +1,955 @@
+
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta name="robots" content="index, follow">
+    <meta name="publisher" content="FAF Games Team">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Geometry Dash Lite: Play Online for Free | FAF Games</title>
+    <meta name="description" content="Geometry Dash Lite is a fast-paced rhythm platformer where you jump and fly through challenging levels. Play free online, test your reflexes, and enjoy the music.">
+    
+    <meta name="keywords" content="Vex 5 Game, 
+    Adventure Games, AdventureGames, Adventure Games Pc, AdventureGamesPc, 
+    Adventure Games Online, 
+    AdventureGamesOnline, Adventure Games Free, AdventureGamesFree">
+    <meta name="news_keywords" content="vex 5 unblocked
+    vex 5 extension
+    vex 5 download
+    vex 5 unblocked 66
+    vex 5 -- yandex
+    vex 5 y8
+    vex 5 6
+    vex 5 crazy games">
+    <meta name="author" content="FAF Games Team">
+    <link rel="canonical" href="/game/geometry-dash-lite.html" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="../assets/css/all.min.css">
+    <!--Magnific css-->
+    <link rel="stylesheet" href="../assets/css/magnific-popup.css">
+    <!--Owl-Carousel css-->
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/css/owl.theme.default.min.css">
+    <!--NoUiSlider css-->
+    <link rel="stylesheet" href="../assets/css/nouislider.min.css">
+    <!--Animate css-->
+    <link rel="stylesheet" href="../assets/css/animate.min.css">
+    <!--Site Main Style css-->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Responsive css-->
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    <style>
+        .game-iframe-container {
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            min-height: 75vh;
+        }
+        .game-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+        }
+                .FG-splash-button{
+                    border-bottom-color:#ffb53d!important;
+                    color:#000;background:linear-gradient(140deg,#fbde04,#e2c803)}
+                .FG-splash-button:hover{
+                    border-bottom-color:#ff5e00!important;
+                    color:#fff;
+                    background:linear-gradient(140deg,#ff9214,#fa8500)}
+                .FG-splash-button:active{
+                    border-bottom-color:#ff7e33!important;
+                    background:linear-gradient(140deg,#ff5e00,#ff5e00)}
+                .SP-splash-button{
+                    width:290px;
+                    height:60px;
+                    margin-top:2.5rem;
+                    border-radius:290486px!important;
+                    padding-left:2rem;
+                    padding-right:2rem;
+                    border:3px solid #fff!important;
+                    color:#0a0a0a;
+                    text-transform:uppercase;
+                    background:linear-gradient(180deg,#001aff,#002fff);
+                    box-shadow:12px 14px 15px -1px rgba(0,0,0,.2)}
+                .SP-splash-button:before{
+                    content:"";
+                    position:absolute;
+                    left:0;top:1px;
+                    width:100%;
+                    height:100%;
+                    border-radius:290486px!important;
+                    opacity:0;
+                    background: linear-gradient(180deg,#af39b9,#c815d7);
+                    transform:scale(0);
+                    transform-origin:50% 100%;
+                    will-change:transform;
+                    transition:transform .3s cubic-bezier(.25,.46,.45,.94),opacity .2s cubic-bezier(.25,.46,.45,.94);
+                    z-index:-1}
+                .SP-splash-top>div>button:active{transform:translateY(0)}
+                .SP-splash-button:hover:before{
+                    top:0;
+                    opacity:1;
+                    transform:scale(1)}
+                .SP-splash-top>div>button:active:before{
+                    box-shadow:inset 0 0 7px 0 rgba(224,71,36,.53),inset 0 0 7px 0 rgba(0,0,0,.35)}
+                .HG-splash-button{
+                    height:35px;
+                    line-height:35px;
+                    border-bottom:none!important;
+                    border-radius:5px!important;
+                    color:#f06000;
+                    background:#fff}
+                .HG-splash-button:hover{
+                    color:#fff;
+                    background:#f06000}
+                .BG-splash-button,.BG-splash-button:active{
+                    box-shadow:inset 0 3px 0 0 #00fcff,
+                    inset 20px 0 50px rgba(8,238,225,.3),
+                    inset 20px 0 300px rgba(0,200,187,.05),
+                    inset 0 20px 50px rgba(8,238,225,.3),
+                    inset 0 0 10px #affffa,4px 4px 4px 0 rgba(10,10,10,.5)!important;
+                    background-color:rgba(9,81,105,.5);
+                    border:0;
+                    color:#affffa;
+                    width:290px;
+                    height:4rem;
+                    border-radius:290486px!important;
+                    font-size:1.25rem!important;
+                    border:2px solid #5258b5!important;
+                    opacity:.7}
+                .BG-splash-button:before{
+                    content:"";
+                    position:absolute;
+                    left:0;top:1px;
+                    width:100%;
+                    height:100%;
+                    border-radius:290486px!important;
+                    opacity:0;
+                    background-color:#fff;box-shadow:inset 0 0 7px 0 rgba(223,180,170,.53)!important;transform:scale(0);
+                    transform-origin:50% 50%;will-change:transform;
+                    transition:transform 172ms cubic-bezier(.25,.46,.45,.94),opacity 172ms cubic-bezier(.25,.46,.45,.94);
+                    z-index:-1}
+                .BG-splash-button:hover{
+                    color:rgba(0,0,0,.7)!important;border:2px solid #098c9c!important}
+                .BG-splash-button:active{
+                    border-color:transparent!important;
+                    color:rgba(0,0,0,.7);transform:translateY(0)}
+                .BG-splash-button:hover:before{
+                    top:0;
+                    opacity:1;
+                    transform:scale(1)}
+                .BG-splash-button:active:before{
+                    box-shadow:inset 0 0 7px 0 rgba(224,71,36,.53),inset 0 0 7px 0 rgba(0,0,0,.35)!important}body{position:inherit}
+                .talpa-splash-background-container{
+                    box-sizing:border-box;
+                    position:absolute;
+                    top:0;
+                    left:0;
+                    width:100%;
+                    height:100%;
+                    background-color:#000;
+                    overflow:hidden}
+                .talpa-splash-background-image{
+                    box-sizing:border-box;
+                    position:absolute;
+                    top:-25%;
+                    left:-25%;
+                    width:150%;
+                    height:150%;
+                    background-image:var(--thumb);
+                    background-size:cover;
+                    filter:blur(50px) brightness(1.5)}
+                .talpa-splash-container{
+                    display:flex;
+                    flex-flow:column;
+                    box-sizing:border-box;
+                    position:absolute;
+                    bottom:0;
+                    width:100%;
+                    height:100%}
+                .talpa-splash-top{
+                    display:flex;
+                    flex-flow:column;
+                    box-sizing:border-box;
+                    flex:1;
+                    align-self:center;
+                    justify-content:center;
+                    padding:20px}
+                .talpa-splash-top>div{text-align:center}
+                .talpa-splash-top>div>button{
+                    position:relative;
+                    min-width:180px;
+                    min-height:45px;
+                    line-height:45px;
+                    border:0;
+                    border-radius:25px;
+                    border-bottom:5px solid grey;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                    text-align:center;
+                    text-transform:uppercase;
+                    text-shadow:1px 1px 1px rgba(0,0,0,.004);
+                    font-family:Roboto Condensed,Helvetica Neue,Arial,"sans-serif";
+                    font-size:16px;
+                    font-weight:400;
+                    cursor:pointer;
+                    box-shadow:inset 0 -1px 1px hsla(0,0%,100%,.1),inset 0 1px 1px hsla(0,0%,100%,.2);
+                    will-change:transform;
+                    transition:transform .15s linear}
+                .talpa-splash-top>div>button:focus{outline:none}
+                .talpa-splash-top>div>button:active{
+                    box-shadow:0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.13);
+                    transform:translateY(-5px)}
+                .talpa-loader,.talpa-loader:after{
+                    border-radius:50%;
+                    width:1.5em;
+                    height:1.5em}
+                .talpa-loader{
+                    box-sizing:content-box;
+                    margin:0 auto;
+                    font-size:10px;
+                    position:relative;
+                    text-indent:-9999em;
+                    border:1.1em solid hsla(0,0%,100%,.2);
+                    border-left-color:#fff;
+                    -webkit-transform:translateZ(0);
+                    -ms-transform:translateZ(0);
+                    transform:translateZ(0);
+                    -webkit-animation:talpa-load8 1.1s linear infinite;
+                    animation:talpa-load8 1.1s linear infinite;
+                    display:none}
+                .talpa-splash-top>div>div:first-child{
+                    position:relative;
+                    width:150px;
+                    height:150px;
+                    margin:auto auto 20px;
+                    border-radius:10px;
+                    overflow:hidden;
+                    border:2px solid hsla(0,0%,100%,.8);
+                    box-shadow:inset 0 5px 5px rgba(0,0,0,.5),0 2px 4px rgba(0,0,0,.3);
+                    background-image:var(--thumb);
+                    background-position:50%;
+                    background-size:cover}
+                .talpa-splash-top>div>div>img{
+                    width:100%;
+                    height:100%}
+                .talpa-splash-bottom{
+                    display:flex;
+                    flex-flow:column;
+                    box-sizing:border-box;
+                    align-self:center;
+                    justify-content:center;
+                    width:100%;
+                    padding:0 0 20px}
+                .talpa-splash-bottom>.talpa-splash-consent,.talpa-splash-bottom>.talpa-splash-title{
+                    box-sizing:border-box;
+                    width:100%;
+                    padding:20px;
+                    background:linear-gradient(90deg,transparent,rgba(0,0,0,.5) 50%,transparent);
+                    color:#fff;
+                    text-align:left;
+                    font-size:12px;
+                    font-family:Arial;
+                    font-weight:400;
+                    text-shadow:0 0 1px rgba(0,0,0,.7);
+                    line-height:150%}
+                .talpa-splash-bottom>.talpa-splash-title{
+                    padding:15px 0;
+                    text-align:center;
+                    font-size:18px;
+                    font-family:Helvetica,Arial,sans-serif;
+                    font-weight:700;
+                    line-height:100%}
+                .talpa-splash-bottom>.talpa-splash-consent a{
+                    color:#fff}
+                    @-webkit-keyframes talpa-load8{0%{-webkit-transform:rotate(0deg);
+                    transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);
+                    transform:rotate(1turn)}}
+                    @keyframes talpa-load8{0%{-webkit-transform:rotate(0deg);
+                    transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);
+                    transform:rotate(1turn)}}
+                    @keyframes talpa-gradient{0%{background-position:0 50%}50%{background-position:100% 50%}to{background-position:0 50%}}
+                .iframeloader {
+                    background: url(./images/loadinggif.gif) center center no-repeat;
+                    background-size: 5vw;}
+        .article-header {
+            width: 100%;
+            float: left;
+            border-bottom: 1px solid rgba(255,255,255,.1);
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            margin-top: 20px
+        }
+        
+    </style>
+   </head>
+   <body>
+       
+       
+      <!-- Custom Cursor Start -->
+      <div id="cursor-large"></div>
+      <div id="cursor-small"></div>
+      <!-- Custom Cursor End -->
+    <!-- Header Area Start -->
+    <nav class="fag-header navbar navbar-expand-lg">
+      <div class="container">
+          <a class="navbar-brand" href="../index.html"><img src="../assets/img/logo.png" alt="FAF Games" /></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="menu-toggle"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+              <ul class="header_menu  mr-auto">
+                  <li class="nav-item active">
+                      <a href="../index.html" class="nav-link">Home</a>
+                  </li>
+                  <li class="nav-item">
+                          <a href="../action/index.html" class="nav-link">Action</a>
+                  </li>
+                  <li class="nav-item">
+                          <a href="../adventure/index.html" class="nav-link">Adventure</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="../bike/index.html" class="nav-link">Bike</a>
+                  </li>        
+                  <li class="nav-item">
+                          <a href="../car/index.html" class="nav-link">Car</a>
+                  </li>        
+                  <li class="nav-item">
+                      <a href="../idle/index.html" class="nav-link">Idle</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="../shooting/index.html" class="nav-link">Shooting</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="../skill/index.html" class="nav-link">Skill</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="../sport/index.html" class="nav-link">Sport</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <!-- Header Area End -->
+  <!-- Breadcrumb Area Start -->
+      <section class="fag-breadcrumb-area">
+         <div class="container">
+            <div class="row">
+
+                <div class="banner-ad-wrapper"><div class="banner-ad-content" style="padding: 20px 0; text-align: center;">
+                		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js" crossorigin="anonymous"></script>
+<script>
+  window.googletag = window.googletag || {cmd: []};
+  googletag.cmd.push(function() {
+    googletag.defineSlot('/23079347111/footer', [970, 250], 'div-gpt-ad-1745489755961-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script><!-- /23079347111/footer -->
+<div id='div-gpt-ad-1745489755961-0' style='min-width: 970px; min-height: 250px;'>
+  <script>
+    googletag.cmd.push(function() { googletag.display('div-gpt-ad-1745489755961-0'); });
+  </script>
+</div>
+               <div class="col-12">
+                  <div class="games-details-banner">
+                     <div class="row">
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- Breadcrumb Area End -->
+       
+       
+      <!-- games Details Page Start -->
+    <!-- contest-details-section start -->
+    <section class="pb-120 mt-minus-300">
+      <div class="container">
+
+           <div class="article-header">
+        <h1>Geometry Dash Lite</h1>
+    </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <div class="contest-details__slider-area">
+              <div class="contest-details__thumb-slider">
+                <div class="game-iframe-container" id="loadgame">
+                  <div class="talpa-splash-container" style="background: var(--color2);"><div class="talpa-splash-top"><div>
+                       <div style="--thumb:url(../assets/img/geometry-dash-lite/geometry-dash-lite.png);" alt="Stylish Crop Top Trends"></div>
+                       <button id="talpa-splash-button" class="SP-splash-button" onclick="loadMainGame()" style="display: block;">PLAY NOW</button>
+                       <div class="talpa-loader" style="display: none;">Loading...</div></div></div><div class="talpa-splash-bottom"></div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div><!-- row end -->
+      </div>
+    </section>
+    <!-- contest-details-section end  -->
+       
+       
+      <!-- Related Games Start -->
+      <section class="fag-games-area related_games section_100">
+         <div class="container">
+            <div class="row">
+              <div class="dark-theme container">
+
+  <div class="dark-theme section">
+    <h2>About</h2>
+    <p><strong>Geometry Dash Lite</strong> is a fast-paced rhythm-based platformer where timing is everything. Jump, flip, and fly through challenging obstacle courses set to energetic music. This <strong>Geometry Dash Lite unblocked</strong> version lets you play instantly in your browser, perfect for school, work breaks, or home gaming sessions. Whether you are a beginner trying to pass your first level or a pro mastering triple spikes, Geometry Dash Lite delivers addictive gameplay and endless replay value. Enjoy one of the most exciting <a href="https://faf-games.github.io" target="_blank">unblocked games</a> with precision jumping, dynamic obstacles, and catchy beats.</p>
+  </div>
+
+  <div class="dark-theme section">
+    <h2>How to Play / Tips</h2>
+    <ul>
+      <li>Tap or click at the right moment to jump over spikes and gaps.</li>
+      <li>Memorize patterns to progress further each time.</li>
+      <li>Stay in rhythm with the background music — it helps with timing.</li>
+      <li>Don’t rush — focus on precision over speed.</li>
+    </ul>
+  </div>
+
+  <div class="dark-theme section">
+    <h2>Controls</h2>
+    <ul>
+      <li><strong>Space / Left Click:</strong> Jump</li>
+      <li><strong>Hold Jump:</strong> Continuous jump for certain sequences</li>
+    </ul>
+  </div>
+
+  <div class="dark-theme section">
+    <h2>Game Information</h2>
+    <ul>
+      <li><strong>Developer:</strong> RobTop Games</li>
+      <li><strong>Genre:</strong> Rhythm / Platformer</li>
+      <li><strong>Players:</strong> Single Player</li>
+      <li><strong>Release Date:</strong> 2014 (Lite version)</li>
+      <li><strong>Build:</strong> HTML5</li>
+    </ul>
+  </div>
+
+  <div class="dark-theme section">
+    <h2>Game Objective</h2>
+    <p>Survive through each level by avoiding obstacles, keeping perfect timing, and adapting to new challenges with every section.</p>
+  </div>
+
+  <div class="dark-theme section">
+    <h2>Unblocked Game Disclaimer</h2>
+    <p>This is an unblocked HTML5 version of Geometry Dash Lite, playable online without downloads or restrictions.</p>
+  </div>
+
+  <div class="dark-theme section">
+    <h2>Related Games</h2>
+    <ul>
+      <li><a href="https://faf-games.github.io/game/level-devil.html">Level Devil</a></li>
+      <li><a href="https://faf-games.github.io/game/vex-7.html">Vex 7</a></li>
+      <li><a href="https://faf-games.github.io/game/slope.html">Slope</a></li>
+    </ul>
+  </div>
+
+  <div class="dark-theme section tags">
+    <a href="https://faf-games.github.io/skill/index.html" class="tag">Skill</a>
+    <a href="https://faf-games.github.io/action/index.html" class="tag">Action</a>
+  </div>
+
+</div>
+
+               <div class="col-12">
+                  <div class="site-heading">
+                     <h2 class="heading_animation">Related <span>games</span></h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                  <div class="games-masonary">
+                      <div class="clearfix gamesContainer">
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/bad-ice-cream-3.html">
+                                              <img src="../assets/img/badicecream3/bad-ice-cream-3.png" alt="Bad Ice Cream 3" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/bad-ice-cream-3.html">Bad Ice Cream 3</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/big-tower-tiny-square.html">
+                                              <img src="../assets/img/bigtowertinysquere/big-tower-tiny-square.png" alt="Big Tower Tiny Square" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/big-tower-tiny-square.html">Big Tower Tiny Square</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/bob-the-robber-2.html">
+                                              <img src="../assets/img/bobtherobber2/bob-the-robber-2.png" alt="Bob The Robber 2" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/bob-the-robber-2.html">Bob The Robber 2</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                        <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/level-devil.html">
+                                              <img src="../assets/img/level-devil/level-devil.png" alt="Level devil" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/level-devil.html">Level devil</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/bob-the-robber-4.html">
+                                              <img src="../assets/img/bobtherobber4/bob-the-robber-4.png" alt="Bob The Robber 4" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/bob-the-robber-4.html">Bob The Robber 4</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/burrito-bison-launcha-libre.html">
+                                              <img src="../assets/img/burritobisonlauchalebre/burrito-bison-launcha-libre.png" alt="Burriton Bison Launchan Libre" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/burrito-bison-launcha-libre.html">Burriton Bison Launchan Libre</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/breaking-the-bank.html">
+                                              <img src="../assets/img/breakingthebank/breaking-the-bank.png" alt="Breaking The Bank" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/breaking-the-bank.html">Breaking The Bank</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/escaping-the-prison.html">
+                                              <img src="../assets/img/escapingtheprison/escaping-the-prison.png" alt="Escaping The Prison" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/escaping-the-prison.html">Escaping The Prison</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fleeing-the-complex.html">
+                                              <img src="../assets/img/fleeingthecomplex/fleeing-the-complex.png" alt="Fleeing The Complex" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fleeing-the-complex.html">Fleeing The Complex</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fireboy-and-watergirl.html">
+                                              <img src="../assets/img/fireboyandwatergirl/fireboy-and-watergirl.png" alt="Fireboy & Watergirl" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fireboy-and-watergirl.html">Fireboy & Watergirl</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fireboy-and-watergirl-2.html">
+                                              <img src="../assets/img/fireboyandwatergirl/fireboy-and-watergirl-2.png" alt="Fireboy & Watergirl 2" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fireboy-and-watergirl-2.html">Fireboy & Watergirl 2</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fireboy-and-watergirl-3.html">
+                                              <img src="../assets/img/fireboyandwatergirl/fireboy-and-watergirl-3.png" alt="Fireboy & Watergirl 3" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fireboy-and-watergirl-3.html">Fireboy & Watergirl 3</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fireboy-and-watergirl-4.html">
+                                              <img src="../assets/img/fireboyandwatergirl/fireboy-and-watergirl-4.png" alt="Fireboy & Watergirl 4" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fireboy-and-watergirl-4.html">Fireboy & Watergirl 4</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fireboy-and-watergirl-5.html">
+                                              <img src="../assets/img/fireboyandwatergirl/fireboy-and-watergirl-5.png" alt="Fireboy & Watergirl 5" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fireboy-and-watergirl-5.html">Fireboy & Watergirl 5</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/fireboy-and-watergirl-6.html">
+                                              <img src="../assets/img/fireboyandwatergirl/fireboy-and-watergirl-6.png" alt="Fireboy & Watergirl 6" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/fireboy-and-watergirl-6.html">Fireboy & Watergirl 6</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/infiltrating-the-airship.html">
+                                              <img src="../assets/img/infiltratingtheairshing/infiltrating-the-airship.png" alt="Infiltrating The Airship" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/infiltrating-the-airship.html">Infiltrating The Airship</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/red-ball-4.html">
+                                              <img src="../assets/img/redball4/red-ball-4.png" alt="Red Ball 4" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/red-ball-4.html">Red Ball 4</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/stealing-the-diamond.html">
+                                              <img src="../assets/img/stealingthediamond/stealing-the-diamond.png" alt="Stealing The Diamond" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/stealing-the-diamond.html">Stealing The Diamond</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/vex-3.html">
+                                              <img src="../assets/img/vex/vex3.png" alt="Vex 3" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/vex-3.html">Vex 3</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/vex-4.html">
+                                              <img src="../assets/img/vex/vex4.png" alt="Vex 4" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/vex-4.html">Vex 4</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/vex-5.html">
+                                              <img src="../assets/img/vex/vex5.png" alt="Vex 5" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/vex-5.html">Vex 5</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/vex-6.html">
+                                              <img src="../assets/img/vex/vex6.png" alt="Vex 6" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/vex-6.html">Vex 6</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/vex-7.html">
+                                              <img src="../assets/img/vex/vex7.png" alt="Vex 7" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/vex-7.html">Vex 7</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                          <div class="games-item desktop">
+                              <div class="games-single-item img-contain-isotope">
+                                  <div class="games-thumb">
+                                          <a href="../game/ovo.html">
+                                              <img src="../assets/img/ovo/ovo.png" alt="OvO" />
+                                          </a>
+                                  </div>
+                                  <div class="games-desc">
+                                      <h3><a href="../game/ovo.html">OvO</a></h3>
+                                      <p class="game-meta">Adventure | Desktop | Mobile</p>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- end game item -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+         </div>
+      </section>
+      <!-- Related Games End -->
+      <footer class="fag-footer">
+         <div class="footer-top-area">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-lg-4 col-md-6 col-sm-12">
+                         <div class="single-footer">
+                             <h3>About us</h3>
+                             <p>Moreover, they ban certain gaming websites and utilize internet filters to restrict others. <br>All gaming sites are blocked by these filters.<br>
+                                 Even though it takes a long time, <br>some gaming websites will get unblocked since it is difficult to prohibit every website on the internet, <br>
+                                 and because <a href="https://faf-games.github.io">FAF GAME</a> websites are less likely to be blocked.</p>
+                         </div>
+                     </div>
+                     <div class="col-lg-5 col-md-6 col-sm-12">
+                         <div class="widget-content">
+                             <div class="row clearfix">
+                                 <div class=" col-lg-6 col-md-6 col-sm-12">
+                                     <div class="single-footer">
+                                         <h3>Our Games</h3>
+                                         <ul>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Need For Speed</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Call Of Duty</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Resident Evil</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Dragons Fight</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>2 Player Champions</a></li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                                 <div class=" col-lg-6 col-md-6 col-sm-12">
+                                     <div class="single-footer">
+                                         <h3>Explore</h3>
+                                         <ul>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>About</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Our Games</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Contact Us</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Help & Support</a></li>
+                                             <li><a href="#"><span class="fa fa-caret-right"></span>Privacy Policy</a></li>
+                                         </ul>
+                                     </div>
+                                 </div>
+                             </div>
+                         </div>
+                     </div>
+                     <div class=" col-lg-3 col-md-6 col-sm-12">
+                         <div class="single-footer">
+                             <h3>Contact Us</h3>
+                             <div class="footer-contact">
+                                 <h4 class="title"><i class="fa fa-map-marker"></i>Address </h4>
+                                 <p>88 Road, Broklyn Street<br>New York, USA</p>
+                             </div>
+                             <div class="footer-contact">
+                                 <h4 class="title"><i class="fa fa-envelope"></i>Email Address</h4>
+                                 <p>info@fafgames.com</p>
+                             </div>
+                             <div class="footer-contact">
+                                 <h4 class="title"><i class="fa fa-phone"></i>Phone </h4>
+                                 <p>777-1234-567</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <div class="footer-bottom">
+             <div class="container">
+                 <div class="row">
+                     <div class="col-12">
+                         <div class="footer-bottom-inn">
+                             <div class="footer-logo">
+                                 <a href="index.html">
+                                     <img src="../assets/img/logo.png" alt="FAF Games" />
+                                 </a>
+                             </div>
+                             <div class="footer-social">
+                                 <ul>
+                                     <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                     <li><a href="#"><span class="fab fa-instagram"></span></a></li>
+                                     <li><a href="#"><span class="fab fa-youtube"></span></a></li>
+                                     <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                 </ul>
+                             </div>
+                             <div class="copyright">
+                                 <p>&copy; Copyrights 2020 FAF GAMES - All Rights Reserved</p>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </footer>
+     <!-- Footer Area End -->
+
+       
+    <!--Jquery js-->
+    <script src="../assets/js/jquery.min.js"></script>
+    <!--Bootstrap js-->
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
+    <!--Owl-Carousel js-->
+    <script src="../assets/js/owl.carousel.min.js"></script>
+    <!--Magnific js-->
+    <script src="../assets/js/jquery.magnific-popup.min.js"></script>
+    <!--wNumb js-->
+    <script src="../assets/js/wNumb.js"></script>
+    <!--NoUiSlider js-->
+    <script src="../assets/js/nouislider.min.js"></script>
+    <!-- Isotop Js -->
+    <script src="../assets/js/isotope.pkgd.min.js"></script>
+    <script src="../assets/js/custom-isotop.js"></script>
+    <!--Main js-->
+    <script src="../assets/js/main.js"></script>
+     <script>
+        function loadMainGame()
+        {
+              var html = `<iframe class="game-iframe iframeloader" id="game-area" src="https://geometry-dash-lite.io/gdl/" width="480" height="800" scrolling="none" frameborder="0" allowfullscreen="" tabindex="0"></iframe>`;
+              document.getElementById("loadgame").innerHTML = html;
+              document.getElementById('loadgame').scrollIntoView();
+        }
+        function open_fullscreen() {
+              let game = document.getElementById("game-area");
+              if (game.requestFullscreen) {
+              game.requestFullscreen();
+              } else if (game.mozRequestFullScreen) { /* Firefox */
+              game.mozRequestFullScreen();
+              } else if (game.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+              game.webkitRequestFullscreen();
+              } else if (game.msRequestFullscreen) { /* IE/Edge */
+              game.msRequestFullscreen();
+              }
+              };
+     </script>
+</body>
+</html>
