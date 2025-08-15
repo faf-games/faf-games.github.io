@@ -12,6 +12,10 @@
         "name": "2048",
         "url": "game/2048.html"
     },
+     {
+        "name": "1v1 LOL Official",
+        "url": "game/1v1-lol-unblocked.html"
+    },
     {
         "name": "3D Bowling",
         "url": "game/3d-bowling.html"
@@ -344,6 +348,10 @@
         "name": "Go Kart Go Ultra",
         "url": "game/go-kart-go-ultra.html"
     },
+     {
+        "name": "Geometry Dash Lite",
+        "url": "game/geometry-dash-lite.html"
+    },
     {
         "name": "Gun Blood",
         "url": "game/gun-blood.html"
@@ -427,6 +435,10 @@
     {
         "name": "Leader Strike",
         "url": "game/leader-strike.html"
+    },
+     {
+        "name": "Level Devil",
+        "url": "game/level-devil.html"
     },
     {
         "name": "Mad Gunz",
