@@ -191,6 +191,23 @@
 
 
 
+  .bmc-fixed-btn{
+    position: fixed;
+    bottom: 20px;         /* keep above footer */
+    right: 20px;          /* change to left:20px; for bottom-left */
+    z-index: 2147483647;  /* above everything, incl. ads/chat */
+    transform-origin: bottom right;
+  }
+  @media (max-width: 768px){
+    .bmc-fixed-btn{ bottom: 15px; right: 15px; transform: scale(.9); }
+  }
+  @media (max-width: 480px){
+    .bmc-fixed-btn{ bottom: 12px; right: 12px; transform: scale(.85); }
+  }
+
+  /* If you use Google bottom anchor ads, give the button extra clearance */
+  body.has-bottom-anchor .bmc-fixed-btn{ bottom: 84px; } /* ~sticky ad height */
+
   </style>
 
 	<script data-cfasync="false">
@@ -1530,6 +1547,22 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
         }
     </script>
 
+<!-- Buy Me a Coffee (fixed floating) -->
+<div class="bmc-fixed-btn">
+  <script
+    type="text/javascript"
+    src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+    data-name="bmc-button"
+    data-slug="malikshahal"
+    data-color="#FFDD00"
+    data-emoji="☕"
+    data-font="Inter"
+    data-text="Buy me a coffee"
+    data-outline-color="#000000"
+    data-font-color="#000000"
+    data-coffee-color="#ffffff">
+  </script>
+</div>
 
 
 		
