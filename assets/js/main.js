@@ -24,6 +24,66 @@ JS INDEX
 -------------------------------------------------------------------------------------*/
 
 
+// === Inject Buy Me a Coffee floating button globally ===
+(() => {
+  if (window.__bmcInjected) return;
+  window.__bmcInjected = true;
+
+  // 1) Add CSS
+  const style = document.createElement('style');
+  style.textContent = `
+    .bmc-fixed-btn{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 2147483647;
+      transform-origin: bottom right;
+    }
+    @media (max-width:768px){ .bmc-fixed-btn{ bottom:15px; right:15px; transform:scale(.9); } }
+    @media (max-width:480px){ .bmc-fixed-btn{ bottom:12px; right:12px; transform:scale(.85); } }
+    body.has-bottom-anchor .bmc-fixed-btn{ bottom:84px; }
+  `;
+  document.head.appendChild(style);
+
+  // 2) Create wrapper
+  const wrap = document.createElement('div');
+  wrap.className = 'bmc-fixed-btn';
+
+  // 3) Create the BMC script with attributes
+  const s = document.createElement('script');
+  s.type = 'text/javascript';
+  s.src = 'https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js';
+  s.setAttribute('data-name', 'bmc-button');
+  s.setAttribute('data-slug', 'malikshahal');
+  s.setAttribute('data-color', '#FFDD00');
+  s.setAttribute('data-emoji', '☕');
+  s.setAttribute('data-font', 'Inter');
+  s.setAttribute('data-text', 'Buy me a coffee');
+  s.setAttribute('data-outline-color', '#000000');
+  s.setAttribute('data-font-color', '#000000');
+  s.setAttribute('data-coffee-color', '#ffffff');
+
+  wrap.appendChild(s);
+  document.body.appendChild(wrap);
+
+  // 4) Nudge up if a Google bottom anchor ad is present
+  const mark = () => {
+    const hasAnchor = !!document.querySelector('iframe[id^="google_ads_iframe"]:not([style*="display: none"])');
+    document.body.classList.toggle('has-bottom-anchor', hasAnchor);
+  };
+  setTimeout(mark, 800);
+  setTimeout(mark, 2000);
+  setTimeout(mark, 4000);
+  window.addEventListener('resize', mark);
+})();
+
+
+
+
+
+
+
+
 (function ($) {
 	"use strict";
 
