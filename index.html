@@ -1563,6 +1563,21 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
     data-coffee-color="#ffffff">
   </script>
 </div>
+<script>
+  (function(){
+    const mark = () => {
+      // if a Google anchor iframe appears, add a class to body
+      const hasAnchor = !!document.querySelector('iframe[id^="google_ads_iframe"]:not([style*="display: none"])');
+      document.body.classList.toggle('has-bottom-anchor', hasAnchor);
+    };
+    // run a few times as ads load
+    setTimeout(mark, 800);
+    setTimeout(mark, 2000);
+    setTimeout(mark, 4000);
+    // and on resize
+    window.addEventListener('resize', mark);
+  })();
+</script>
 
 
 		
