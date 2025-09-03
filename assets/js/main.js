@@ -10,7 +10,7 @@
     
 JS INDEX
 =============
-1 - buy me a coffe button
+1 - buy me a coffee button
 01 - Menu Toggle JS
 02 - Search Toggle
 03 - Main Slider JS
