@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /game/index.html
 
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://faf-games.github.io/sitemap.xml
