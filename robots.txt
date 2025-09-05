@@ -1,7 +1,943 @@
-User-agent: *
-Disallow: /game/index.html
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+        <title>Unblocked Games 76</title>
+        <meta name="description"content="Unblocked Games 76 is your top source for playing hundreds of free online games at school or work. Enjoy action, puzzle, racing, and more no downloads, no blocks, just pure fun. Play the latest and most popular unblocked games now!"/>
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css" />
+        <link rel="stylesheet" href="/assets/css/styles.css" />
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XQRMBCYE8L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-User-agent: Bingbot
-Allow: /
+  gtag('config', 'G-XQRMBCYE8L');
+</script>
 
-Sitemap: https://faf-games.github.io/sitemap.xml
+
+    </head>
+ 
+
+    <body>
+        <header>
+            <div class="header-menu-container">
+                <ul>
+                    <li><a href="/about/">About Us</a></li>
+                    <li><a href="/contact/">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="temp-search-container search-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search" id="search-button">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                </svg>
+                <div class="search-form header-search"><input class="form-control" type="text" id="search-bar" placeholder="Search 326 games ..." /></div>
+            </div>
+        </header>
+        <div class="sidebar main-side">
+            <a href="/" alt="Unblocked Games 76"><img class="header-logo" src="/assets/img/logo.svg" /></a>
+            <ul>
+                <li class="">
+                    <a class="main-sidebar-new sidebar-top-category" href="/category/featured.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="sidebar-main-icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <g>
+                                <path
+                                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span>Featured</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a class="main-sidebar-new sidebar-top-category" href="/category/latest.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="sidebar-main-icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <g>
+                                <path
+                                    d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span>Latest</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a class="main-sidebar-new sidebar-top-category" href="/category/trending.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="sidebar-main-icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <g>
+                                <path
+                                    d="M14.06,9.94L12,9l2.06-0.94L15,6l0.94,2.06L18,9l-2.06,0.94L15,12L14.06,9.94z M4,14l0.94-2.06L7,11l-2.06-0.94L4,8 l-0.94,2.06L1,11l2.06,0.94L4,14z M8.5,9l1.09-2.41L12,5.5L9.59,4.41L8.5,2L7.41,4.41L5,5.5l2.41,1.09L8.5,9z M4.5,20.5l6-6.01l4,4 L23,8.93l-1.41-1.41l-7.09,7.97l-4-4L3,19L4.5,20.5z"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span>Trending</span>
+                    </a>
+                </li>
+            </ul>
+
+            <hr />
+            <ul class="mt-0">
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-io.svg" /><a href="/category/io.html">.io</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-action.svg" /><a href="/category/action.html">Action</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-adventure.svg" /><a href="/category/adventure.html">Adventure</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-arcade.svg" /><a href="/category/arcade.html">Arcade</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-google.svg" /><a href="/category/google.html">Google</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-idle.svg" /><a href="/category/idle.html">Idle</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-multiplayer.svg" /><a href="/category/multiplayer.html">Multiplayer</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-papas.svg" /><a href="/category/papas.html">Papas</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-puzzle.svg" /><a href="/category/puzzle.html">Puzzle</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-racing.svg" /><a href="/category/racing.html">Racing</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-running.svg" /><a href="/category/running.html">Running</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-shooting.svg" /><a href="/category/shooting.html">Shooting</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-skill.svg" /><a href="/category/skill.html">Skill</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-snake.svg" /><a href="/category/snake.html">Snake</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-sports.svg" /><a href="/category/sports.html">Sports</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-stickman.svg" /><a href="/category/stickman.html">Stickman</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-strategy.svg" /><a href="/category/strategy.html">Strategy</a></li>
+            </ul>
+
+            <hr />
+            <div class="sidebar-tags">
+                <a class="sidebar-tag" href="/search.html?q=race">Race</a>
+
+                <a class="sidebar-tag" href="/search.html?q=stick">Stick</a>
+
+                <a class="sidebar-tag" href="/search.html?q=ball">Ball</a>
+
+                <a class="sidebar-tag" href="/search.html?q=doodle">Doodle</a>
+
+                <a class="sidebar-tag" href="/search.html?q=rush">Rush</a>
+
+                <a class="sidebar-tag" href="/search.html?q=tower-defense">Tower Defense</a>
+            </div>
+        </div>
+        <div class="topmenu-container">
+            <a href="/"><img class="header-logo" src="/assets/img/logo.svg" /></a>
+            <a class="topmenu-burger" href="#">
+                <div class="burger__bar1"></div>
+                <div class="burger__bar2"></div>
+                <div class="burger__bar3"></div>
+            </a>
+        </div>
+        <div class="sidebar mobile-side">
+            <div class="temp-search-sidebar-container search-container w-100">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-search" id="search-button-m">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                </svg>
+                <div class="search-form header-search"><input class="form-control" type="text" id="search-bar-m" placeholder="Search 326 games ..." /></div>
+            </div>
+            <ul>
+                <li class="">
+                    <a class="main-sidebar-new sidebar-top-category" href="/category/featured.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="sidebar-main-icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <g>
+                                <path
+                                    d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span>Featured</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a class="main-sidebar-new sidebar-top-category" href="/category/latest.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="sidebar-main-icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <g>
+                                <path
+                                    d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span>Latest</span>
+                    </a>
+                </li>
+
+                <li class="">
+                    <a class="main-sidebar-new sidebar-top-category" href="/category/trending.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="sidebar-main-icon">
+                            <rect fill="none" height="24" width="24"></rect>
+                            <g>
+                                <path
+                                    d="M14.06,9.94L12,9l2.06-0.94L15,6l0.94,2.06L18,9l-2.06,0.94L15,12L14.06,9.94z M4,14l0.94-2.06L7,11l-2.06-0.94L4,8 l-0.94,2.06L1,11l2.06,0.94L4,14z M8.5,9l1.09-2.41L12,5.5L9.59,4.41L8.5,2L7.41,4.41L5,5.5l2.41,1.09L8.5,9z M4.5,20.5l6-6.01l4,4 L23,8.93l-1.41-1.41l-7.09,7.97l-4-4L3,19L4.5,20.5z"
+                                ></path>
+                            </g>
+                        </svg>
+                        <span>Trending</span>
+                    </a>
+                </li>
+            </ul>
+
+            <hr />
+            <ul class="mt-0">
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-io.svg" /><a href="/category/io.html">.io</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-action.svg" /><a href="/category/action.html">Action</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-adventure.svg" /><a href="/category/adventure.html">Adventure</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-arcade.svg" /><a href="/category/arcade.html">Arcade</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-google.svg" /><a href="/category/google.html">Google</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-idle.svg" /><a href="/category/idle.html">Idle</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-multiplayer.svg" /><a href="/category/multiplayer.html">Multiplayer</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-papas.svg" /><a href="/category/papas.html">Papas</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-puzzle.svg" /><a href="/category/puzzle.html">Puzzle</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-racing.svg" /><a href="/category/racing.html">Racing</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-running.svg" /><a href="/category/running.html">Running</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-shooting.svg" /><a href="/category/shooting.html">Shooting</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-skill.svg" /><a href="/category/skill.html">Skill</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-snake.svg" /><a href="/category/snake.html">Snake</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-sports.svg" /><a href="/category/sports.html">Sports</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-stickman.svg" /><a href="/category/stickman.html">Stickman</a></li>
+
+                <li class="sidebar-category"><img class="sidebar-category-icon" src="/assets/img/icons-strategy.svg" /><a href="/category/strategy.html">Strategy</a></li>
+            </ul>
+
+            <hr />
+            <div class="sidebar-tags">
+                <a class="sidebar-tag" href="/search.html?q=race">Race</a>
+
+                <a class="sidebar-tag" href="/search.html?q=stick">Stick</a>
+
+                <a class="sidebar-tag" href="/search.html?q=ball">Ball</a>
+
+                <a class="sidebar-tag" href="/search.html?q=doodle">Doodle</a>
+
+                <a class="sidebar-tag" href="/search.html?q=rush">Rush</a>
+
+                <a class="sidebar-tag" href="/search.html?q=tower-defense">Tower Defense</a>
+            </div>
+        </div>
+        <div class="mobile-sidebar-background"></div>
+        <div class="main">
+            <div class="index-container">
+                    <div class="banner-ad-content" style="padding: 20px; text-align: center;"><!-- ADS1 -->
+
+        <script type="text/javascript">
+	atOptions = {
+		'key' : '14f07e64f566d8c66414ffc6f7dfdef4',
+		'format' : 'iframe',
+		'height' : 250,
+		'width' : 300,
+		'params' : {}
+	};
+</script>
+<script type="text/javascript" src="//insomniacompulsive.com/14f07e64f566d8c66414ffc6f7dfdef4/invoke.js"></script>
+</div>
+                <h1 class="title-page" style="padding: 0 15px; margin-top: -5px;">Unblocked Games 76</h1>
+                <p><b>Unblocked Games 76</b> is one of the top destinations for free online games that you can play at school, work, or anywhere access is limited. This site offers hundreds of browser-based games like action, puzzle, sports, strategy, racing, and even classics like <b>Snake</b>, <b>Slope</b>, and <b>Happy Wheels</b>. No downloads, no sign-ups, and no stress just click and play instantly. Whether you are looking to kill time during a break or dive into addictive gameplay, <b>Unblocked Games 76</b> keeps things smooth, fast, and fun. It is built to bypass most school or office firewalls, making it the perfect spot for students and casual gamers alike.</p>
+                <div class="index-category-container">
+                    <h2><i class="fa fa-star"></i><span>&nbsp;TRENDING GAMES</span></h2>
+                    <ul class="game-list">
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bob-the-robber.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/bob-the-robber.png" /></a>
+                                <h3>Bob the Robber</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/car-eats-car.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/car-eats-car.png" /></a>
+                                <h3>Car Eats Car</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/papas-freezeria.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/papas-freezeria.png" /></a>
+                                <h3>Papa&#8217;s Freezeria</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/papas-pizzeria.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/papas-pizzeria.png" /></a>
+                                <h3>Papa&#8217;s Pizzeria</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/papas-scooperia.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/papas-scooperia.png" /></a>
+                                <h3>Papa&#8217;s Scooperia</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/papas-sushiria.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/papas-sushiria.png" /></a>
+                                <h3>Papa&#8217;s Sushiria</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/adventure-capitalist.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/adventure-capitalist.png" /></a>
+                                <h3>Adventure Capitalist</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/backflipper.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/backflipper.png" /></a>
+                                <h3>Backflipper</h3>
+                            </div>
+                        </li>
+
+
+                                                <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/1v1-lol.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/1v1-lol.png" /></a>
+                                <h3>1v1.lol Unblocked</h3>
+                            </div>
+                        </li>
+                        
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bacon-may-die.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/bacon-may-die.png" /></a>
+                                <h3>Bacon May Die</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bartender-the-right-mix.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/bartender-the-right-mix.png" /></a>
+                                <h3>Bartender: The Right Mix</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bloxorz.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/bloxorz.png" /></a>
+                                <h3>Bloxorz</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/blumgi-castle.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/blumgi-castle.png" /></a>
+                                <h3>Blumgi Castle</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/core-ball.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/core-ball.png" /></a>
+                                <h3>Core Ball</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/craftmine.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/craftmine.png" /></a>
+                                <h3>Craftmine</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/crazy-cars.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/crazy-cars.png" /></a>
+                                <h3>Crazy Cars</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/crossy-road.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/crossy-road.png" /></a>
+                                <h3>Crossy Road</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/elastic-man.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/elastic-man.png" /></a>
+                                <h3>Elastic Man</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/fireboy-and-watergirl.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/fireboy-and-watergirl.png" /></a>
+                                <h3>Fireboy and Watergirl</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/monkey-market.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/monkey-market.png" /></a>
+                                <h3>Monkey Mart</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/space-racing-3d-void.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/space-racing-3d-void.png" /></a>
+                                <h3>Space Racing 3D: Void</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/ballistic.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76org/png/ballistic.png" /></a>
+                                <h3>Ballistic</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/cookie-clicker-2.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76org/png/cookie-clicker-2.png" /></a>
+                                <h3>Cookie Clicker 2</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/dread-head-parkour.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76org/png/dread-head-parkour.png" /></a>
+                                <h3>Dread Head Parkour</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/drift-boss.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76org/png/drift-boss.png" /></a>
+                                <h3>Drift Boss</h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <h2><i class="fa fa-certificate"></i><span>&nbsp;LATEST GAMES</span></h2>
+                    <ul class="game-list">
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/2048.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/2048.png" /></a>
+                                <h3>2048</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/age-of-war.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/age-of-war.png" /></a>
+                                <h3>Age of War</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/balloon-tower-defense-5.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/balloon-tower-defense-5.png" /></a>
+                                <h3>Balloon Tower Defense 5</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/city-car-driving.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/city-car-driving.png" /></a>
+                                <h3>City Car Driving</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/fruit-ninja-online.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/fruit-ninja-online.png" /></a>
+                                <h3>Fruit Ninja Online</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/mario-kart-tour.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/mario-kart-tour.png" /></a>
+                                <h3>Mario Kart Tour</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/papas-cheeseria.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/papas-cheeseria.png" /></a>
+                                <h3>Papa&#8217;s Cheeseria</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/red-ball.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/red-ball.png" /></a>
+                                <h3>Red Ball</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/run-2.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/run-2.png" /></a>
+                                <h3>Run 2</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/stickman-army.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/stickman-army.png" /></a>
+                                <h3>Stickman Army</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/surviv-io.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/surviv-io.png" /></a>
+                                <h3>Surviv.io</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/tank-wars.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/tank-wars.png" /></a>
+                                <h3>Tank Wars</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/tunnel-rush.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/tunnel-rush.png" /></a>
+                                <h3>Tunnel Rush</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/vex-4.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/vex-4.png" /></a>
+                                <h3>Vex 4</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/zombocalypse.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/zombocalypse.png" /></a>
+                                <h3>Zombocalypse</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/zombotron.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/zombotron.png" /></a>
+                                <h3>Zombotron</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/backrooms.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/backrooms.png" /></a>
+                                <h3>Backrooms</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/big-shot-boxing.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/big-shot-boxing.png" /></a>
+                                <h3>Big Shot Boxing</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bitlife.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/bitlife.png" /></a>
+                                <h3>Bitlife</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/blocky-cars.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/blocky-cars.png" /></a>
+                                <h3>Blocky Cars</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/brain-test.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/brain-test.png" /></a>
+                                <h3>Brain Test</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/candy-jump.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/candy-jump.png" /></a>
+                                <h3>Candy Jump</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/charge-it.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/charge-it.png" /></a>
+                                <h3>Charge it</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/climbing-over-it.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/climbing-over-it.png" /></a>
+                                <h3>Climbing Over It</h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <h2><i class="fa fa-gamepad"></i><span>&nbsp;FEATURED GAMES</span></h2>
+                    <ul class="game-list">
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/electric-man-2.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/electric-man-2.png" /></a>
+                                <h3>Electric Man 2</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/happy-room.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/happy-room.png" /></a>
+                                <h3>Happy Room</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/piano-tiles.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/piano-tiles.png" /></a>
+                                <h3>Piano Tiles</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/super-mario-flash.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/super-mario-flash.png" /></a>
+                                <h3>Super Mario Flash</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/vex-5.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/vex-5.png" /></a>
+                                <h3>Vex 5</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/zombs-royale.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76com/png/zombs-royale.png" /></a>
+                                <h3>Zombs Royale</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/blightborne.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/blightborne.png" /></a>
+                                <h3>Blightborne</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/blockins.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/blockins.png" /></a>
+                                <h3>Blockins</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bloons-tower-defense.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/bloons-tower-defense.png" /></a>
+                                <h3>Bloons Tower Defense</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/bubble-tower-3d.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/bubble-tower-3d.png" /></a>
+                                <h3>Bubble Tower 3D</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/classic-snake-game.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/classic-snake-game.png" /></a>
+                                <h3>Classic Snake Game Google - Revisit the Iconic Retro Game</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/cursed-treasure-2.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/cursed-treasure-2.png" /></a>
+                                <h3>Cursed Treasure 2</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/demolition-derby.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/demolition-derby.png" /></a>
+                                <h3>Demolition Derby</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/field-goal-frvr.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/field-goal-frvr.png" /></a>
+                                <h3>Field Goal FRVR</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/flip-bottle.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/flip-bottle.png" /></a>
+                                <h3>Flip Bottle</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/flowz.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/flowz.png" /></a>
+                                <h3>FlowZ</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/foggy-fox.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/foggy-fox.png" /></a>
+                                <h3>Foggy Fox</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/glitch-dash.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/glitch-dash.png" /></a>
+                                <h3>Glitch Dash</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/heli-battle.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/heli-battle.png" /></a>
+                                <h3>Heli Battle</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/idle-startup-company.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/idle-startup-company.png" /></a>
+                                <h3>Idle Startup Company</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/joyrider.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/joyrider.png" /></a>
+                                <h3>Joyrider</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/knights-vs-orcs.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/knights-vs-orcs.png" /></a>
+                                <h3>Knights vs Orcs | Play Hundreds of Online Free Games</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/lay-eggs.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/lay-eggs.png" /></a>
+                                <h3>Lay Eggs</h3>
+                            </div>
+                        </li>
+
+                        <li class="game-item">
+                            <div class="index-game-container">
+                                <a class="index-category-img" href="/game/merge-the-cake.html"><img class="index-game-img lazyload" src="/assets/upload/ubg76io/png/merge-the-cake.png" /></a>
+                                <h3>Merge the Cake</h3>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="index-category-blocks"></ul>
+                </div>
+                
+ 
+      <h2>What Is Unblocked Games 76?</h2>
+      <p>
+        <strong>Unblocked Games 76</strong> is a browser-based game collection that works on many restricted networks. The site lets you play hundreds of games directly in your web browser without downloads or sign-ups. This makes it ideal for quick breaks at school, work, or on public Wi-Fi.
+      </p>
+      <p>
+        The site focuses on lightweight, fun games that run well on Chromebooks, Windows PCs, and tablets. Most titles are short, easy to learn, and great for passing a few free minutes.
+      </p>
+     
+      
+      
+      <h2>Why People Love Unblocked Games 76?</h2>
+<ul>
+  <li><strong>Free to Play:</strong> All games are completely free with no hidden fees.</li>
+  <li><strong>No Account Needed:</strong> Jump right in no registration required.</li>
+  <li><strong>Accessible Anywhere:</strong> Works on school and office networks.</li>
+  <li><strong>Huge Game Library:</strong> Action, sports, racing, puzzles, and more.</li>
+  <li><strong>Fast & Secure:</strong> Play with confidence on a safe, user-friendly website.</li>
+</ul>
+
+      
+      
+      <h2>How to Play on Unblocked Games 76</h2>
+<ol>
+  <li>Open your browser and visit <a href="https://unblocked-games-76.bitbucket.io">Unblocked Games 76</a>.</li>
+  <li>Choose a game from the homepage or search for your favorite.</li>
+  <li>Click the game title (for example, <a href="https://unblocked-games-76.bitbucket.io/game/1v1-lol.html">1v1.LOL</a>) to start playing instantly.</li>
+  <li>Use the on-screen or listed controls to play the game.</li>
+  <li>Enjoy and share with friends for even more fun.</li>
+</ol>
+      
+
+     <h2>Top 10 Unblocked Games 76</h2>
+<p>Below are popular titles often found on <a href="https://unblocked-games-76.bitbucket.io">Unblocked Games 76</a>. Each game is easy to learn, runs in your browser, and is great for quick fun or long play sessions.</p>
+<ol class="game-list">
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/1v1-lol.html">1v1.LOL</a>:</strong> A thrilling building and shooting game. Outsmart your opponent by building walls for defense and using accurate shots to win one-on-one battles. Tip: Keep moving to make it harder for enemies to hit you.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/drift-hunters.html">Drift Hunters</a>:</strong> Test your drifting skills with customizable cars. Earn points by maintaining smooth drifts around corners. Tip: Use longer drifts to chain combos for higher scores.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/slope.html">Slope</a>:</strong> Roll a ball down a neon slope while avoiding holes and walls. The speed increases, so stay focused. Tip: Small movements keep you in control at high speeds.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/run-3.html">Run 3</a>:</strong> Navigate tunnels in space by running and jumping between walls. Tip: Learn to use wall jumps to bypass tricky gaps.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/basketball-stars.html">Basketball Stars</a>:</strong> Play fast-paced basketball matches. Time your shots carefully and use power-ups for an advantage. Tip: Block opponents right before they jump to shoot.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/moto-x3m.html">Moto X3M</a>:</strong> Ride through obstacle-filled tracks with flips and tricks. Tip: Maintain balance in mid-air to land safely and keep your speed.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/fireboy-and-watergirl.html">Fireboy and Watergirl</a>:</strong> Solve puzzles by controlling two characters with different abilities. Tip: Plan moves ahead to avoid hazards for both players.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/tunnel-rush.html">Tunnel Rush</a>:</strong> Dodge obstacles in a high-speed 3D tunnel. Tip: Memorize patterns to react faster as the game speeds up.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/drift-boss.html">Drift Boss</a>:</strong> Steer carefully through tight turns while drifting. Tip: Release and tap the drift key to correct your angle without losing control.</li>
+  <li><strong><a href="https://unblocked-games-76.bitbucket.io/game/cookie-clicker.html">Cookie Clicker</a>:</strong> A relaxing idle game where you bake cookies endlessly. Tip: Invest in upgrades early to boost production faster.</li>
+</ol>
+
+
+      <h2 Expert Tips  How to Win</h2>
+        <p><strong>These are short, practical tips you can use right away.</strong></p>
+        <h3>1v1.LOL</h3>
+        <ul>
+          <li>Practice building: quick, small walls block shots and create cover.</li>
+          <li>Aim while moving: strafing makes you harder to hit.</li>
+          <li>Use high ground: if the map allows it, height gives a shooting advantage.</li>
+        </ul>
+
+        <h3>Drift Hunters / Drift Boss</h3>
+        <ul>
+          <li>Brake gently into turns and accelerate out smooth control > sharp inputs.</li>
+          <li>Learn each track: memorizing corners raises your score quickly.</li>
+        </ul>
+
+        <h3>Slope / Run 3 / Tunnel Rush</h3>
+        <ul>
+          <li>Look ahead, not just at your avatar this helps you react to sudden changes.</li>
+          <li>Keep small, steady movements to maintain control at high speed.</li>
+        </ul>
+
+        <h3>Basketball Stars</h3>
+        <ul>
+          <li>Time your jump-release when shooting releasing at the peak gives better shots.</li>
+          <li>Use quick dashes to reposition or block opponents.</li>
+        </ul>
+        
+        
+        <h3>Slope</h3>
+      <ul>
+        <li>Use the left and right arrow keys to guide the ball.</li>
+        <li>Look ahead to avoid sudden drops and obstacles.</li>
+        <li>Small, steady moves are better than large jerks this helps you last longer.</li>
+      </ul>
+
+        <h3>General Tips</h3>
+        <ul>
+          <li>Start in practice or easy mode to learn controls.</li>
+          <li>Watch short gameplay videos to pick up pro moves and strategies.</li>
+          <li>Play regularly muscle memory and reaction time improve with practice.</li>
+        </ul>
+        
+        
+
+    
+
+      <h2>How to Play Safely</h2>
+      <p>Follow these quick safety tips before you play:</p>
+      <ul>
+        <li>Use a trusted network (avoid public Wi-Fi for accounts or saving data).</li>
+        <li>Do not share personal information in game chats.</li>
+        <li>Take short breaks to rest your eyes and hands.</li>
+        <li>Keep your browser updated to reduce security risks.</li>
+      </ul>
+
+    
+     <h2>Final Thoughts</h2>
+      <p>Unblocked Games 76 is more than just a gaming site on <b>Bitbucket.io</b> it is a place to relax, have fun, and challenge yourself no matter where you are. With its large game library, easy access, and safe environment, it is the perfect choice for students, office workers, and anyone looking for quick entertainment. Visit today and start playing your favorite games right away!</p>
+
+    
+    
+            </div>
+
+            <div class="index-container">
+                <div class="index-category-container about">
+                    <div class="text-page" style="text-align: justify;">
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="index-category-container">
+                <hr class="footer-hr" />
+                <div class="footer-bottom-container">
+                    <div class="footer-contact-email"><a href="mailto:jsosshjanug@gmail.com">jsosshjanug@gmail.com</a></div>
+                    <div class="footer-buttons">
+                        <div class="footer-contact"><a href="/dmca/">DMCA</a></div>
+                        <div class="footer-contact"><a href="/privacy/">Privacy Policy</a></div>
+                        <div class="footer-terms"><a href="/terms/">Terms &amp; Conditions</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/js/analytics_ubg235_v1_0.js"></script>
+        <script src="/assets/js/search_v1_1.js"></script>
+        <script src="/assets/js/main.js"></script>
+ <script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/assets/js/sw.js');
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.hasAttribute('loading')) img.loading = 'lazy';
+    if (!img.hasAttribute('decoding')) img.decoding = 'async';
+    if (!img.hasAttribute('fetchpriority')) img.setAttribute('fetchpriority','low');
+  });
+});
+</script>
+
+    </body>
+</html>
