@@ -191,22 +191,6 @@
 
 
 
-  .bmc-fixed-btn{
-    position: fixed;
-    bottom: 20px;         /* keep above footer */
-    right: 20px;          /* change to left:20px; for bottom-left */
-    z-index: 2147483647;  /* above everything, incl. ads/chat */
-    transform-origin: bottom right;
-  }
-  @media (max-width: 768px){
-    .bmc-fixed-btn{ bottom: 15px; right: 15px; transform: scale(.9); }
-  }
-  @media (max-width: 480px){
-    .bmc-fixed-btn{ bottom: 12px; right: 12px; transform: scale(.85); }
-  }
-
-  /* If you use Google bottom anchor ads, give the button extra clearance */
-  body.has-bottom-anchor .bmc-fixed-btn{ bottom: 100px; } /* ~sticky ad height */
 
   </style>
 
@@ -1546,38 +1530,10 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
             }
         }
     </script>
-			<div class="bmc-fixed-btn">
-  <script
-    type="text/javascript"
-    src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-    data-name="bmc-button"
-    data-slug="malikshahal"
-    data-color="#FFDD00"
-    data-emoji="☕"
-    data-font="Inter"
-    data-text="Buy me a coffee"
-    data-outline-color="#000000"
-    data-font-color="#000000"
-    data-coffee-color="#ffffff">
-  </script>
-</div>
+ 
 
 
-<script>
-  (function(){
-    const mark = () => {
-      // if a Google anchor iframe appears, add a class to body
-      const hasAnchor = !!document.querySelector('iframe[id^="google_ads_iframe"]:not([style*="display: none"])');
-      document.body.classList.toggle('has-bottom-anchor', hasAnchor);
-    };
-    // run a few times as ads load
-    setTimeout(mark, 800);
-    setTimeout(mark, 2000);
-    setTimeout(mark, 4000);
-    // and on resize
-    window.addEventListener('resize', mark);
-  })();
-</script>
+ 
 
 
 		
