@@ -765,8 +765,8 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 					<!-- end game item -->
 								  </div> <!-- close .gamesContainer -->
 
-								   <div class="load-more-wrap" style="text-align:center;margin-top:24px;">
-  <button id="loadMoreGames" class="load-more-btn" aria-label="Load more games">Load more</button>
+								   <div class="load-more-wrap" id="loadMoreWrap" style="text-align:center;margin-top:24px;">
+  <button id="loadMoreGames" class="load-more-btn" aria-label="Load more games">Show more</button>
 </div>
 					<div class="clearfix gamesContainer" id="gamesAfter">
 					<div class="games-item mobile">
@@ -1571,17 +1571,18 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 <script>
 (function(){
-  const BATCH_SIZE = 24; // how many to reveal per click
-  const grid = document.getElementById('gamesAfter');   // second grid
+  // CONFIG
+  const INITIAL_COUNT = 12;  // how many cards to show by default
+  const grid = document.getElementById('gamesAfter');   // the second grid (Ballistic → end)
   const btn  = document.getElementById('loadMoreGames');
+  const wrap = document.getElementById('loadMoreWrap');
+  if (!grid || !btn || !wrap) return;
 
-  if (!grid || !btn) return;
-
-  // Collect only the cards in the second grid
   const allItems = Array.from(grid.querySelectorAll('.games-item'));
   let shown = 0;
+  let expanded = false;
 
-  function relayoutIfIsotopeActive(container){
+  function relayout(container){
     try {
       if (window.jQuery && jQuery(container).data('isotope')) {
         jQuery(container).isotope('layout');
@@ -1594,36 +1595,62 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
       if (i < shown) el.classList.remove('is-hidden');
       else           el.classList.add('is-hidden');
     });
-    relayoutIfIsotopeActive(grid);
+    relayout(grid);
   }
 
-  function showNextBatch(){
-    shown = Math.min(shown + BATCH_SIZE, allItems.length);
+  function updateButton(){
+    btn.textContent = expanded ? 'Show less' : 'Show more';
+    btn.disabled = false; // always clickable (we toggle, not finish)
+  }
+
+  function moveButtonBottom(){
+    // places the button AFTER the grid (bottom)
+    grid.after(wrap);
+  }
+
+  function moveButtonTop(){
+    // places the button BEFORE the grid (above Ballistic)
+    grid.before(wrap);
+  }
+
+  function showAll(){
+    shown = allItems.length;       // show everything in one click
+    expanded = true;
     applyVisibility();
-    if (shown >= allItems.length){
-      btn.textContent = 'All games loaded';
-      btn.disabled = true;
-    }
+    moveButtonBottom();
+    updateButton();
   }
 
-  // Init: hide them all until first click, or show a small teaser—your call.
-  // Option A (hide all until click):
-  shown = 0;
+  function showInitial(){
+    shown = Math.min(INITIAL_COUNT, allItems.length);
+    expanded = false;
+    applyVisibility();
+    moveButtonTop();
+    updateButton();
+  }
 
-  // Option B (show some immediately):
-  // shown = Math.min(BATCH_SIZE, allItems.length);
+  // INIT: show initial subset and keep button above Ballistic
+  showInitial();
 
-  applyVisibility();
+  // Toggle behavior
+  btn.addEventListener('click', function(){
+    if (!expanded){
+      showAll();
+    } else {
+      showInitial();
+      // Optional: scroll back to the button so user sees where we collapsed to
+      try { wrap.scrollIntoView({behavior:'smooth', block:'center'}); } catch(e){}
+    }
+  });
 
-  btn.addEventListener('click', showNextBatch);
-
-  // If your filter buttons are used, relayout after they run
+  // If you use the category filter bar, relayout after filters
   const filterBar = document.querySelector('.projectFilter');
   if (filterBar){
-    filterBar.addEventListener('click', () => setTimeout(() => relayoutIfIsotopeActive(grid), 150));
+    filterBar.addEventListener('click', () => setTimeout(() => relayout(grid), 150));
   }
 })();
 </script>
+
 
  
 
