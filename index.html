@@ -71,7 +71,7 @@
 .load-more-btn:hover{ transform:translateY(-1px); }
 .load-more-btn:disabled{ opacity:.5; cursor:not-allowed; }
 .games-item.is-hidden{ display:none !important; } /* keeps Isotope happy */
-
+.load-more-wrap{ position: relative; z-index: 1000; }
 
 		  
     .cta-button {
@@ -763,12 +763,12 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 					    </div>
 					</div>
 					<!-- end game item -->
-								   </div>
+								  </div> <!-- close .gamesContainer -->
 
 								   <div class="load-more-wrap" style="text-align:center;margin-top:24px;">
   <button id="loadMoreGames" class="load-more-btn" aria-label="Load more games">Load more</button>
 </div>
-					
+					<div class="clearfix gamesContainer" id="gamesAfter">
 					<div class="games-item mobile">
 					    <div class="games-single-item img-contain-isotope">
 					        <div class="games-thumb">
@@ -1571,66 +1571,56 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 <script>
 (function(){
-  // SETTINGS
-  const BATCH_SIZE = 24; // how many to show per click
-  const grid = document.querySelector('.gamesContainer'); // first list
-  if (!grid) return;
+  const BATCH_SIZE = 24; // how many to reveal per click
+  const grid = document.getElementById('gamesAfter');   // second grid
+  const btn  = document.getElementById('loadMoreGames');
 
-  const btn = document.getElementById('loadMoreGames');
-  if (!btn) return;
+  if (!grid || !btn) return;
 
-  // Collect items
+  // Collect only the cards in the second grid
   const allItems = Array.from(grid.querySelectorAll('.games-item'));
   let shown = 0;
 
-  // Hide all, then show first batch
-  function applyVisibility() {
-    allItems.forEach((el, i) => {
-      if (i < shown) {
-        el.classList.remove('is-hidden');
-      } else {
-        el.classList.add('is-hidden');
-      }
-    });
-
-    // If Isotope is active, relayout
+  function relayoutIfIsotopeActive(container){
     try {
-      if (window.jQuery && jQuery(grid).data('isotope')) {
-        jQuery(grid).isotope('layout');
+      if (window.jQuery && jQuery(container).data('isotope')) {
+        jQuery(container).isotope('layout');
       }
-    } catch(e){ /* no-op */ }
+    } catch(e){}
   }
 
-  function showNextBatch() {
+  function applyVisibility(){
+    allItems.forEach((el, i) => {
+      if (i < shown) el.classList.remove('is-hidden');
+      else           el.classList.add('is-hidden');
+    });
+    relayoutIfIsotopeActive(grid);
+  }
+
+  function showNextBatch(){
     shown = Math.min(shown + BATCH_SIZE, allItems.length);
     applyVisibility();
-    if (shown >= allItems.length) {
+    if (shown >= allItems.length){
       btn.textContent = 'All games loaded';
       btn.disabled = true;
     }
   }
 
-  // Init
-  shown = Math.min(BATCH_SIZE, allItems.length);
+  // Init: hide them all until first click, or show a small teaser—your call.
+  // Option A (hide all until click):
+  shown = 0;
+
+  // Option B (show some immediately):
+  // shown = Math.min(BATCH_SIZE, allItems.length);
+
   applyVisibility();
 
-  // Wire button
   btn.addEventListener('click', showNextBatch);
 
-  // Optional: if user clicks filter buttons (from your Isotope filters),
-  // relayout so spacing doesn’t get funky.
+  // If your filter buttons are used, relayout after they run
   const filterBar = document.querySelector('.projectFilter');
-  if (filterBar) {
-    filterBar.addEventListener('click', () => {
-      // small delay to let filter run, then relayout
-      setTimeout(() => {
-        try {
-          if (window.jQuery && jQuery(grid).data('isotope')) {
-            jQuery(grid).isotope('layout');
-          }
-        } catch(e){ /* no-op */ }
-      }, 150);
-    });
+  if (filterBar){
+    filterBar.addEventListener('click', () => setTimeout(() => relayoutIfIsotopeActive(grid), 150));
   }
 })();
 </script>
