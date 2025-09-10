@@ -73,6 +73,11 @@
 .games-item.is-hidden{ display:none !important; } /* keeps Isotope happy */
 .load-more-wrap{ position: relative; z-index: 1000; }
 
+		  /* Hide all cards in the second grid until JS reveals them */
+#gamesAfter .games-item { display: none; }
+/* When JS removes .is-hidden, show them */
+#gamesAfter .games-item:not(.is-hidden) { display: block; }
+
 		  
     .cta-button {
       display: inline-block;
@@ -1571,9 +1576,8 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 
 <script>
 (function(){
-  // CONFIG
-  const INITIAL_COUNT = 12;  // how many cards to show by default
-  const grid = document.getElementById('gamesAfter');   // the second grid (Ballistic → end)
+  const INITIAL_COUNT = 0;                // ← show nothing until first click
+  const grid = document.getElementById('gamesAfter');
   const btn  = document.getElementById('loadMoreGames');
   const wrap = document.getElementById('loadMoreWrap');
   if (!grid || !btn || !wrap) return;
@@ -1582,74 +1586,52 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
   let shown = 0;
   let expanded = false;
 
-  function relayout(container){
-    try {
-      if (window.jQuery && jQuery(container).data('isotope')) {
-        jQuery(container).isotope('layout');
-      }
-    } catch(e){}
+  function relayout(c){
+    try { if (window.jQuery && jQuery(c).data('isotope')) jQuery(c).isotope('layout'); } catch(e){}
   }
-
   function applyVisibility(){
-    allItems.forEach((el, i) => {
-      if (i < shown) el.classList.remove('is-hidden');
-      else           el.classList.add('is-hidden');
-    });
+    allItems.forEach((el, i) => i < shown ? el.classList.remove('is-hidden')
+                                          : el.classList.add('is-hidden'));
     relayout(grid);
   }
+  function updateButton(){ btn.textContent = expanded ? 'Show less' : 'Show more'; }
 
-  function updateButton(){
-    btn.textContent = expanded ? 'Show less' : 'Show more';
-    btn.disabled = false; // always clickable (we toggle, not finish)
-  }
-
-  function moveButtonBottom(){
-    // places the button AFTER the grid (bottom)
-    grid.after(wrap);
-  }
-
-  function moveButtonTop(){
-    // places the button BEFORE the grid (above Ballistic)
-    grid.before(wrap);
-  }
+  function moveButtonBottom(){ grid.after(wrap); }
+  function moveButtonTop(){ grid.before(wrap); }
 
   function showAll(){
-    shown = allItems.length;       // show everything in one click
+    shown = allItems.length;
     expanded = true;
     applyVisibility();
     moveButtonBottom();
     updateButton();
   }
-
   function showInitial(){
-    shown = Math.min(INITIAL_COUNT, allItems.length);
+    shown = Math.min(INITIAL_COUNT, allItems.length); // 0 → hide all
     expanded = false;
     applyVisibility();
     moveButtonTop();
     updateButton();
   }
 
-  // INIT: show initial subset and keep button above Ballistic
+  // INIT (run as soon as script executes)
   showInitial();
 
-  // Toggle behavior
   btn.addEventListener('click', function(){
-    if (!expanded){
-      showAll();
-    } else {
+    if (!expanded) showAll();
+    else {
       showInitial();
-      // Optional: scroll back to the button so user sees where we collapsed to
       try { wrap.scrollIntoView({behavior:'smooth', block:'center'}); } catch(e){}
     }
   });
 
-  // If you use the category filter bar, relayout after filters
   const filterBar = document.querySelector('.projectFilter');
   if (filterBar){
     filterBar.addEventListener('click', () => setTimeout(() => relayout(grid), 150));
   }
 })();
 </script>
+
 
 
  
