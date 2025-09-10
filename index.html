@@ -63,6 +63,17 @@
 }
 </script>
 	  <style>
+.load-more-btn{
+  display:inline-block; padding:12px 22px; border:0; border-radius:10px;
+  font-weight:700; cursor:pointer; background:#ff7a21; color:#111; 
+  box-shadow:0 8px 16px rgba(0,0,0,.25); transition:transform .15s ease, opacity .2s ease;
+}
+.load-more-btn:hover{ transform:translateY(-1px); }
+.load-more-btn:disabled{ opacity:.5; cursor:not-allowed; }
+.games-item.is-hidden{ display:none !important; } /* keeps Isotope happy */
+
+
+		  
     .cta-button {
       display: inline-block;
       padding: 15px 30px;
@@ -751,6 +762,10 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
 					    </div>
 					</div>
 					<!-- end game item -->
+								   <div class="load-more-wrap" style="text-align:center;margin-top:24px;">
+  <button id="loadMoreGames" class="load-more-btn" aria-label="Load more games">Load more</button>
+</div>
+
 					
 					<div class="games-item mobile">
 					    <div class="games-single-item img-contain-isotope">
@@ -1551,6 +1566,71 @@ Unblocked games or unblocked games premium, such as <strong>Unblocked games</str
     </script>
  
 
+<script>
+(function(){
+  // SETTINGS
+  const BATCH_SIZE = 24; // how many to show per click
+  const grid = document.querySelector('.gamesContainer'); // first list
+  if (!grid) return;
+
+  const btn = document.getElementById('loadMoreGames');
+  if (!btn) return;
+
+  // Collect items
+  const allItems = Array.from(grid.querySelectorAll('.games-item'));
+  let shown = 0;
+
+  // Hide all, then show first batch
+  function applyVisibility() {
+    allItems.forEach((el, i) => {
+      if (i < shown) {
+        el.classList.remove('is-hidden');
+      } else {
+        el.classList.add('is-hidden');
+      }
+    });
+
+    // If Isotope is active, relayout
+    try {
+      if (window.jQuery && jQuery(grid).data('isotope')) {
+        jQuery(grid).isotope('layout');
+      }
+    } catch(e){ /* no-op */ }
+  }
+
+  function showNextBatch() {
+    shown = Math.min(shown + BATCH_SIZE, allItems.length);
+    applyVisibility();
+    if (shown >= allItems.length) {
+      btn.textContent = 'All games loaded';
+      btn.disabled = true;
+    }
+  }
+
+  // Init
+  shown = Math.min(BATCH_SIZE, allItems.length);
+  applyVisibility();
+
+  // Wire button
+  btn.addEventListener('click', showNextBatch);
+
+  // Optional: if user clicks filter buttons (from your Isotope filters),
+  // relayout so spacing doesn’t get funky.
+  const filterBar = document.querySelector('.projectFilter');
+  if (filterBar) {
+    filterBar.addEventListener('click', () => {
+      // small delay to let filter run, then relayout
+      setTimeout(() => {
+        try {
+          if (window.jQuery && jQuery(grid).data('isotope')) {
+            jQuery(grid).isotope('layout');
+          }
+        } catch(e){ /* no-op */ }
+      }, 150);
+    });
+  }
+})();
+</script>
 
  
 
