@@ -664,6 +664,11 @@
         "name": "Slope",
         "url": "game/slope.html"
     },
+    
+    {
+        "name": "Snow Bros",
+        "url": "game/snow-bros.html"
+    },
     {
         "name": "Smash Karts",
         "url": "game/smash-karts.html"
