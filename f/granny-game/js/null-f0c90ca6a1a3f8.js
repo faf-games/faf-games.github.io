@@ -1,1 +1,0 @@
-No Content: https://gnhustgames.org/granny-source/js/null.js?https://mc.yandex.ru/watch/49035923?page-url=https%3A%2F%2Fgnhustgames.org%2Fgranny-source%2F&page-ref=&charset=utf-8&site-info=%7B%22borrowParams%22%3A%7B%22adv%22%3A%7B%22sdk%22%3A%7B%22fullscreen%22%3A%7B%22tryOpen%22%3Atrue%2C%22isFirstTryOpen%22%3Atrue%7D%7D%7D%7D%7D
