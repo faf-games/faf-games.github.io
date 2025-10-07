@@ -8,13 +8,14 @@
         "name": "1v1 LOL",
         "url": "game/1v1-lol"
     },
+    
     {
         "name": "2048",
         "url": "game/2048"
     },
      {
-        "name": "1v1 LOL Official",
-        "url": "game/1v1-lol-unblocked"
+        "name": "1v1 LOL Offline",
+        "url": "game/1v1-lol-offline"
     },
     {
         "name": "3D Bowling",
