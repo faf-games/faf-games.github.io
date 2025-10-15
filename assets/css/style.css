@@ -62,6 +62,15 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
+.clearfix.gamesContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
+  gap: 32px; /* Adjust spacing between items */
+  padding: 32px 0; /* Optional: vertical padding */
+}
+
+
+
 .dark-theme container  {
     background-color: #121212;
     color: #ffffff;
@@ -1581,9 +1590,10 @@ span.is-active {
 
 .games-item {
     float: left;
-    margin: 30px 0 0;
     padding: 0 15px;
-    width: 25%;
+    width: 100%; /* Grid makes items fill available column width */
+    max-width: 220px; /* Optional: control card size */
+    margin: 0 auto;   /* Center cards in their column */
 }
 
 .games-single-item {
