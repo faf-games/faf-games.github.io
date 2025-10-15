@@ -66,6 +66,7 @@ This files contents are outlined below >>>>
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
   padding: 32px 0; /* Optional: vertical padding */
+  gap: 32px;
 }
 
 
