@@ -64,7 +64,7 @@ This files contents are outlined below >>>>
 ==================================================*/
 .clearfix.gamesContainer {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 4 columns per row */
+  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
   padding: 32px 0; /* Optional: vertical padding */
 }
 
@@ -1588,11 +1588,11 @@ span.is-active {
 }
 
 .games-item {
-    float: left;
+float: left;
     padding: 0 15px;
-    width: 100%; /* Grid makes items fill available column width */
-    max-width: 220px; /* Optional: control card size */
-    margin: 0 auto;   /* Center cards in their column */
+    width: 100%;
+    max-width: 270px;
+    margin: 0 auto;
 }
 
 .games-single-item {
