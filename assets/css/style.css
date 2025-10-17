@@ -101,6 +101,21 @@ This files contents are outlined below >>>>
   border-radius: 10px;
 }
 
+
+.games-thumb {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+}
+.games-thumb:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 2;
+}
+
 /* Game title/meta layout */
 .games-desc h3 {
   margin: 8px 0 4px;
