@@ -1669,12 +1669,6 @@ span.is-active {
     transform: skew(-40deg);
 }
 
-.games-item {
-  float: none !important;        /* cancel any float from older CSS */
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-}
 
 
 
