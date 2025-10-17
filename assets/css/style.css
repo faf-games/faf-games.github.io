@@ -62,12 +62,93 @@ This files contents are outlined below >>>>
 /*================================================
 02 - DEFAULT CSS
 ==================================================*/
+ 
+
+/* Container: force grid layout and remove legacy float layout */
 .clearfix.gamesContainer {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 columns per row */
-  padding: 32px 0; /* Optional: vertical padding */
-  gap: 32px;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+  gap: 24px; /* spacing between cards */
+  align-items: start;
+  justify-items: center; /* center card content inside their columns */
+  padding: 32px 0px;
+  box-sizing: border-box;
 }
+
+/* Ensure items don't float or use inline-block sizing */
+.games-item {
+  float: none !important;        /* cancel any float from older CSS */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Card inner wrapper — control max width so cards don't get too wide */
+.games-single-item {
+  width: 100%;
+  max-width: 260px;   /* adjust to control card size */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Make images responsive and preserve aspect ratio */
+.games-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* square thumbnails; fallback will use height:auto */
+  border-radius: 10px;
+}
+
+/* Game title/meta layout */
+.games-desc h3 {
+  margin: 8px 0 4px;
+  font-size: 15px;
+  line-height: 1.2;
+}
+.game-meta {
+  font-size: 12px;
+  color: #bbb;
+  margin: 0;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .clearfix.gamesContainer {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+@media (max-width: 900px) {
+  .clearfix.gamesContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 16px;
+  }
+  .games-single-item { max-width: 300px; } /* allow slightly wider cards on medium screens */
+}
+@media (max-width: 600px) {
+  .clearfix.gamesContainer {
+    grid-template-columns: 1fr; /* single column on small phones */
+    gap: 12px;
+    padding: 12px;
+  }
+  .games-single-item { max-width: 100%; }
+  .games-desc h3 { font-size: 14px; }
+  .game-meta { font-size: 11px; }
+}
+
+/* If you want more automatic behavior, use this alternative for fluid columns:
+   .clearfix.gamesContainer {
+     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+   }
+   That will fit as many 220px columns as possible; remove the explicit breakpoints above if you use it.
+*/
+
+
+
+
+
+
 
 
 
@@ -1589,18 +1670,14 @@ span.is-active {
 }
 
 .games-item {
-float: left;
-    padding: 0 15px;
-    width: 100%;
-    max-width: 270px;
-    margin: 0 auto;
+  float: none !important;        /* cancel any float from older CSS */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.games-single-item {
-    background: #0d0e1b none repeat scroll 0 0;
-    overflow: hidden;
-    position: relative;
-}
+
+
 
 .games-desc {
     padding: 20px;
@@ -1611,10 +1688,7 @@ float: left;
     position: relative
 }
 
-.games-thumb-image {
-    position: relative;
-    overflow: hidden;
-}
+
 
 .games-thumb-image:before {
     position: absolute;
@@ -1700,17 +1774,7 @@ float: left;
     transform: translate(-50%, -50%) scale(1) !important;
 }
 
-.games-desc h3 {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
-    margin-bottom: 5px;
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    font-weight: 600
-}
+ 
 
 .games-desc h3 a {
     color: #fff
