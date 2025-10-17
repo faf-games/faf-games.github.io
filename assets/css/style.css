@@ -103,6 +103,7 @@ This files contents are outlined below >>>>
 
 
 .games-thumb {
+  position: relative;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   border-radius: 8px;
@@ -110,11 +111,32 @@ This files contents are outlined below >>>>
   cursor: pointer;
   display: block;
 }
+
+/* the orange line effect */
+.games-thumb::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0;
+  background-color: #ff7a21;
+  transition: width 0.3s ease;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
 .games-thumb:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 24px rgba(0,0,0,0.18);
   z-index: 2;
 }
+
+/* animate the line on hover */
+.games-thumb:hover::before {
+  width: 100%;
+}
+
 
 /* Game title/meta layout */
 .games-desc h3 {
