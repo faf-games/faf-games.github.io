@@ -103,17 +103,26 @@ This files contents are outlined below >>>>
 
 
 .games-thumb {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: relative;
   border-radius: 8px;
   overflow: hidden;
-  cursor: pointer;
-  display: block;
 }
-.games-thumb:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
-  z-index: 2;
+
+.games-thumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  background: linear-gradient(45deg, #00ffcc, #ff00cc, #00aaff);
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-position 1s linear;
+}
+
+.games-thumb:hover::before {
+  opacity: 1;
+  background-position: 100% 0;
 }
 
 /* Game title/meta layout */
