@@ -1,11 +1,17 @@
 
 (function() {
-  function initStickyAd() {
+  // Load Google Publisher Tag script asynchronously
+  var gptScript = document.createElement('script');
+  gptScript.async = true;
+  gptScript.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
+  document.head.appendChild(gptScript);
+
+  // Once the GPT script is loaded, initialize the sticky ad
+  gptScript.onload = function() {
     window.googletag = window.googletag || { cmd: [] };
 
     window.googletag.cmd.push(function() {
-      if (window.anchorSlot_2) return; // Prevent duplicate setup
-
+      // Define the sticky ad slot
       var anchorSlot_2 = window.googletag.defineOutOfPageSlot(
         '//23079347111/sticky',
         window.googletag.enums.OutOfPageFormat.BOTTOM_ANCHOR
@@ -15,20 +21,12 @@
         anchorSlot_2.addService(window.googletag.pubads());
       }
 
+      // Enable single request architecture (SRA)
       window.googletag.pubads().enableSingleRequest();
       window.googletag.enableServices();
+
+      // Display the sticky ad
       window.googletag.display(anchorSlot_2);
     });
-  }
-
-  // Load GPT if not already loaded
-  if (!window.googletag || !window.googletag.apiReady) {
-    var gptScript = document.createElement('script');
-    gptScript.async = true;
-    gptScript.src = "https://securepubads.g.doubleclick.net/tag/js/gpt.js";
-    gptScript.onload = initStickyAd;
-    document.head.appendChild(gptScript);
-  } else {
-    initStickyAd();
-  }
+  };
 })();
