@@ -42,6 +42,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Create and insert the async Funding Choices script
+const fundingScript = document.createElement('script');
+fundingScript.async = true;
+fundingScript.src = "https://fundingchoicesmessages.google.com/i/pub-9427048641572074?ers=1";
+fundingScript.setAttribute("nonce", "7M3TLdpr6ws84KtZqprB7Q");
+document.head.appendChild(fundingScript);
+
+// Create and insert the inline script
 const inlineScript = document.createElement('script');
 inlineScript.setAttribute("nonce", "7M3TLdpr6ws84KtZqprB7Q");
 inlineScript.textContent = `
