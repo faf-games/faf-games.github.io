@@ -629,6 +629,10 @@
         "name": "Running Fred",
         "url": "game/running-fred.html"
     },
+        {
+        "name": "Ragdoll Hit",
+        "url": "game/ragdoll-hit.html"
+    },
     {
         "name": "Shell Shockers",
         "url": "game/shell-shockers.html"
