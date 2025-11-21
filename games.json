@@ -65,6 +65,10 @@
         "name": "Block Blast Unblocked",
         "url": "game/block-blast-unblocked.html"
     },
+        {
+        "name": "Baseball 9",
+        "url": "game/baseball-9.html"
+    },
     {
         "name": "Ballistic",
         "url": "game/ballistic.html"
@@ -961,5 +965,9 @@
      {
         "name": "Worlds Hardest Game",
         "url": "game/worlds-hardest-game"
+    },
+        {
+        "name": "X Trench Run",
+        "url": "game/x-trench-run.html"
     }
 ]
