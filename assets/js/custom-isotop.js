@@ -42,14 +42,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Create and insert the async Funding Choices script
-const fundingScript = document.createElement('script');
-fundingScript.async = true;
-fundingScript.src = "https://fundingchoicesmessages.google.com/i/pub-9427048641572074?ers=1";
-fundingScript.setAttribute("nonce", "7M3TLdpr6ws84KtZqprB7Q");
-document.head.appendChild(fundingScript);
-
-// Create and insert the inline script
 const inlineScript = document.createElement('script');
 inlineScript.setAttribute("nonce", "7M3TLdpr6ws84KtZqprB7Q");
 inlineScript.textContent = `
@@ -74,28 +66,6 @@ document.head.appendChild(inlineScript);
 
 
 
-(function() {
-  // Create <link> element
-  var link = document.createElement("link");
-  link.rel = "dns-prefetch";
-  link.href = "https://universal.wgplayer.com";
-
-  // Create <script> element
-  var script = document.createElement("script");
-  script.type = "text/javascript";
-  script.async = true;
-  script.fetchPriority = "high";
-  script.src = "https://universal.wgplayer.com/tag/?lh=" + window.location.hostname +
-               "&wp=" + window.location.pathname +
-               "&ws=" + window.location.search;
-
-  // Append to <head>
-  var head = document.getElementsByTagName("head")[0];
-  if (head) {
-    head.appendChild(link);
-    head.appendChild(script);
-  }
-})();
 
 
 
